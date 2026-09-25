@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="إنجليزي المبرمج: أسبوع مكثّف وخطة 12 أسبوع، واختبارات، وتقييمات للأطفال من 6 لـ 12 سنة، ومكتبة أكتر من 190 مصدر.">
+<meta name="description" content="إنجليزي المبرمج: أسبوع مكثّف وخطة 12 أسبوع، واختبارات، ونصوص محلولة، وبنك مفردات بالنطق، ورسائل أخطاء Python وJavaScript وGit وHTTP، ومكتبة مصادر كبيرة ومراجع.">
 <meta name="theme-color" content="#5a9c7a">
 <meta property="og:title" content="إنجليزي المبرمج">
-<meta property="og:description" content="اتعلم الإنجليزي اللي المبرمج بيحتاجه، مع تقييمات حسب السن من 6 لـ 12 سنة ومكتبة تفاعلية كبيرة.">
+<meta property="og:description" content="اتعلم الإنجليزي اللي المبرمج بيحتاجه كل يوم: رسائل الأخطاء والتوثيق والكتابة والتواصل والمقابلات، مع مكتبة ومراجع.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%235a9c7a'/><text x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='monospace' font-weight='700'>En</text></svg>">
 <style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}</style>
 <title>إنجليزي المبرمج</title>
@@ -516,68 +516,8 @@
   .phrase-card .p{font-family:'JetBrains Mono';direction:ltr;text-align:left;font-size:13.5px;color:var(--accent-ink);white-space:pre-wrap;word-break:break-word;}
 </style>
 <style>
-  /* ===== age assessments (6–12) ===== */
   [hidden]{display:none!important;}
-  :root{ --kid-sun:#e8b949; --kid-sun-soft:#fbf3dc; --kid-sky:#4f8fb8; --kid-sky-soft:#e3eff6; }
-  .age-strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-bottom:18px;}
-  .age-btn{
-    font:inherit;color:inherit;cursor:pointer;text-align:center;background:var(--surface);
-    border:1px solid var(--border);border-radius:14px;padding:10px 6px;display:grid;gap:2px;min-width:0;
-  }
-  .age-btn .an{font-family:'Cairo';font-weight:800;font-size:22px;line-height:1.2;color:var(--accent-ink);}
-  .age-btn .al{font-size:12px;color:var(--muted);}
-  .age-btn .as{font-size:13px;letter-spacing:1px;min-height:18px;}
-  .age-btn.sel{border-color:var(--kid-sky);box-shadow:0 0 0 2px var(--kid-sky-soft);}
-  .age-btn.sel .an{color:var(--kid-sky);}
-  .kid-stage{
-    background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);
-    padding:22px 24px;display:grid;gap:16px;
-  }
-  .kid-head{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:baseline;justify-content:space-between;}
-  .kid-head h3{font-family:'Cairo';font-size:21px;margin:0;color:var(--ink);}
-  .kid-meta{display:flex;flex-wrap:wrap;gap:6px;}
-  .kid-meta .badge{font-size:12px;}
-  .badge.sky{background:var(--kid-sky-soft);color:var(--kid-sky);}
-  .badge.sun{background:var(--kid-sun-soft);color:#8a6414;}
-  .kid-intro{margin:0;color:var(--muted);font-size:15px;max-width:70ch;}
-  .kid-bar{height:10px;border-radius:999px;background:var(--surface-2);overflow:hidden;}
-  .kid-bar > div{height:100%;background:var(--kid-sky);transition:width .3s;}
-  .kid-q{display:grid;gap:14px;}
-  .kid-qn{font-family:'JetBrains Mono';direction:ltr;text-align:right;font-size:12px;color:var(--muted);}
-  .kid-qq{font-family:'Cairo';font-weight:700;font-size:clamp(18px,2.6vw,22px);line-height:1.6;text-wrap:balance;}
-  .kid-qq .en{direction:ltr;unicode-bidi:isolate;font-family:'Tajawal';}
-  .kid-code{direction:ltr;text-align:left;font-family:'JetBrains Mono';font-size:14px;background:var(--surface-2);border-radius:10px;padding:10px 14px;white-space:pre;overflow-x:auto;margin:0;}
-  .kid-listen{
-    justify-self:start;font-family:'Cairo';font-weight:700;font-size:16px;cursor:pointer;
-    background:var(--kid-sky);color:#fff;border:0;border-radius:999px;padding:10px 22px;
-  }
-  .kid-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
-  .kid-opt{
-    font:inherit;font-size:18px;cursor:pointer;color:var(--ink);text-align:center;min-height:64px;
-    background:var(--surface-2);border:2px solid var(--border);border-radius:16px;padding:10px 14px;
-    display:flex;align-items:center;justify-content:center;word-break:break-word;
-  }
-  .kid-opt.big{font-size:40px;line-height:1;}
-  .kid-opt.ltr{direction:ltr;font-family:'Tajawal';}
-  .kid-opt:hover:not([disabled]){border-color:var(--kid-sky);}
-  .kid-opt.right{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink);font-weight:700;}
-  .kid-opt.wrong{background:var(--accent-2-soft);border-color:var(--accent-2);color:var(--accent-2);}
-  .kid-opt[disabled]{cursor:default;}
-  .kid-fb{font-size:16px;font-family:'Cairo';font-weight:700;min-height:1.6em;}
-  .kid-fb.ok{color:var(--accent-ink);}
-  .kid-fb.no{color:var(--accent-2);}
-  .kid-nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
-  .kid-result{display:grid;gap:12px;justify-items:start;}
-  .kid-stars{font-size:44px;letter-spacing:6px;line-height:1;}
-  .kid-score{font-family:'Cairo';font-weight:800;font-size:28px;color:var(--accent-ink);}
-  .kid-review{display:grid;gap:8px;width:100%;}
-  .kid-review .rv{background:var(--surface-2);border-radius:10px;padding:8px 12px;font-size:14.5px;}
-  .kid-review .rv b{color:var(--accent-ink);}
-  .report{width:100%;border-collapse:collapse;font-size:14.5px;}
-  .report th,.report td{text-align:start;padding:8px 10px;border-bottom:1px solid var(--border);}
-  .report th{font-family:'Cairo';font-size:13px;color:var(--muted);font-weight:700;}
-  .report td.num{font-family:'JetBrains Mono';direction:ltr;text-align:right;font-variant-numeric:tabular-nums;}
-  .table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:6px 10px;margin-top:16px;}
+  :root{ --star:#e8b949; --star-soft:#fbf3dc; }
 
   /* ===== bigger library ===== */
   .lib-filters{display:grid;gap:8px;margin-bottom:14px;}
@@ -593,8 +533,7 @@
     flex:none;cursor:pointer;background:transparent;border:1px solid var(--border);border-radius:999px;
     font-size:15px;line-height:1;padding:5px 8px;color:var(--muted);
   }
-  .lib-top .fav.on{background:var(--kid-sun-soft);border-color:var(--kid-sun);color:#8a6414;}
-  .badge.age{background:var(--kid-sky-soft);color:var(--kid-sky);}
+  .lib-top .fav.on{background:var(--star-soft);border-color:var(--star);color:#8a6414;}
   .badge.paid{background:var(--surface-2);color:var(--accent-2);}
   .lib-more{display:flex;justify-content:center;margin-top:14px;}
   .pick-box{margin-bottom:14px;}
@@ -613,13 +552,6 @@
   .backup .msg{font-size:14px;color:var(--accent-ink);}
   .danger{color:var(--accent-2)!important;}
 
-  @media (max-width:720px){ .age-strip{grid-template-columns:repeat(4,minmax(0,1fr));} }
-  @media (max-width:480px){
-    .age-strip{grid-template-columns:repeat(4,minmax(0,1fr));}
-    .kid-stage{padding:16px;}
-    .kid-opt{font-size:16px;min-height:56px;}
-    .kid-opt.big{font-size:34px;}
-  }
 </style>
 
 <div class="wrap">
@@ -636,14 +568,13 @@
       <div class="streak-card"><div class="num" id="quizPct">0%</div><div class="lbl">إجابات صح</div></div>
       <div class="streak-card"><div class="num" id="vocabPct">0%</div><div class="lbl">كلمات محفوظة</div></div>
       <div class="streak-card"><div class="num alt" id="planPct">0%</div><div class="lbl">خطة 12 أسبوع</div></div>
-      <div class="streak-card"><div class="num" id="kidsNum">0/7</div><div class="lbl">تقييمات الأعمار</div></div>
+      <div class="streak-card"><div class="num" id="libNum">0</div><div class="lbl">مصادر جرّبتها</div></div>
     </div>
   </header>
 
   <nav class="snav" id="snav" aria-label="أقسام الصفحة">
     <a href="#sprint">الأسبوع المكثّف</a>
     <a href="#quiz">اختبارات</a>
-    <a href="#kids">تقييمات حسب السن</a>
     <a href="#reading">نصوص محلولة</a>
     <a href="#terms">المفردات</a>
     <a href="#phrases">جمل جاهزة</a>
@@ -653,7 +584,7 @@
     <a href="#plan">الخطة اليومية</a>
     <a href="#tracks">المهارات</a>
     <a href="#projects">المشاريع</a>
-    <a href="#errors">رسائل الأخطاء</a>
+    <a href="#errors">الأخطاء وHTTP</a>
     <a href="#refs">المراجع</a>
     <a href="#backup">حفظ التقدم</a>
   </nav>
@@ -675,29 +606,21 @@
 
   <section id="quiz">
     <h2><span class="n">02</span> اختبارات</h2>
-    <p class="section-desc">اختار إجابة وهتعرف على طول إذا كانت صح ولا غلط، وليه. السؤال اللي تغلط فيه هتلاقيه في تبويب «اللي غلطت فيها»، فارجعله بعد يوم.</p>
+    <p class="section-desc">اختار إجابة وهتعرف على طول إذا كانت صح ولا غلط، وليه. أسئلة كل يوم من الأسبوع المكثّف، وتبويب «مراجعة شاملة» فيه أسئلة على الاختصارات وأكواد HTTP وGit والقواعد. السؤال اللي تغلط فيه هتلاقيه في تبويب «اللي غلطت فيها»، فارجعله بعد يوم.</p>
     <div class="cat-tabs" id="quizTabs"></div>
     <div class="quiz-score" id="quizScore"></div>
     <div class="quiz-list" id="quizList"></div>
   </section>
 
-  <section id="kids">
-    <h2><span class="n">03</span> تقييمات حسب السن: من 6 لـ 12 سنة</h2>
-    <p class="section-desc">اختبار لكل سن، 12 سؤال مناسبين للسن ده: صور وأصوات للصغيرين، وجمل وقراءة وأوامر برمجة بسيطة للأكبر. الأسئلة مبنية على مستويات كامبريدج للأطفال (Starters وMovers وFlyers) وإطار CEFR، ومعاها أساسيات التفكير البرمجي (ترتيب الخطوات والتكرار والشروط). السؤال بيظهر لوحده، والطفل يدوس على الإجابة ويعرف على طول صح ولا غلط. ولو فيه زرار 🔊، اسمعوا الكلمة الأول.</p>
-    <div class="age-strip" id="ageStrip"></div>
-    <div class="kid-stage" id="kidStage"></div>
-    <div class="table-wrap"><table class="report" id="kidReport"></table></div>
-  </section>
-
   <section id="reading">
-    <h2><span class="n">04</span> نصوص محلولة</h2>
+    <h2><span class="n">03</span> نصوص محلولة</h2>
     <p class="section-desc">نصوص قصيرة زي اللي هتقابلها في الشغل بالظبط: رسالة خطأ، وصفحة توثيق، وREADME، وتقرير bug، وإيميل عميل، ورسالة في Slack. اقرا النص الإنجليزي الأول وحاول تفهمه لوحدك، وبعدين افتح الكلمات المهمة والترجمة وجاوب على الأسئلة.</p>
     <div class="cat-tabs" id="rdTabs"></div>
     <div class="ex-grid" id="rdGrid"></div>
   </section>
 
   <section id="terms">
-    <h2><span class="n">05</span> بنك المفردات</h2>
+    <h2><span class="n">04</span> بنك المفردات</h2>
     <p class="section-desc">كل كلمة معاها معناها بالعربي، وجملة إنجليزي بتوريك بتتقال إزاي، وزرار 🔊 تسمع منه النطق. استخدم البطاقات: شوف الكلمة، افتكر معناها، واقلب البطاقة. الكلمة اللي تعلّم عليها «عرفتها» مبترجعلكش في المراجعة.</p>
     <div class="mode-row" id="modeRow"></div>
     <div id="flashBox" class="flash-wrap" hidden>
@@ -726,29 +649,28 @@
   </section>
 
   <section id="phrases">
-    <h2><span class="n">06</span> جمل جاهزة</h2>
+    <h2><span class="n">05</span> جمل جاهزة</h2>
     <p class="section-desc">قوالب جاهزة تنسخها وتكمّلها لكل موقف في الشغل: تشرح كود، أو تسأل، أو تبلّغ عن bug، أو تكتب لعميل، أو تتكلم في اجتماع أو مقابلة.</p>
     <div class="cat-tabs" id="phTabs"></div>
     <div class="phrase-grid" id="phraseGrid"></div>
   </section>
 
   <section id="grammar">
-    <h2><span class="n">07</span> قواعد المبرمج</h2>
+    <h2><span class="n">06</span> قواعد المبرمج</h2>
     <p class="section-desc">مش كل القواعد. دي القواعد اللي بتتكرر في التوثيق والكود والإيميلات، ولكل قاعدة مثال صح ومثال غلط شائع عند المتكلمين بالعربي.</p>
     <div class="grammar-grid" id="grammarGrid"></div>
   </section>
 
   <section id="library">
-    <h2><span class="n">08</span> المكتبة</h2>
-    <p class="section-desc">حوالي 200 مصدر، أغلبهم مجاني: قواميس ونطق، وكتابة تقنية، وقواعد، واستماع وبودكاست، وقراءة وكتب، وتعلم برمجة، وتطبيقات حفظ، وأدوات تصحيح، ومصادر للأطفال من 6 لـ 12 سنة، ومصادر بالعربي. فلتر حسب السن والنوع والتصنيف، وعلّم ⭐ على المفضّل، وعلّم «جرّبته» على اللي استخدمته.</p>
+    <h2><span class="n">07</span> المكتبة</h2>
+    <p class="section-desc"><span id="libTotal"></span> مصدر، أغلبهم مجاني: قواميس ونطق، وكتابة تقنية، وقواعد، واستماع وبودكاست، وقراءة وكتب، وتعلم برمجة، وGit وكود ريفيو، وأمان، وذكاء اصطناعي، ومقابلات، وتطبيقات حفظ، وأدوات تصحيح، ومصادر بالعربي. فلتر حسب التصنيف والنوع، وعلّم ⭐ على المفضّل، وعلّم «جرّبته» على اللي استخدمته.</p>
     <div class="lib-tools">
-      <label class="lib-search" for="libSearch"><span>ابحث:</span><input type="search" id="libSearch" placeholder="نطق، Scratch، قاموس، بودكاست…" autocomplete="off"></label>
+      <label class="lib-search" for="libSearch"><span>ابحث:</span><input type="search" id="libSearch" placeholder="نطق، Git، قاموس، بودكاست…" autocomplete="off"></label>
       <button type="button" class="cat-tab" id="libRandom">🎲 اقترح عليّا مصدر</button>
       <span class="lib-count" id="libCount"></span>
     </div>
     <div class="pick-box" id="libPick" hidden></div>
     <div class="lib-filters">
-      <div class="frow" id="libAge"></div>
       <div class="frow" id="libMisc"></div>
     </div>
     <div class="cat-tabs" id="libTabs"></div>
@@ -757,13 +679,13 @@
   </section>
 
   <section id="map">
-    <h2><span class="n">09</span> خريطة الـ 12 أسبوع</h2>
+    <h2><span class="n">08</span> خريطة الـ 12 أسبوع</h2>
     <p class="section-desc">بعد الأسبوع المكثّف: 12 أسبوع، حوالي 40 دقيقة في اليوم. كل أسبوع فيه مهارة (قراءة وكتابة واستماع وكلام) في موضوع من شغل المبرمج، وقاعدة واحدة، وتصنيف كلمات، ومشروع صغير تسلّمه يوم الجمعة. اضغط أي أسبوع تفتح خطته.</p>
     <div class="map-grid" id="mapGrid"></div>
   </section>
 
   <section id="plan">
-    <h2><span class="n">10</span> الخطة اليومية</h2>
+    <h2><span class="n">09</span> الخطة اليومية</h2>
     <p class="section-desc">كل يوم فيه جزئين: المهارة، والكلمات والقواعد. الأسبوع اللي بيفتح لوحده هو أول أسبوع لسه مخلصتوش، والتقدم بيتحفظ في المتصفح.</p>
     <div class="week-head" id="weekHead"></div>
     <div class="spot-grid" id="spotGrid"></div>
@@ -772,13 +694,13 @@
   </section>
 
   <section id="tracks">
-    <h2><span class="n">11</span> المهارات</h2>
+    <h2><span class="n">10</span> المهارات</h2>
     <p class="section-desc">علّم على المهارة لما تبقى بتعملها فعلاً من غير ما تفتح قالب أو مترجم. دي أدق مقياس لمستواك.</p>
     <div class="track-grid" id="trackGrid"></div>
   </section>
 
   <section id="projects">
-    <h2><span class="n">12</span> المشاريع</h2>
+    <h2><span class="n">11</span> المشاريع</h2>
     <p class="section-desc">مشروع صغير كل أسبوع تقدر تعرضه، وكلهم بيتجمعوا في بورتفوليو بالإنجليزي في الآخر.</p>
     <div class="proj-grid" id="projGrid"></div>
     <div class="proj">
@@ -788,14 +710,15 @@
   </section>
 
   <section id="errors">
-    <h2><span class="n">13</span> رسائل أخطاء Python هتقابلها كتير</h2>
-    <p class="section-desc">أشهر رسائل الأخطاء في بايثون ومعناها وسببها الشائع، ومعاها الكلمة الإنجليزية المهمة في كل رسالة. لو حفظتهم هتقرا أي رسالة خطأ بثقة.</p>
+    <h2><span class="n">12</span> رسائل الأخطاء وأكواد HTTP</h2>
+    <p class="section-desc">أشهر رسائل الأخطاء في Python وJavaScript وGit والـ Terminal، وأكواد HTTP اللي بترجع من أي API. لكل رسالة: معناها، وسببها الشائع، وإزاي تحلها، والكلمة الإنجليزية المهمة فيها. اختار المجموعة من التبويبات.</p>
+    <div class="cat-tabs" id="errTabs"></div>
     <div class="err-list" id="errList"></div>
   </section>
 
   <section id="refs">
-    <h2><span class="n">14</span> المراجع</h2>
-    <p class="section-desc">المصادر اللي اتبنى عليها محتوى الصفحة: القواعد، والمصطلحات، ورسائل الأخطاء، ومستويات تقييمات الأطفال. الروابط بتفتح في تاب جديد.</p>
+    <h2><span class="n">13</span> المراجع</h2>
+    <p class="section-desc">المصادر اللي اتبنى عليها محتوى الصفحة: القواعد، والمصطلحات، والكتابة التقنية، ورسائل الأخطاء، وأكواد HTTP، وGit، ومستويات اللغة. كل الروابط لمواقعها الأصلية وبتفتح في تاب جديد.</p>
     <div id="refList"></div>
   </section>
 
@@ -826,17 +749,17 @@
     </div>
   </section>
 
-  <footer>إنجليزي المبرمج · التقدم محفوظ محليًا في هذا المتصفح فقط · كل الروابط لمواقعها الأصلية</footer>
+  <footer>إنجليزي المبرمج · التقدم محفوظ محليًا في هذا المتصفح فقط · كل الروابط لمواقعها الأصلية · <a href="https://github.com/micro4tricks-ai/programmer-english" target="_blank" rel="noopener" style="color:var(--accent-ink)">الكود على GitHub</a></footer>
 </div>
 <script>
 (function(){
   var STORE_KEY = 'eng_plan_v1';
-  function freshState(){ return {tasks:{}, vocab:{}, sprint:{}, quiz:{}, lib:{}, fav:{}, kids:{}, plan:{}, skills:{}, proj:{}, cap:{}, lastDate:null, streak:0}; }
+  function freshState(){ return {tasks:{}, vocab:{}, sprint:{}, quiz:{}, lib:{}, fav:{}, plan:{}, skills:{}, proj:{}, cap:{}, lastDate:null, streak:0}; }
   function loadState(){
     try{
       var raw = localStorage.getItem(STORE_KEY);
       var s = raw ? JSON.parse(raw) : freshState();
-      ['tasks','vocab','sprint','quiz','lib','fav','kids','plan','skills','proj','cap'].forEach(function(k){ s[k] = s[k] || {}; });
+      ['tasks','vocab','sprint','quiz','lib','fav','plan','skills','proj','cap'].forEach(function(k){ s[k] = s[k] || {}; });
       return s;
     }catch(e){ return freshState(); }
   }
@@ -1585,6 +1508,159 @@
     {cat:'المقابلات', s:7, term:'deliverable', mean:'حاجة هتتسلّم فعلاً للعميل', ex:'The main deliverable is a working workflow.'},
     {cat:'المقابلات', s:7, term:'scope', mean:'حدود الشغل المتفق عليه', ex:'That feature is outside the project scope.'}
   ].forEach(function(v){ VOCAB.push(v); });
+  // more categories: work abbreviations, phrasal verbs, AI, DevOps, security, JS, n8n, meetings
+  [
+    {"cat": "اختصارات الشغل", "term": "ASAP", "mean": "في أسرع وقت (as soon as possible)", "ex": "Please fix the login bug ASAP."},
+    {"cat": "اختصارات الشغل", "term": "FYI", "mean": "للعلم (for your information)", "ex": "FYI: the API key expires next week."},
+    {"cat": "اختصارات الشغل", "term": "LGTM", "mean": "شكله تمام وموافق (looks good to me)", "ex": "LGTM, merging now."},
+    {"cat": "اختصارات الشغل", "term": "PTAL", "mean": "بص تاني من فضلك (please take another look)", "ex": "I fixed your comments. PTAL."},
+    {"cat": "اختصارات الشغل", "term": "WIP", "mean": "لسه شغال عليه (work in progress)", "ex": "WIP: please do not merge this PR yet."},
+    {"cat": "اختصارات الشغل", "term": "TL;DR", "mean": "الخلاصة باختصار", "ex": "TL;DR: the bug is fixed in version 2.1."},
+    {"cat": "اختصارات الشغل", "term": "IMO / IMHO", "mean": "في رأيي (in my opinion)", "ex": "IMO, this function is too long."},
+    {"cat": "اختصارات الشغل", "term": "EOD", "mean": "آخر اليوم (end of day)", "ex": "I will send the report by EOD."},
+    {"cat": "اختصارات الشغل", "term": "OOO", "mean": "برّه المكتب / في إجازة (out of office)", "ex": "I'm OOO on Thursday."},
+    {"cat": "اختصارات الشغل", "term": "AFAIK", "mean": "على حد علمي (as far as I know)", "ex": "AFAIK, the API does not support webhooks."},
+    {"cat": "اختصارات الشغل", "term": "TBD", "mean": "لسه هيتحدد (to be decided)", "ex": "Release date: TBD."},
+    {"cat": "اختصارات الشغل", "term": "N/A", "mean": "مش منطبق / مش متاح (not applicable)", "ex": "Environment: N/A (the problem is in the docs)."},
+    {"cat": "اختصارات الشغل", "term": "e.g. / i.e.", "mean": "على سبيل المثال / يعني بالتحديد", "ex": "Use a free API, e.g. Open-Meteo."},
+    {"cat": "اختصارات الشغل", "term": "PR / MR", "mean": "طلب دمج (pull request / merge request)", "ex": "Please open a PR against the main branch."},
+    {"cat": "اختصارات الشغل", "term": "CI/CD", "mean": "التكامل والنشر المستمر", "ex": "The CI/CD pipeline runs the tests on every push."},
+    {"cat": "اختصارات الشغل", "term": "MVP", "mean": "أبسط نسخة شغالة من المنتج (minimum viable product)", "ex": "Let's ship an MVP first and add features later."},
+    {"cat": "اختصارات الشغل", "term": "POC", "mean": "تجربة لإثبات إن الفكرة تنفع (proof of concept)", "ex": "I built a quick POC to test the idea."},
+    {"cat": "اختصارات الشغل", "term": "QA", "mean": "ضمان الجودة والاختبار (quality assurance)", "ex": "The QA team found three bugs."},
+    {"cat": "اختصارات الشغل", "term": "SLA", "mean": "اتفاقية مستوى الخدمة (service level agreement)", "ex": "Our SLA promises 99.9% uptime."},
+    {"cat": "اختصارات الشغل", "term": "KPI", "mean": "مؤشر أداء رئيسي (key performance indicator)", "ex": "Response time is our main KPI."},
+    {"cat": "اختصارات الشغل", "term": "DM", "mean": "رسالة خاصة (direct message)", "ex": "Send me a DM with the details."},
+    {"cat": "اختصارات الشغل", "term": "BTW", "mean": "على فكرة (by the way)", "ex": "BTW, the staging server is down."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "log in / log out", "mean": "يسجّل دخول / يسجّل خروج", "ex": "Log in with your work email."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "sign up", "mean": "يعمل حساب جديد", "ex": "Sign up for a free account."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "back up", "mean": "ياخد نسخة احتياطية", "ex": "Back up the database before the update."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "shut down", "mean": "يقفل (جهاز أو خدمة)", "ex": "We will shut down the old server next week."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "clean up", "mean": "ينضّف / يرتّب", "ex": "I cleaned up the code before the review."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "break down", "mean": "يقسّم لأجزاء صغيرة (أو يعطل)", "ex": "Break down the task into smaller steps."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "come up with", "mean": "يطلع بفكرة أو حل", "ex": "We came up with a simpler solution."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "find out", "mean": "يكتشف / يعرف", "ex": "I found out why the test fails."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "go over", "mean": "يراجع", "ex": "Let's go over the requirements again."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "point out", "mean": "ينبّه على", "ex": "Thanks for pointing out the typo."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "reach out", "mean": "يتواصل مع", "ex": "Feel free to reach out if you have questions."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "sort out", "mean": "يحل / يظبّط", "ex": "I sorted out the permission issue."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "wrap up", "mean": "يختم / يخلّص", "ex": "Let's wrap up the meeting."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "spin up", "mean": "يشغّل (سيرفر أو بيئة) بسرعة", "ex": "Spin up a new container for testing."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "fall back (on)", "mean": "يرجع لبديل", "ex": "If the API fails, fall back on the cached data."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "carry out", "mean": "ينفّذ", "ex": "We carried out the migration last night."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "check out", "mean": "يبص على / يحوّل لفرع في Git", "ex": "Check out the new branch and run the tests."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "put off", "mean": "يأجّل", "ex": "We put off the release until Monday."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "turn on / turn off", "mean": "يشغّل / يطفّي", "ex": "Turn off notifications during the demo."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "work out", "mean": "يحل / ينجح", "ex": "The new approach worked out well."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "give up", "mean": "يستسلم / يبطّل", "ex": "Don't give up — read the error again."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "look up", "mean": "يدوّر على معلومة", "ex": "Look up the word in the dictionary."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "scale up", "mean": "يكبّر الموارد", "ex": "We scaled up the database for the sale."},
+    {"cat": "أفعال مركّبة (Phrasal verbs)", "term": "plug in", "mean": "يوصّل / يحط (قيمة أو جهاز)", "ex": "Plug in your API key here."},
+    {"cat": "الذكاء الاصطناعي", "term": "prompt", "mean": "التعليمات أو السؤال اللي بتكتبه للنموذج", "ex": "Write a clear prompt with one example."},
+    {"cat": "الذكاء الاصطناعي", "term": "model", "mean": "النموذج (زي نموذج لغة)", "ex": "Which model are you using for the summaries?"},
+    {"cat": "الذكاء الاصطناعي", "term": "token (AI)", "mean": "جزء من كلمة، والنموذج بيحسب بيه الطول والتكلفة", "ex": "The response used 800 tokens."},
+    {"cat": "الذكاء الاصطناعي", "term": "context window", "mean": "أقصى كمية نص النموذج يقدر يشوفها مرة واحدة", "ex": "The document is too long for the context window."},
+    {"cat": "الذكاء الاصطناعي", "term": "hallucination", "mean": "إن النموذج يألّف معلومة غلط بثقة", "ex": "Always check the facts because of hallucinations."},
+    {"cat": "الذكاء الاصطناعي", "term": "fine-tuning", "mean": "تدريب إضافي لنموذج على بياناتك", "ex": "Try better prompts before fine-tuning."},
+    {"cat": "الذكاء الاصطناعي", "term": "embedding", "mean": "تمثيل النص كأرقام عشان تقارن المعاني", "ex": "We store an embedding for every document."},
+    {"cat": "الذكاء الاصطناعي", "term": "inference", "mean": "تشغيل النموذج عشان يطلّع إجابة", "ex": "Inference takes about two seconds."},
+    {"cat": "الذكاء الاصطناعي", "term": "training data", "mean": "البيانات اللي النموذج اتدرّب عليها", "ex": "The training data ends in 2024."},
+    {"cat": "الذكاء الاصطناعي", "term": "dataset", "mean": "مجموعة بيانات", "ex": "Split the dataset into training and test sets."},
+    {"cat": "الذكاء الاصطناعي", "term": "agent", "mean": "برنامج بيستخدم نموذج وأدوات عشان ينفّذ مهام", "ex": "The agent reads emails and creates tasks."},
+    {"cat": "الذكاء الاصطناعي", "term": "RAG", "mean": "تجيب معلومات من مصادرك وتدّيها للنموذج قبل ما يجاوب (retrieval-augmented generation)", "ex": "We use RAG so the answers come from our docs."},
+    {"cat": "الذكاء الاصطناعي", "term": "temperature", "mean": "إعداد بيتحكم في عشوائية الإجابة", "ex": "Use a low temperature for consistent answers."},
+    {"cat": "الذكاء الاصطناعي", "term": "accuracy", "mean": "الدقة", "ex": "The model's accuracy is 92%."},
+    {"cat": "الذكاء الاصطناعي", "term": "bias", "mean": "تحيّز", "ex": "Check the results for bias."},
+    {"cat": "الذكاء الاصطناعي", "term": "output", "mean": "الناتج", "ex": "Validate the model output before you save it."},
+    {"cat": "DevOps والسحابة", "term": "deploy", "mean": "ينشر نسخة جديدة على السيرفر", "ex": "We deploy every Tuesday."},
+    {"cat": "DevOps والسحابة", "term": "staging / production", "mean": "بيئة التجربة / البيئة الحقيقية", "ex": "Test it on staging before production."},
+    {"cat": "DevOps والسحابة", "term": "container", "mean": "حاوية بتشغّل البرنامج بكل احتياجاته", "ex": "Each service runs in its own container."},
+    {"cat": "DevOps والسحابة", "term": "Docker image", "mean": "قالب بيتعمل منه الـ container", "ex": "Build the Docker image and push it to the registry."},
+    {"cat": "DevOps والسحابة", "term": "pipeline", "mean": "سلسلة خطوات أوتوماتيك (build ثم test ثم deploy)", "ex": "The pipeline failed at the test step."},
+    {"cat": "DevOps والسحابة", "term": "build", "mean": "تجميع الكود في نسخة جاهزة للتشغيل", "ex": "The build takes five minutes."},
+    {"cat": "DevOps والسحابة", "term": "log / logs", "mean": "سجل الأحداث", "ex": "Check the logs to see what happened."},
+    {"cat": "DevOps والسحابة", "term": "monitoring", "mean": "مراقبة النظام", "ex": "Set up monitoring for the payment service."},
+    {"cat": "DevOps والسحابة", "term": "uptime / downtime", "mean": "وقت التشغيل / وقت التوقف", "ex": "We had ten minutes of downtime last night."},
+    {"cat": "DevOps والسحابة", "term": "load balancer", "mean": "موزّع الحمل بين السيرفرات", "ex": "The load balancer sends traffic to three servers."},
+    {"cat": "DevOps والسحابة", "term": "scalability", "mean": "قابلية التوسّع", "ex": "Scalability matters when users grow fast."},
+    {"cat": "DevOps والسحابة", "term": "hotfix", "mean": "تصليح سريع وعاجل", "ex": "We released a hotfix for the login bug."},
+    {"cat": "DevOps والسحابة", "term": "release", "mean": "إصدار", "ex": "The next release includes dark mode."},
+    {"cat": "DevOps والسحابة", "term": "hosting", "mean": "استضافة", "ex": "GitHub Pages offers free hosting for static sites."},
+    {"cat": "DevOps والسحابة", "term": "domain / DNS", "mean": "اسم الموقع / نظام أسماء النطاقات", "ex": "Point the domain to the server in the DNS settings."},
+    {"cat": "DevOps والسحابة", "term": "SSH", "mean": "اتصال آمن بسيرفر من بعيد", "ex": "Connect to the server over SSH."},
+    {"cat": "DevOps والسحابة", "term": "port", "mean": "منفذ", "ex": "n8n runs on port 5678 by default."},
+    {"cat": "DevOps والسحابة", "term": "localhost", "mean": "جهازك انت (السيرفر المحلي)", "ex": "Open localhost:3000 in your browser."},
+    {"cat": "DevOps والسحابة", "term": "webhook", "mean": "رابط بيستقبل بيانات أول ما حدث يحصل", "ex": "Stripe sends a webhook when a payment succeeds."},
+    {"cat": "DevOps والسحابة", "term": "cron job", "mean": "مهمة مجدولة بتتكرر أوتوماتيك", "ex": "A cron job runs the backup every night."},
+    {"cat": "DevOps والسحابة", "term": "rate limit", "mean": "أقصى عدد طلبات مسموح في وقت معيّن", "ex": "We hit the rate limit of 60 requests per minute."},
+    {"cat": "DevOps والسحابة", "term": "latency", "mean": "التأخير في الرد", "ex": "Latency is higher for users in Europe."},
+    {"cat": "الأمان", "term": "vulnerability", "mean": "ثغرة", "ex": "The update fixes a security vulnerability."},
+    {"cat": "الأمان", "term": "patch", "mean": "تحديث بيصلّح مشكلة", "ex": "Apply the security patch today."},
+    {"cat": "الأمان", "term": "credentials", "mean": "بيانات الدخول (اسم وكلمة سر أو مفاتيح)", "ex": "Never share your credentials in chat."},
+    {"cat": "الأمان", "term": "API key", "mean": "مفتاح الوصول للـ API", "ex": "Store the API key in an environment variable."},
+    {"cat": "الأمان", "term": "two-factor authentication (2FA)", "mean": "التحقق بخطوتين", "ex": "Enable 2FA on your GitHub account."},
+    {"cat": "الأمان", "term": "hash", "mean": "تحويل البيانات لبصمة مينفعش ترجعها", "ex": "Passwords are stored as a hash."},
+    {"cat": "الأمان", "term": "phishing", "mean": "تصيّد (رسايل مزيفة لسرقة بياناتك)", "ex": "This email is a phishing attempt."},
+    {"cat": "الأمان", "term": "sanitize", "mean": "ينضّف المدخلات من أي حاجة خطيرة", "ex": "Sanitize user input before you save it."},
+    {"cat": "الأمان", "term": "SQL injection", "mean": "حقن أوامر SQL خبيثة من خلال المدخلات", "ex": "Use parameterized queries to prevent SQL injection."},
+    {"cat": "الأمان", "term": "leak", "mean": "تسريب", "ex": "The key leaked in a public repository."},
+    {"cat": "الأمان", "term": "rotate (a key)", "mean": "يغيّر المفتاح بواحد جديد", "ex": "Rotate the API key every 90 days."},
+    {"cat": "الأمان", "term": "OAuth", "mean": "طريقة ربط بتدي صلاحية من غير ما تشارك الباسورد", "ex": "Connect Google Sheets with OAuth."},
+    {"cat": "الأمان", "term": "HTTPS / SSL certificate", "mean": "اتصال مشفّر / شهادة الأمان", "ex": "The site needs an SSL certificate for HTTPS."},
+    {"cat": "الأمان", "term": "access token", "mean": "رمز مؤقت بيدي صلاحية", "ex": "The access token expires after one hour."},
+    {"cat": "الأمان", "term": "least privilege", "mean": "تدي أقل صلاحيات محتاجها بس", "ex": "Follow the principle of least privilege."},
+    {"cat": "JavaScript والويب", "term": "DOM", "mean": "شجرة عناصر الصفحة في المتصفح", "ex": "The script updates the DOM when you click."},
+    {"cat": "JavaScript والويب", "term": "event listener", "mean": "كود بيستنى حدث (زي ضغطة)", "ex": "Add an event listener to the button."},
+    {"cat": "JavaScript والويب", "term": "callback", "mean": "دالة بتتبعت لدالة تانية وتتنادى بعدين", "ex": "Pass a callback that runs when the file loads."},
+    {"cat": "JavaScript والويب", "term": "promise", "mean": "وعد بنتيجة هتيجي بعدين", "ex": "fetch() returns a promise."},
+    {"cat": "JavaScript والويب", "term": "async / await", "mean": "كود بيستنى النتيجة من غير ما يوقّف الصفحة", "ex": "Use async / await to wait for the response."},
+    {"cat": "JavaScript والويب", "term": "component", "mean": "مكوّن (جزء واجهة ممكن تعيد استخدامه)", "ex": "The header is a reusable component."},
+    {"cat": "JavaScript والويب", "term": "state", "mean": "الحالة (البيانات الحالية للواجهة)", "ex": "Update the state when the user logs in."},
+    {"cat": "JavaScript والويب", "term": "props", "mean": "القيم اللي بتتبعت لمكوّن", "ex": "Pass the title as a prop."},
+    {"cat": "JavaScript والويب", "term": "selector", "mean": "محدِّد (لاختيار عناصر في CSS أو JS)", "ex": "Use a class selector to style all cards."},
+    {"cat": "JavaScript والويب", "term": "responsive", "mean": "بيتظبط مع أي حجم شاشة", "ex": "The layout is responsive on phones."},
+    {"cat": "JavaScript والويب", "term": "npm", "mean": "مدير حزم JavaScript", "ex": "Run npm install to get the dependencies."},
+    {"cat": "JavaScript والويب", "term": "undefined / null", "mean": "مش متعرّف / فاضي عن قصد", "ex": "The value is undefined because the key is missing."},
+    {"cat": "JavaScript والويب", "term": "console", "mean": "الكونسول (مكان رسائل المطوّر في المتصفح)", "ex": "Open the console to see the error."},
+    {"cat": "JavaScript والويب", "term": "frontend / backend", "mean": "الواجهة / الخلفية (السيرفر)", "ex": "I work on the backend, and she works on the frontend."},
+    {"cat": "JavaScript والويب", "term": "query string", "mean": "الجزء اللي بعد ? في الرابط", "ex": "Add the page number to the query string."},
+    {"cat": "الأتمتة وn8n", "term": "workflow", "mean": "سير عمل (سلسلة خطوات أوتوماتيك)", "ex": "The workflow runs every morning at 8."},
+    {"cat": "الأتمتة وn8n", "term": "node", "mean": "خطوة واحدة في الـ workflow", "ex": "Add an HTTP Request node after the trigger."},
+    {"cat": "الأتمتة وn8n", "term": "trigger", "mean": "الحدث اللي بيبدأ الـ workflow", "ex": "The trigger fires when a new row is added."},
+    {"cat": "الأتمتة وn8n", "term": "execution", "mean": "تشغيلة واحدة للـ workflow", "ex": "Open the failed execution to see the error."},
+    {"cat": "الأتمتة وn8n", "term": "credential", "mean": "بيانات اتصال محفوظة لخدمة", "ex": "Create a new Google credential in n8n."},
+    {"cat": "الأتمتة وn8n", "term": "item", "mean": "عنصر بيانات واحد بيعدّي بين الـ nodes", "ex": "The node returned 25 items."},
+    {"cat": "الأتمتة وn8n", "term": "payload", "mean": "البيانات اللي جوه الطلب", "ex": "The webhook payload contains the order ID."},
+    {"cat": "الأتمتة وn8n", "term": "header", "mean": "معلومات إضافية بتتبعت مع الطلب", "ex": "Send the token in the Authorization header."},
+    {"cat": "الأتمتة وn8n", "term": "HTTP method (GET / POST)", "mean": "نوع الطلب: تجيب ولا تبعت ولا تعدّل ولا تمسح", "ex": "Use POST to create a new record."},
+    {"cat": "الأتمتة وn8n", "term": "pagination", "mean": "تقسيم النتايج على صفحات", "ex": "Enable pagination to get all 2,000 rows."},
+    {"cat": "الأتمتة وn8n", "term": "retry", "mean": "إعادة المحاولة", "ex": "Retry the request three times before failing."},
+    {"cat": "الأتمتة وn8n", "term": "idempotent", "mean": "تكراره مش بيغيّر النتيجة", "ex": "Make the workflow idempotent so duplicates don't matter."},
+    {"cat": "الأتمتة وn8n", "term": "mapping", "mean": "ربط حقل بحقل", "ex": "Map the email field to the Contact Email column."},
+    {"cat": "الأتمتة وn8n", "term": "integration", "mean": "ربط بين خدمتين", "ex": "We built an integration between Shopify and the CRM."},
+    {"cat": "الأتمتة وn8n", "term": "polling", "mean": "إنك تسأل كل شوية عن بيانات جديدة", "ex": "Polling every minute uses more API calls than a webhook."},
+    {"cat": "الأتمتة وn8n", "term": "sub-workflow", "mean": "workflow بيتنادى من workflow تاني", "ex": "Move the cleanup steps into a sub-workflow."},
+    {"cat": "الأتمتة وn8n", "term": "error workflow", "mean": "workflow بيشتغل لما workflow تاني يفشل", "ex": "The error workflow sends an alert to Telegram."},
+    {"cat": "الاجتماعات والشغل", "term": "agenda", "mean": "جدول أعمال الاجتماع", "ex": "I'll share the agenda before the meeting."},
+    {"cat": "الاجتماعات والشغل", "term": "action item", "mean": "مهمة مطلوبة بعد الاجتماع", "ex": "Each action item has an owner and a due date."},
+    {"cat": "الاجتماعات والشغل", "term": "stakeholder", "mean": "صاحب مصلحة في المشروع", "ex": "We need approval from all stakeholders."},
+    {"cat": "الاجتماعات والشغل", "term": "requirement", "mean": "متطلب", "ex": "The main requirement is Arabic support."},
+    {"cat": "الاجتماعات والشغل", "term": "estimate", "mean": "تقدير (للوقت أو التكلفة)", "ex": "My estimate is three days."},
+    {"cat": "الاجتماعات والشغل", "term": "priority", "mean": "أولوية", "ex": "Security fixes are the top priority."},
+    {"cat": "الاجتماعات والشغل", "term": "backlog", "mean": "قايمة المهام اللي لسه متعملتش", "ex": "Add it to the backlog for the next sprint."},
+    {"cat": "الاجتماعات والشغل", "term": "sprint (Agile)", "mean": "فترة شغل قصيرة (غالبًا أسبوعين)", "ex": "We plan the tasks at the start of each sprint."},
+    {"cat": "الاجتماعات والشغل", "term": "milestone", "mean": "مرحلة مهمة في المشروع", "ex": "The first milestone is the MVP."},
+    {"cat": "الاجتماعات والشغل", "term": "feedback", "mean": "رأي / ملاحظات", "ex": "Thanks for the feedback!"},
+    {"cat": "الاجتماعات والشغل", "term": "onboarding", "mean": "تجهيز الموظف أو المستخدم الجديد", "ex": "The onboarding guide explains the setup."},
+    {"cat": "الاجتماعات والشغل", "term": "sync / sync-up", "mean": "اجتماع قصير للتنسيق", "ex": "Let's have a quick sync tomorrow."},
+    {"cat": "الاجتماعات والشغل", "term": "trade-off", "mean": "مفاضلة (تكسب حاجة وتخسر حاجة)", "ex": "It's faster, but the trade-off is more memory."},
+    {"cat": "الاجتماعات والشغل", "term": "bottleneck", "mean": "عنق الزجاجة (الحتة اللي مبطّأة الكل)", "ex": "The database is the bottleneck."},
+    {"cat": "الاجتماعات والشغل", "term": "edge case", "mean": "حالة نادرة على الأطراف", "ex": "What about the edge case of an empty file?"},
+    {"cat": "الاجتماعات والشغل", "term": "scope creep", "mean": "زيادة المطلوب تدريجيًا بعد الاتفاق", "ex": "Adding reports now would be scope creep."},
+    {"cat": "الاجتماعات والشغل", "term": "retrospective", "mean": "اجتماع مراجعة بعد فترة شغل", "ex": "In the retrospective we discussed what went wrong."},
+    {"cat": "الاجتماعات والشغل", "term": "deliver", "mean": "يسلّم", "ex": "We delivered the project on time."},
+    {"cat": "الاجتماعات والشغل", "term": "ownership", "mean": "تحمّل مسؤولية حاجة لآخرها", "ex": "She took ownership of the bug until it was fixed."}
+  ].forEach(function(v){ VOCAB.push(v); });
   // tag some existing words with sprint days too
   var S_TAG = {'error':1,'exception':1,'traceback':1,'syntax error':1,'warning':1,'crash':1,'debug':1,
     'parameter':2,'argument':2,'return':2,'default value':2,'version':2,
@@ -1636,7 +1712,19 @@
      text:'Automation Specialist (Remote, Part-time)\n\nWe are a small e-commerce team looking for someone to automate our order and customer workflows.\n\nResponsibilities:\n- Build and maintain n8n workflows\n- Connect Shopify, Google Sheets and our CRM\n- Monitor failures and fix them quickly\n\nRequirements:\n- 1+ year of experience with n8n or Zapier\n- Good knowledge of APIs and JSON\n- Basic JavaScript\n- Clear written English\n\nNice to have: Python, SQL\n\nTo apply, send a short proposal and one example of a workflow you built.',
      kw:[['Responsibilities','المهام المطلوبة'],['maintain','يحافظ على / يصون'],['Monitor','يراقب'],['Requirements','المتطلبات'],['Nice to have','ميزة إضافية مش شرط'],['To apply','عشان تقدّم']],
      tr:'فريق تجارة إلكترونية صغير عايز حد يعمل أتمتة للطلبات والعملاء. المهام: يبني ويصون Workflows في n8n، ويربط Shopify وSheets والـ CRM، ويراقب الأخطاء ويصلّحها. المطلوب: سنة خبرة في n8n أو Zapier، وAPIs وJSON، وJavaScript أساسي، وإنجليزي كتابة واضح. وPython وSQL ميزة.',
-     qs:[['إيه الفرق بين Requirements وNice to have؟','Requirements شروط أساسية، وNice to have ميزة إضافية لو عندك.'],['اكتب أول سطر في proposal للإعلان ده','Hi, I noticed you want to automate order and customer workflows between Shopify, Sheets and your CRM — I have built exactly this with n8n.']]}
+     qs:[['إيه الفرق بين Requirements وNice to have؟','Requirements شروط أساسية، وNice to have ميزة إضافية لو عندك.'],['اكتب أول سطر في proposal للإعلان ده','Hi, I noticed you want to automate order and customer workflows between Shopify, Sheets and your CRM — I have built exactly this with n8n.']]},
+    {"t": "خطأ JavaScript في الكونسول", "cat": "أخطاء", "lvl": 1, "code": true, "text": "Uncaught TypeError: Cannot read properties of undefined (reading 'map')\n    at renderOrders (orders.js:14:22)\n    at loadPage (app.js:40:5)", "kw": [["Uncaught", "محدش مسكه (مفيش try/catch)"], ["Cannot read properties of undefined", "مش قادر يقرا خاصية من قيمة undefined"], ["reading 'map'", "وهو بيحاول يوصل لـ map"], ["at", "في (مكان الخطأ)"]], "tr": "في ملف orders.js سطر 14، الكود بيحاول ينادي map. على متغيّر قيمته undefined. غالبًا البيانات لسه ماوصلتش من الـ API، أو اسم الحقل غلط.", "qs": [["أول حاجة تعملها إيه؟", "اطبع المتغيّر قبل السطر 14 بـ console.log وشوف قيمته."], ["إزاي تمنع الخطأ؟", "تتأكد إن القيمة موجودة: (orders || []).map(...) أو orders?.map(...)."]]},
+    {"t": "Merge conflict في Git", "cat": "أخطاء", "lvl": 1, "code": true, "text": "$ git pull origin main\nAuto-merging config.py\nCONFLICT (content): Merge conflict in config.py\nAutomatic merge failed; fix conflicts and then commit the result.", "kw": [["Auto-merging", "بيحاول يدمج أوتوماتيك"], ["CONFLICT", "تعارض"], ["Merge conflict", "تعارض في الدمج"], ["fix conflicts and then commit the result", "صلّح التعارضات وبعدين اعمل commit للنتيجة"]], "tr": "انت وحد تاني عدّلتوا نفس السطور في config.py. Git مش عارف ياخد أنهي تعديل، فوقف ومستنيك تختار.", "qs": [["هتعمل إيه؟", "افتح config.py، ودوّر على <<<<<<< و=======، واختار الكود الصح، وامسح العلامات، وبعدين git add وgit commit."], ["\"Automatic merge failed\" معناها؟", "الدمج الأوتوماتيك فشل ومحتاج تدخّل منك."]]},
+    {"t": "توثيق API: حدود الطلبات", "cat": "توثيق", "lvl": 2, "code": false, "text": "Rate limits\n\nEach API key can make up to 60 requests per minute. If you exceed this limit, the API returns a 429 Too Many Requests response. The response includes a Retry-After header that tells you how many seconds to wait before you send another request.\n\nTo avoid hitting the limit:\n- Cache responses when possible.\n- Use batch endpoints instead of many single requests.\n- Use exponential backoff when you retry.", "kw": [["up to", "لحد / بحد أقصى"], ["exceed", "يتعدّى"], ["Retry-After header", "header بيقولك تستنى قد إيه"], ["batch endpoints", "endpoints بتاخد عناصر كتير في طلب واحد"], ["exponential backoff", "تستنى وقت بيتضاعف مع كل محاولة"]], "tr": "كل مفتاح له 60 طلب في الدقيقة. لو عدّيتهم هيرجعلك 429، ومعاه Retry-After بعدد الثواني اللي تستناها. عشان متوصلش للحد: خزّن الردود، واستخدم الـ batch، وزوّد وقت الانتظار تدريجيًا مع كل إعادة.", "qs": [["لو جالك 429 تعمل إيه؟", "تقرا Retry-After وتستنى المدة دي قبل ما تبعت تاني."], ["exponential backoff يعني إيه عمليًا؟", "تستنى ثانية، وبعدين 2، وبعدين 4، وبعدين 8… مع كل محاولة فاشلة."]]},
+    {"t": "تعليقات Code review", "cat": "Code review", "lvl": 2, "code": false, "text": "Reviewer: Thanks for the PR! Overall this looks good. A few comments:\n\n1. nit: rename `data2` to something more descriptive, e.g. `filtered_orders`.\n2. What happens if the API returns an empty list? I think line 42 will raise an IndexError.\n3. Could we move the API key to an environment variable instead of hardcoding it?\n4. Consider adding a unit test for the date parsing.\n\nOnce 2 and 3 are addressed, I'm happy to approve.\n\nAuthor: Good catch on #2 — fixed in the latest commit. I moved the key to .env as well. I'll add the test in a follow-up PR if that's OK. PTAL.", "kw": [["Overall", "بشكل عام"], ["nit", "ملاحظة صغيرة مش مهمة أوي (nitpick)"], ["descriptive", "بيوصف / واضح"], ["addressed", "اتعاملوا معاها / اتصلحت"], ["Good catch", "ملاحظة في محلها"], ["follow-up PR", "PR تاني بعده"], ["PTAL", "بص تاني من فضلك"]], "tr": "المراجع شايف الشغل كويس، وعنده 4 ملاحظات: غيّر اسم data2، وخلي بالك من القايمة الفاضية، وشيل المفتاح من الكود، وضيف اختبار. هيوافق لما 2 و3 يتصلحوا. الكاتب صلّح الاتنين وهيضيف الاختبار في PR تاني.", "qs": [["أنهي ملاحظات لازم تتصلح قبل الموافقة؟", "رقم 2 (القايمة الفاضية) ورقم 3 (المفتاح)."], ["\"nit\" معناها إيه؟", "ملاحظة صغيرة (شكلية غالبًا)، مش هتوقف الموافقة."]]},
+    {"t": "وصف Pull request", "cat": "Code review", "lvl": 1, "code": false, "text": "## Summary\nThis PR adds CSV export to the reports page.\n\n## Changes\n- Add an \"Export CSV\" button\n- Add `export_csv()` in reports.py\n- Use UTF-8 so Arabic names are exported correctly\n\n## How to test\n1. Open /reports\n2. Click \"Export CSV\"\n3. Open the file in Excel and check the Arabic names\n\n## Related issue\nCloses #42\n\n## Notes\nNo breaking changes.", "kw": [["This PR adds", "الـ PR ده بيضيف"], ["How to test", "إزاي تجرّب"], ["Related issue", "المشكلة المرتبطة"], ["Closes #42", "بيقفل issue رقم 42 أوتوماتيك لما يتدمج"], ["No breaking changes", "مفيش تغييرات بتبوّظ الكود القديم"]], "tr": "وصف PR بيضيف تصدير CSV لصفحة التقارير: زرار جديد، ودالة export_csv، وترميز UTF-8 عشان العربي. وفيه خطوات التجربة، وبيقفل issue رقم 42.", "qs": [["ليه قسم How to test مهم؟", "عشان المراجع يجرّب بسرعة من غير ما يسألك."], ["اكتب Summary لـ PR بيصلّح bug", "This PR fixes a crash when the cart is empty."]]},
+    {"t": "Release notes لإصدار جديد", "cat": "توثيق", "lvl": 2, "code": false, "text": "## [2.0.0] - 2026-03-01\n### Breaking changes\n- `export()` now returns a Path object instead of a string.\n- Dropped support for Python 3.8.\n\n### Added\n- Excel (.xlsx) export.\n- A `--dry-run` flag that shows what would change without saving anything.\n\n### Fixed\n- Arabic text is now exported correctly on Windows.\n\n### Deprecated\n- `old_export()` will be removed in 3.0. Use `export()` instead.", "kw": [["Breaking changes", "تغييرات هتبوّظ الكود القديم"], ["instead of", "بدل"], ["Dropped support", "بطّل يدعم"], ["dry run", "تجربة من غير تنفيذ فعلي"], ["Deprecated", "قديم وهيتشال"]], "tr": "إصدار 2.0.0: export بقت ترجّع Path بدل نص، وPython 3.8 مبقاش مدعوم. اتضاف تصدير Excel وخيار --dry-run. واتصلح تصدير العربي على Windows. وold_export هتتشال في 3.0.", "qs": [["ليه رقم الإصدار اتغيّر من 1 لـ 2؟", "عشان فيه breaking changes، وده حسب Semantic Versioning."], ["لو كودك بيعامل ناتج export() كنص، إيه اللي هيحصل؟", "ممكن يبوظ، لأنه بقى Path. حوّله بـ str() أو عدّل الكود."]]},
+    {"t": "إجابة على Stack Overflow", "cat": "منتدى", "lvl": 2, "code": false, "text": "The problem is that `input()` always returns a string, even if the user types a number. So `age + 1` tries to add an int to a str.\n\nConvert the value first:\n\n    age = int(input(\"Your age: \"))\n\nIf the user might type something that isn't a number, wrap it in a try/except block and ask again:\n\n    while True:\n        try:\n            age = int(input(\"Your age: \"))\n            break\n        except ValueError:\n            print(\"Please enter a whole number.\")\n\nHope this helps!", "kw": [["always returns", "دايمًا بترجّع"], ["even if", "حتى لو"], ["Convert", "حوّل"], ["wrap it in", "حطه جوه"], ["whole number", "رقم صحيح"], ["Hope this helps", "أتمنى ده يفيد"]], "tr": "input() دايمًا بترجّع نص، فلازم تحوّله لرقم بـ int(). ولو المستخدم ممكن يكتب حاجة مش رقم، حطها في try/except واسأله تاني لحد ما يكتب رقم صحيح.", "qs": [["ليه الكود الأصلي وقع؟", "عشان input() رجّعت نص، والكود حاول يجمع نص على رقم."], ["الـ while True بتعمل إيه هنا؟", "بتفضل تسأل لحد ما المستخدم يكتب رقم صحيح، وبعدين break بتوقف الحلقة."]]},
+    {"t": "إيميل أمان: غيّر مفتاح الـ API", "cat": "إيميل", "lvl": 2, "code": false, "text": "Subject: Action required: rotate your API key\n\nHi,\n\nWe detected that one of your API keys was published in a public GitHub repository on March 3. To protect your account, we have disabled this key.\n\nPlease do the following as soon as possible:\n1. Create a new key in your dashboard.\n2. Update your applications to use the new key.\n3. Remove the old key from your code and your Git history.\n\nIf you did not publish this key, please contact our support team immediately.\n\nThe Security Team", "kw": [["Action required", "مطلوب منك إجراء"], ["detected", "اكتشفنا"], ["published", "اتنشر"], ["disabled", "عطّلنا / وقفنا"], ["Git history", "تاريخ الـ commits في Git"], ["immediately", "فورًا"]], "tr": "الشركة لقت مفتاح API بتاعك منشور في repo عام على GitHub، فوقفته. المطلوب: تعمل مفتاح جديد، وتحدّث تطبيقاتك، وتشيل القديم من الكود ومن تاريخ Git.", "qs": [["ليه مسح المفتاح من الكود بس مش كفاية؟", "لأنه لسه موجود في commits قديمة، وأي حد يقدر يشوفه."], ["إزاي تمنع ده يتكرر؟", "حط المفاتيح في .env، وضيف .env لـ .gitignore، وفعّل secret scanning."]]},
+    {"t": "تقرير Post-mortem بعد عطل", "cat": "تقرير", "lvl": 3, "code": false, "text": "Incident summary\n\nOn May 12, from 09:10 to 09:55 (45 minutes), customers could not complete payments.\n\nRoot cause: A new version of the checkout service expected a field called `currency_code`, but the payment provider still sent `currency`. Every payment request failed validation.\n\nDetection: Our monitoring alerted the on-call engineer 4 minutes after the deploy.\n\nResolution: We rolled back to the previous version at 09:50. Payments recovered at 09:55.\n\nAction items:\n- Add a contract test for the payment payload (owner: Omar, due May 20).\n- Release checkout changes behind a feature flag (owner: Sara).\n\nThis review is blameless: the goal is to improve the system, not to blame a person.", "kw": [["Incident", "حادثة / عطل"], ["Root cause", "السبب الجذري"], ["on-call engineer", "المهندس المناوب"], ["Resolution", "الحل"], ["feature flag", "مفتاح يشغّل ويقفل ميزة من غير deploy"], ["blameless", "من غير لوم أشخاص"]], "tr": "لمدة 45 دقيقة الدفع كان واقف. السبب: النسخة الجديدة مستنية حقل currency_code والمزوّد بيبعت currency. المراقبة نبّهت بعد 4 دقايق، ورجعوا للنسخة القديمة. المهام الجاية: اختبار للبيانات، وfeature flag.", "qs": [["إيه الـ root cause؟", "اختلاف اسم الحقل: الخدمة مستنية currency_code والمزوّد بيبعت currency."], ["ليه الكتابة blameless مهمة؟", "عشان الناس تحكي اللي حصل بصراحة، والتركيز يبقى على تحسين النظام."]]},
+    {"t": "حوار: اجتماع Standup", "cat": "حوار", "lvl": 1, "code": false, "text": "Lead: Good morning, everyone. Let's start. Ahmed?\nAhmed: Yesterday I finished the Google Sheets integration. Today I'm going to write tests for it. No blockers.\nLead: Great. Mona?\nMona: I'm still working on the login bug. I found the cause, but I need access to the production logs.\nLead: OK, I'll give you access after the meeting.\nMona: Thanks!\nLead: Anything else? No? Let's wrap up. Thanks, everyone.", "kw": [["Let's start", "يلا نبدأ"], ["I'm going to", "هعمل (خطة)"], ["No blockers", "مفيش حاجة موقفاني"], ["I'm still working on", "لسه شغالة على"], ["access", "صلاحية وصول"], ["Let's wrap up", "يلا نختم"]], "tr": "اجتماع standup: أحمد خلّص ربط Google Sheets وهيكتب اختبارات. منى لسه على bug تسجيل الدخول، لقت السبب بس محتاجة صلاحية على logs الـ production، والـ lead هيديهالها.", "qs": [["منى محتاجة إيه؟", "صلاحية وصول لـ production logs."], ["قول الـ standup بتاعك بنفس الشكل", "Yesterday I … Today I'm going to … No blockers."]]},
+    {"t": "حوار: مقابلة شغل", "cat": "حوار", "lvl": 2, "code": false, "text": "Interviewer: Tell me about a challenging bug you fixed.\nCandidate: Sure. Last year, our daily report sometimes showed wrong totals. It only happened on Mondays, so it was hard to reproduce.\nInterviewer: How did you find the cause?\nCandidate: I added logging and compared the Monday data with other days. I found out that weekend orders were counted twice because of a time zone issue.\nInterviewer: And how did you fix it?\nCandidate: I converted all dates to UTC before grouping them, and I added a test for weekend orders. Since then, the totals have been correct.\nInterviewer: Great. What did you learn from it?\nCandidate: To check time zones early, and to add a test every time I fix a bug.", "kw": [["challenging", "صعب / فيه تحدي"], ["reproduce", "تكرر المشكلة عشان تشوفها"], ["logging", "تسجيل الأحداث في الـ logs"], ["counted twice", "اتحسبت مرتين"], ["time zone", "المنطقة الزمنية"], ["Since then", "من ساعتها"]], "tr": "المرشّح حكى bug بطريقة STAR: التقرير بيطلّع أرقام غلط يوم الاتنين. ضاف logging وقارن البيانات، ولقى إن طلبات الويك إند بتتحسب مرتين بسبب المنطقة الزمنية. حوّل التواريخ لـ UTC وضاف اختبار.", "qs": [["حدد Situation وAction وResult", "S: التقرير غلط يوم الاتنين. A: logging ومقارنة وتحويل لـ UTC واختبار. R: الأرقام صح من ساعتها."], ["ليه قال \"Since then, the totals have been correct\" بـ Present perfect؟", "لأنها حاجة بدأت في الماضي ولسه مستمرة لحد دلوقتي."]]},
+    {"t": "حوار: مكالمة مع عميل", "cat": "حوار", "lvl": 2, "code": false, "text": "Client: We want to send a WhatsApp message to every customer after they order.\nDeveloper: Got it. Just to make sure I understand: the message goes out right after the order is paid, not when it's created?\nClient: Right, after payment.\nDeveloper: And what should the message include?\nClient: The order number, the total, and the delivery date.\nDeveloper: OK. Which platform do you use for orders?\nClient: Shopify.\nDeveloper: Perfect. I can build this with n8n and the WhatsApp Business API. I'll send you a short proposal with the timeline and cost by tomorrow.\nClient: Sounds good. Thanks!", "kw": [["Got it", "فهمت"], ["Just to make sure I understand", "عشان أتأكد إني فاهم"], ["right after", "على طول بعد"], ["include", "يحتوي على"], ["timeline", "الجدول الزمني"], ["Sounds good", "تمام"]], "tr": "العميل عايز رسالة واتساب لكل عميل بعد الطلب. المطوّر اتأكد إنها بعد الدفع مش بعد إنشاء الطلب، وسأل عن محتوى الرسالة والمنصة (Shopify)، ووعد يبعت عرض فيه المدة والتكلفة بكرة.", "qs": [["إيه السؤال اللي منع سوء فهم؟", "«بعد الدفع ولا بعد إنشاء الطلب؟» لأن ده بيغيّر الـ trigger."], ["اكتب سؤال توضيح تاني ممكن يتسأل", "What should happen if the customer doesn't have WhatsApp?"]]}
   ];
 
   // ================= phrase templates =================
@@ -1676,7 +1764,44 @@
     {c:'مقابلات', p:'In my last project, I was responsible for ___.', u:'تحدد دورك'},
     {c:'مقابلات', p:'The biggest challenge was ___, so I ___.', u:'تحكي تحدي وحلّه'},
     {c:'مقابلات', p:'As a result, we ___ (by ___%).', u:'النتيجة بالأرقام'},
-    {c:'مقابلات', p:'I haven\'t used ___ yet, but I have used ___, which is similar.', u:'لما تتسأل عن حاجة متعرفهاش'}
+    {c:'مقابلات', p:'I haven\'t used ___ yet, but I have used ___, which is similar.', u:'لما تتسأل عن حاجة متعرفهاش'},
+    {"c": "Code review", "p": "Nit: ___ (not a blocker).", "u": "ملاحظة صغيرة مش هتوقف الدمج"},
+    {"c": "Code review", "p": "What happens if ___ is empty?", "u": "تسأل عن edge case"},
+    {"c": "Code review", "p": "Could we extract this into a separate function?", "u": "تقترح تقسيم الكود"},
+    {"c": "Code review", "p": "I'd suggest ___ because ___.", "u": "اقتراح ومعاه السبب"},
+    {"c": "Code review", "p": "Good catch, thanks! Fixed in ___.", "u": "ترد على ملاحظة صح"},
+    {"c": "Code review", "p": "I kept it this way because ___. Happy to change it if you prefer.", "u": "تشرح اختيارك بأدب"},
+    {"c": "Code review", "p": "Looks good overall. Just a couple of small comments.", "u": "بداية مراجعة ودودة"},
+    {"c": "Code review", "p": "LGTM. Approving.", "u": "موافقة"},
+    {"c": "وصف Pull request", "p": "This PR ___ (adds / fixes / updates) ___.", "u": "أول سطر في وصف أي PR"},
+    {"c": "وصف Pull request", "p": "How to test:\n1. ___\n2. ___", "u": "خطوات التجربة للمراجع"},
+    {"c": "وصف Pull request", "p": "Closes #___", "u": "يقفل الـ issue أوتوماتيك لما يتدمج"},
+    {"c": "وصف Pull request", "p": "Breaking changes: none.", "u": "تطمّن المراجع"},
+    {"c": "التقدير والمواعيد", "p": "I estimate this will take about ___ days.", "u": "تقدير وقت"},
+    {"c": "التقدير والمواعيد", "p": "It depends on ___. I'll know more by ___.", "u": "لما التقدير لسه مش واضح"},
+    {"c": "التقدير والمواعيد", "p": "I can deliver ___ by ___ if ___.", "u": "وعد بشرط"},
+    {"c": "التقدير والمواعيد", "p": "I'm running behind on ___ because ___. The new ETA is ___.", "u": "تبلّغ بتأخير بوضوح"},
+    {"c": "التقدير والمواعيد", "p": "Would it be possible to move the deadline to ___?", "u": "تطلب تأجيل بأدب"},
+    {"c": "التقدير والمواعيد", "p": "To meet the deadline, I suggest we move ___ to the next version.", "u": "تقترح تقليل المطلوب"},
+    {"c": "العرض والشرح", "p": "Let me share my screen.", "u": "بداية عرض"},
+    {"c": "العرض والشرح", "p": "Let me walk you through ___.", "u": "تشرح خطوة بخطوة"},
+    {"c": "العرض والشرح", "p": "As you can see here, ___.", "u": "تشاور على حاجة في الشاشة"},
+    {"c": "العرض والشرح", "p": "To sum up, ___.", "u": "تلخّص"},
+    {"c": "العرض والشرح", "p": "Does that make sense so far?", "u": "تتأكد إنهم فاهمين"},
+    {"c": "العرض والشرح", "p": "Any questions before I move on?", "u": "قبل ما تنتقل لجزء تاني"},
+    {"c": "رسايل سريعة", "p": "Quick question: ___?", "u": "سؤال سريع في Slack"},
+    {"c": "رسايل سريعة", "p": "FYI: ___.", "u": "معلومة للعلم"},
+    {"c": "رسايل سريعة", "p": "Any update on ___?", "u": "تتابع حاجة متأخرة"},
+    {"c": "رسايل سريعة", "p": "I'll get back to you by ___.", "u": "توعد برد في وقت محدد"},
+    {"c": "رسايل سريعة", "p": "Sorry, I missed your message. ___", "u": "اعتذار عن رد متأخر"},
+    {"c": "رسايل سريعة", "p": "Is now a good time for a quick call?", "u": "تطلب مكالمة"},
+    {"c": "التفاوض مع العميل", "p": "That's a great idea. It's not part of the current scope, but I can add it for ___.", "u": "طلب زيادة برّه الاتفاق"},
+    {"c": "التفاوض مع العميل", "p": "Based on the requirements, the cost is ___ and the timeline is ___.", "u": "عرض السعر والمدة"},
+    {"c": "التفاوض مع العميل", "p": "If we remove ___, we can deliver by ___.", "u": "تفاوض على المدة"},
+    {"c": "التفاوض مع العميل", "p": "I'd recommend ___ because it's easier to maintain.", "u": "توصية مع سبب"},
+    {"c": "مقابلات", "p": "Could you tell me more about the team and how you work?", "u": "سؤال منك في آخر المقابلة"},
+    {"c": "مقابلات", "p": "I'm excited about this role because ___.", "u": "تبيّن اهتمامك"},
+    {"c": "مقابلات", "p": "One thing I'm working on improving is ___.", "u": "إجابة سؤال نقطة الضعف"}
   ];
 
   // ================= grammar for programmers =================
@@ -1692,7 +1817,19 @@
     {h:'Countable و uncountable', p:'data وinformation وfeedback وsoftware وcode مبتتجمعش: من غير s ومن غير a.', bad:'Thanks for the feedbacks and the informations.', good:'Thanks for the feedback and the information.'},
     {h:'Prepositions شائعة', p:'in a file، on a page/line، at 10 PM، on Monday، in the code، to the server، from the API.', bad:'The error is in line 12 at the file.', good:'The error is on line 12 in the file.'},
     {h:'Questions صح', p:'السؤال بيبدأ بـ Do/Does/Did أو is/are أو can، وبعدها الفاعل.', bad:'Why the script not working?', good:'Why is the script not working?'},
-    {h:'Make vs Do vs Take', p:'make a request/change/decision. do a test/task/research. take a screenshot/a look/time.', bad:'Can you do a screenshot?', good:'Can you take a screenshot?'}
+    {h:'Make vs Do vs Take', p:'make a request/change/decision. do a test/task/research. take a screenshot/a look/time.', bad:'Can you do a screenshot?', good:'Can you take a screenshot?'},
+    {"h": "Gerund ولا to + فعل", "p": "بعض الأفعال بييجي بعدها ing: avoid وfinish وsuggest وconsider وkeep. وبعضها بييجي بعدها to: want وneed وdecide وplan.", "bad": "I suggest to use a cache.", "good": "I suggest using a cache."},
+    {"h": "Since و for", "p": "since + نقطة بداية (since 2023، since Monday). for + مدة (for two years). والاتنين غالبًا مع present perfect.", "bad": "I work with n8n since two years.", "good": "I have worked with n8n for two years."},
+    {"h": "Will و going to", "p": "will لقرار اللحظة أو وعد. going to لخطة متحددة قبل كده. ومفيش to بعد will.", "bad": "Tomorrow I will to deploy it.", "good": "Tomorrow I'm going to deploy it."},
+    {"h": "Present continuous للشغل الجاري", "p": "am/is/are + ing لحاجة شغال فيها دلوقتي.", "bad": "I work on the bug now.", "good": "I'm working on the bug now."},
+    {"h": "Relative clauses (who / which / that)", "p": "who للناس، وwhich أو that للحاجات. ومتكررش الضمير بعدهم.", "bad": "This is the function that it sends the email.", "good": "This is the function that sends the email."},
+    {"h": "أدوات الربط", "p": "because (عشان)، so (فـ)، but (بس)، however (لكن، وبعدها فاصلة)، although (رغم إن)، therefore (بالتالي).", "bad": "The test passed, however it is slow.", "good": "The test passed. However, it is slow."},
+    {"h": "المقارنة", "p": "er للكلمات القصيرة (faster)، وmore للطويلة (more reliable). ومتجمعش الاتنين.", "bad": "The new version is more faster.", "good": "The new version is faster and more reliable."},
+    {"h": "Too و enough", "p": "too + صفة = زيادة عن اللزوم. صفة + enough = كفاية. enough بتيجي بعد الصفة.", "bad": "The file is enough big.", "good": "The file is big enough."},
+    {"h": "الحروف الكبيرة وأسماء الأدوات", "p": "أسماء اللغات والأدوات بتتكتب بشكلها الرسمي: Python وJavaScript وGitHub وn8n وmacOS. والجملة و I دايمًا بحرف كبير.", "bad": "i use javascript and github.", "good": "I use JavaScript and GitHub."},
+    {"h": "جمع الاختصارات", "p": "الجمع من غير apostrophe: APIs وURLs وPRs. والـ 's للملكية بس.", "bad": "We have three API's.", "good": "We have three APIs."},
+    {"h": "الأرقام والوحدات", "p": "مسافة بين الرقم والوحدة (5 MB، 30 seconds)، والاسم يبقى جمع مع أي رقم غير 1.", "bad": "The file is 5MB and has 3 row.", "good": "The file is 5 MB and has 3 rows."},
+    {"h": "said و told", "p": "said من غير شخص بعدها (He said that…). told لازم بعدها شخص (He told me that…).", "bad": "The client said me that he wants a report.", "good": "The client told me that he wants a report."}
   ];
 
   // ================= library =================
@@ -1758,212 +1895,218 @@
     {c:'حفظ الكلمات', t:'Quizlet', url:'https://quizlet.com/', type:'بطاقات', lvl:'كل المستويات', days:[],
      why:'أسهل من Anki، وفيه مجموعات جاهزة لمفردات البرمجة.', read:'دوّر على "programming vocabulary".'}
   ];
-  LIBRARY.forEach(function(b){ b.age = [13, 99]; b.lang = 'en'; b.paid = false; });
-  ['BBC Learning English','British Council LearnEnglish','Cambridge Dictionary',"Oxford Learner's Dictionaries",'Quizlet','YouGlish','TED Talks','Automate the Boring Stuff (النسخة الإنجليزي)'].forEach(function(t){
-    LIBRARY.forEach(function(b){ if(b.t === t) b.age = [10, 99]; });
-  });
+  LIBRARY.forEach(function(b){ b.lang = 'en'; b.paid = false; });
 
-  // [category, title, url, type, level, minAge, maxAge, why, how to use, flags]  flags: a = Arabic, p = paid/freemium
-  var K_EN = 'للأطفال: إنجليزي', K_CODE = 'للأطفال: برمجة', CODE = 'تعلم البرمجة', AR = 'بالعربي', TEST = 'اختبارات المستوى', TALK = 'كلام ومحادثة';
+  // [category, title, url, type, level, why, how to use, flags]  flags: a = Arabic, p = paid/freemium
+  var CODE = 'تعلم البرمجة', AR = 'بالعربي', TEST = 'اختبارات المستوى', TALK = 'كلام ومحادثة';
   [
-    // ---- kids: English ----
-    [K_EN,'LearnEnglish Kids (British Council)','https://learnenglishkids.britishcouncil.org/','ألعاب وأغاني وقصص','Pre A1 → A2',6,12,'أغاني وقصص قصيرة وألعاب كلمات معمولة للأطفال، ومعاها أوراق شغل للطباعة.','10 دقايق يوميًا: أغنية + لعبة كلمات من نفس الموضوع.',''],
-    [K_EN,'LearnEnglish Teens (British Council)','https://learnenglishteens.britishcouncil.org/','دروس وتمارين','A2 → B2',12,17,'قراءة واستماع وقواعد بمواضيع تهم المراهقين، ومقسّمة حسب المستوى.','قسم Skills: درس قراءة في الأسبوع.',''],
-    [K_EN,'Starfall','https://www.starfall.com/','صوتيات وقراءة','مبتدئ جدًا',5,8,'تعليم الحروف وأصواتها (Phonics) والقراءة الأولى بطريقة تفاعلية.','ABCs وبعدين Learn to Read بالترتيب.','p'],
-    [K_EN,'Teach Your Monster to Read','https://www.teachyourmonster.org/','لعبة قراءة','مبتدئ جدًا',5,8,'لعبة بتعلّم الطفل الحروف والأصوات والكلمات الأولى خطوة خطوة.','جلسة 15 دقيقة، 3 مرات في الأسبوع.',''],
-    [K_EN,'Storyline Online','https://storylineonline.net/','قصص مقروءة بالفيديو','A1 → A2',6,12,'ممثلين بيقروا كتب أطفال بصوت واضح والصور قدامك.','قصة في الأسبوع مع الترجمة الإنجليزي، وبعدين الطفل يحكيها بكلامه.',''],
-    [K_EN,'Oxford Owl','https://www.oxfordowl.co.uk/','كتب إلكترونية','Pre A1 → A2',6,11,'مكتبة كتب إلكترونية مجانية مقسّمة حسب السن، ومعاها نصايح للأهل.','اختار كتاب على قد السن، واقروه سوا بصوت عالي.',''],
-    [K_EN,'StoryWeaver','https://storyweaver.org.in/','قصص مجانية','A1 → B1',6,12,'آلاف القصص المصوّرة المجانية بمستويات، وبعضها بالعربي والإنجليزي.','اقرا القصة بالعربي الأول، وبعدين نفس القصة بالإنجليزي.',''],
-    [K_EN,'Storynory','https://www.storynory.com/','قصص صوتية','A2 → B1',7,12,'قصص وحواديت مسموعة بصوت واضح ومعاها النص.','اسمع القصة مرتين: مرة من غير نص، ومرة مع النص.',''],
-    [K_EN,'PBS Kids','https://pbskids.org/','ألعاب وفيديوهات','مبتدئ',5,9,'ألعاب وفيديوهات تعليمية من شخصيات مشهورة، بإنجليزي بسيط.','لعبة واحدة يوميًا، واطلب من الطفل يقول 3 كلمات سمعها.',''],
-    [K_EN,'CBeebies (BBC)','https://www.bbc.co.uk/cbeebies','برامج أطفال','مبتدئ جدًا',4,7,'برامج BBC للصغيرين، ومنها Alphablocks للحروف والأصوات.','حلقة Alphablocks قصيرة في اليوم.',''],
-    [K_EN,'Sesame Street','https://www.sesamestreet.org/','فيديوهات وألعاب','مبتدئ جدًا',4,7,'حروف وأرقام ومشاعر بأغاني وشخصيات محبوبة.','أغنية حرف في اليوم.',''],
-    [K_EN,'Super Simple Songs (YouTube)','https://www.youtube.com/@SuperSimpleSongs','أغاني','مبتدئ جدًا',4,8,'أغاني بسيطة جدًا للكلمات الأولى: ألوان وأرقام وحيوانات.','غنّوا الأغنية مع الحركات، وكرّروها 3 أيام.',''],
-    [K_EN,'Games to Learn English','https://www.gamestolearnenglish.com/','ألعاب','A1 → A2',7,12,'ألعاب مجانية للكلمات والقواعد والجمل، من غير تسجيل.','لعبة Fast English أو Sentence Builder.',''],
-    [K_EN,'ESL Games Plus','https://www.eslgamesplus.com/','ألعاب','A1 → A2',7,12,'ألعاب مفردات وقواعد مقسّمة حسب الموضوع.','اختار موضوع الأسبوع (ألوان، أفعال، أزمنة) والعب لعبتين.',''],
-    [K_EN,'Wordwall','https://wordwall.net/','أنشطة تفاعلية','كل المستويات',6,14,'آلاف الأنشطة الجاهزة (مطابقة، عجلة، اختيار) من مدرسين حول العالم.','دوّر على "animals" أو "colours" أو "computer parts".','p'],
-    [K_EN,'Kahoot!','https://kahoot.com/','مسابقات','كل المستويات',8,99,'مسابقات جماعية ممتعة، ممتازة للفصل أو العيلة.','دوّر على "English vocabulary" والعبوها سوا.','p'],
-    [K_EN,'Lingokids','https://lingokids.com/','تطبيق','مبتدئ جدًا',4,8,'تطبيق إنجليزي للصغيرين بالألعاب والأغاني.','15 دقيقة في اليوم تحت إشراف.','p'],
-    [K_EN,'Duolingo ABC','https://abc.duolingo.com/','تطبيق قراءة','مبتدئ جدًا',3,8,'تطبيق مجاني لتعليم القراءة بالإنجليزي للأطفال الصغيرين.','درس واحد في اليوم.',''],
-    [K_EN,'Khan Academy Kids','https://learn.khanacademy.org/khan-academy-kids/','تطبيق شامل','مبتدئ جدًا',3,8,'تطبيق مجاني بالكامل: قراءة وحروف وحساب وقصص.','ركّز على Reading وBooks.',''],
-    [K_EN,'National Geographic Kids','https://kids.nationalgeographic.com/','مقالات وصور','A2 → B1',8,12,'مقالات قصيرة عن الحيوانات والفضاء والعلوم بإنجليزي بسيط وصور جميلة.','مقال في الأسبوع، والطفل يكتب 3 حقايق اتعلمها.',''],
-    [K_EN,'NASA Space Place','https://spaceplace.nasa.gov/','علوم وفضاء','A2 → B1',8,12,'شرح الفضاء والعلوم للأطفال بألعاب وأنشطة.','موضوع في الأسبوع، واقروه بصوت عالي.',''],
-    [K_EN,'Britannica Kids','https://kids.britannica.com/','موسوعة أطفال','A2 → B1',8,14,'موسوعة مكتوبة للأطفال بمستويات قراءة مختلفة.','استخدمها في أبحاث المدرسة بالإنجليزي.','p'],
-    [K_EN,'Simple English Wikipedia','https://simple.wikipedia.org/','موسوعة مبسطة','A2 → B1',10,99,'ويكيبيديا بكلمات وجمل أبسط. ممتازة للقراءة عن أي موضوع.','اقرا مقال «Computer» و«Robot» و«Internet».',''],
-    [K_EN,'ReadWorks','https://www.readworks.org/','نصوص قراءة وأسئلة','A1 → B2',7,16,'نصوص قراءة مجانية مع أسئلة فهم، مقسّمة حسب الصف.','نص وأسئلته مرة في الأسبوع.',''],
-    [K_EN,'CommonLit','https://www.commonlit.org/','نصوص قراءة','A2 → C1',10,18,'نصوص قراءة مجانية بأسئلة وتقييم تلقائي.','اختار نص على قد الصف وحلّ أسئلته.',''],
-    [K_EN,'ReadTheory','https://readtheory.org/','قراءة متكيّفة','A1 → C1',8,99,'بيختبر مستواك في القراءة ويديك نصوص على قدّك وبيعلّي المستوى تدريجيًا.','3 نصوص في الأسبوع.',''],
-    [K_EN,'BBC Bitesize','https://www.bbc.co.uk/bitesize','دروس مدرسية','حسب الصف',5,16,'دروس BBC لكل المواد، ومنها English وComputing للابتدائي.','Primary → English أو Computing حسب الصف.',''],
-    [K_EN,'Dance Mat Typing (BBC)','https://www.bbc.co.uk/bitesize/topics/zf2f9j6','تعلم الكتابة على الكيبورد','مبتدئ',7,11,'لعبة BBC لتعليم الكتابة على الكيبورد بالعشر صوابع.','مرحلة واحدة كل يوم.',''],
-    [K_EN,'Turtle Diary','https://www.turtlediary.com/','ألعاب تعليمية','مبتدئ',5,10,'ألعاب إنجليزي وحساب للأطفال مقسّمة حسب الصف.','لعبة كلمات من Grade المناسب.','p'],
-    [K_EN,'ABCya','https://www.abcya.com/','ألعاب تعليمية','مبتدئ',5,11,'ألعاب حروف وكلمات وكتابة مقسّمة حسب الصف.','ركّز على Letters وWords.','p'],
-    [K_EN,'Funbrain','https://www.funbrain.com/','ألعاب وكتب','مبتدئ → A2',6,12,'ألعاب وكتب ومجلات مصوّرة للأطفال.','كتاب قصير في الأسبوع.',''],
-    [K_EN,'Cambridge Pre A1 Starters','https://www.cambridgeenglish.org/exams-and-tests/starters/','امتحان وأنشطة','Pre A1',6,8,'أول امتحانات كامبريدج للأطفال، وفيه أنشطة مجانية وقوايم الكلمات المطلوبة.','حمّل قايمة الكلمات (Wordlist) واستخدمها مرجع.',''],
-    [K_EN,'Cambridge A1 Movers','https://www.cambridgeenglish.org/exams-and-tests/movers/','امتحان وأنشطة','A1',8,11,'المستوى التاني لامتحانات الأطفال، مع أنشطة وتدريبات.','حل نموذج تدريبي كل شهر.',''],
-    [K_EN,'Cambridge A2 Flyers','https://www.cambridgeenglish.org/exams-and-tests/flyers/','امتحان وأنشطة','A2',9,12,'المستوى التالت لامتحانات الأطفال، وقبله اختبار KET.','راجع قايمة الكلمات قبل الامتحان بشهرين.',''],
-    [K_EN,'Merriam-Webster Learner’s Dictionary','https://www.learnersdictionary.com/','قاموس مبسّط','A2 → B2',10,99,'قاموس بتعريفات بسيطة ونطق مسموع، مناسب للأطفال الكبار والمبتدئين.','استخدمه بدل الترجمة المباشرة.',''],
-    // ---- kids: coding ----
-    [K_CODE,'ScratchJr','https://www.scratchjr.org/','برمجة بالبلوكات','مبتدئ جدًا',5,7,'برمجة قصص وألعاب بسيطة بسحب بلوكات بصور، من غير قراءة تقريبًا.','اعمل مع الطفل قصة: شخصية تمشي وتقول Hello.',''],
-    [K_CODE,'Scratch','https://scratch.mit.edu/','برمجة بالبلوكات','مبتدئ',8,16,'أشهر منصة برمجة للأطفال من MIT. البلوكات بالإنجليزي (وممكن تتحوّل عربي)، فالطفل بيتعلم كلمات زي move وrepeat وif.','خلّي اللغة إنجليزي، واعملوا لعبة من Tutorials.',''],
-    [K_CODE,'Code.org','https://code.org/','كورسات وألعاب برمجة','مبتدئ',6,18,'كورسات برمجة مجانية لكل الأعمار، ومنها كورسات بشخصيات Minecraft وFrozen.','ابدأ بـ CS Fundamentals المناسب للسن.',''],
-    [K_CODE,'Hour of Code','https://hourofcode.com/','أنشطة ساعة واحدة','مبتدئ',6,18,'مئات الأنشطة اللي كل واحد فيها ساعة، ينفع تفلترها حسب السن واللغة.','نشاط واحد في الأسبوع.',''],
-    [K_CODE,'Blockly Games','https://blockly.games/','ألعاب برمجة','مبتدئ',8,14,'ألعاب ألغاز من Google بتعلّم المنطق والتكرار والشروط، وفي الآخر بتنقلك لـ JavaScript.','Puzzle ← Maze ← Bird بالترتيب.',''],
-    [K_CODE,'CS Unplugged','https://www.csunplugged.org/','أنشطة من غير كمبيوتر','مبتدئ',5,14,'أنشطة وألعاب لعلوم الكمبيوتر بالورق والحركة من غير شاشة.','نشاط Binary Numbers أو Sorting Networks مع العيلة.',''],
-    [K_CODE,'Barefoot Computing','https://www.barefootcomputing.org/','أنشطة تفكير برمجي','مبتدئ',5,11,'أنشطة للتفكير البرمجي (algorithm وloop وdebug) للابتدائي.','استخدم أنشطة Unplugged في البيت.',''],
-    [K_CODE,'Lightbot','https://lightbot.com/','لعبة ألغاز','مبتدئ',6,12,'لعبة بتوجّه فيها روبوت بأوامر: خطوات، ودوال، وتكرار.','خلّص مرحلة Basics وProcedures.',''],
-    [K_CODE,'CodeCombat','https://codecombat.com/','لعبة برمجة','مبتدئ → متوسط',9,16,'بتكتب كود Python أو JavaScript حقيقي عشان تحرك البطل.','Python، 20 دقيقة في اليوم.','p'],
-    [K_CODE,'CodeMonkey','https://www.codemonkey.com/','لعبة برمجة','مبتدئ',6,14,'بتبرمج قرد يجيب الموز بكود نصّي بسيط.','مرحلة واحدة كل يوم.','p'],
-    [K_CODE,'Kodable','https://www.kodable.com/','برمجة للصغيرين','مبتدئ جدًا',5,10,'برمجة للصغيرين بالألعاب، ومنهج للمدارس.','جلسات قصيرة 15 دقيقة.','p'],
-    [K_CODE,'Tynker','https://www.tynker.com/','كورسات برمجة','مبتدئ',7,14,'برمجة بالبلوكات وبعدين Python، ومودات Minecraft.','ابدأ بالكورس المجاني.','p'],
-    [K_CODE,'Google CS First','https://csfirst.withgoogle.com/','منهج برمجة','مبتدئ',9,14,'منهج Google مجاني بـ Scratch، بفيديوهات قصيرة.','اختار Theme يحبه الطفل (Game Design أو Storytelling).',''],
-    [K_CODE,'Raspberry Pi Projects','https://projects.raspberrypi.org/','مشاريع خطوة بخطوة','مبتدئ → متوسط',8,18,'مئات المشاريع المجانية بـ Scratch وPython وHTML بتعليمات إنجليزي بسيطة.','مشروع في الأسبوع، والطفل يقرا الخطوات بنفسه.',''],
-    [K_CODE,'micro:bit','https://microbit.org/','برمجة أجهزة','مبتدئ',8,14,'كمبيوتر صغير بيتبرمج بالبلوكات أو Python، وفيه محاكي على النت.','جرّب مشروع Flashing heart في المحاكي.',''],
-    [K_CODE,'Microsoft MakeCode','https://makecode.microbit.org/','محرر برمجة','مبتدئ',8,14,'محرر بلوكات وJavaScript وPython للـ micro:bit، وشغال من غير الجهاز.','Tutorials في الصفحة الرئيسية.',''],
-    [K_CODE,'MakeCode Arcade','https://arcade.makecode.com/','صناعة ألعاب','مبتدئ',9,16,'اعمل ألعاب ريترو بالبلوكات أو JavaScript.','Tutorial: Chase the Pizza.',''],
-    [K_CODE,'Minecraft Education','https://education.minecraft.net/','برمجة في Minecraft','مبتدئ',7,14,'دروس برمجة جوه عالم Minecraft.','ابدأ بـ Hour of Code بتاعهم.','p'],
-    [K_CODE,'Snap!','https://snap.berkeley.edu/','برمجة بالبلوكات','متوسط',10,18,'زي Scratch بس أقوى، من جامعة Berkeley.','بعد ما تتقن Scratch.',''],
-    [K_CODE,'Pencil Code','https://pencilcode.net/','برمجة بلوكات ونص','مبتدئ',9,16,'بتقلب بين البلوكات والكود النصّي بضغطة.','ارسم أشكال بالسلحفاة.',''],
-    [K_CODE,'Turtle Academy','https://turtleacademy.com/','برمجة Logo','مبتدئ',8,14,'دروس Logo: بتكتب forward 100 وright 90 وتشوف الرسمة.','ممتاز لكلمات الاتجاهات والأرقام بالإنجليزي.',''],
-    [K_CODE,'Swift Playgrounds','https://www.apple.com/swift/playgrounds/','برمجة Swift','مبتدئ',10,18,'تطبيق Apple لتعلم البرمجة بالألغاز (على iPad وMac).','Learn to Code 1.',''],
-    [K_CODE,'MIT App Inventor','https://appinventor.mit.edu/','صناعة تطبيقات','مبتدئ',10,18,'اعمل تطبيق موبايل حقيقي بالبلوكات.','Hello Purr أول مشروع.',''],
-    [K_CODE,'Tinkercad','https://www.tinkercad.com/','تصميم 3D ودوائر','مبتدئ',8,18,'تصميم ثلاثي الأبعاد ودوائر كهربا وبرمجة بالبلوكات.','Learn → Lessons.',''],
-    [K_CODE,'Teachable Machine','https://teachablemachine.withgoogle.com/','ذكاء اصطناعي','مبتدئ',10,99,'درّب نموذج ذكاء اصطناعي بسيط على صور أو أصوات في دقايق.','درّبه يفرّق بين 3 حاجات.',''],
-    [K_CODE,'Quick, Draw!','https://quickdraw.withgoogle.com/','لعبة ذكاء اصطناعي','مبتدئ',6,99,'ارسم والكمبيوتر يخمّن. بيعلّم كلمات إنجليزي كتير (الكلمة المطلوبة بتتكتب).','العبوها سوا واقروا الكلمة بصوت عالي.',''],
-    [K_CODE,'Machine Learning for Kids','https://machinelearningforkids.co.uk/','ذكاء اصطناعي + Scratch','مبتدئ',10,16,'مشاريع ذكاء اصطناعي بتتبرمج في Scratch.','مشروع Make me happy.',''],
-    [K_CODE,'Hello Ruby','https://www.helloruby.com/','قصص وأنشطة','مبتدئ جدًا',5,8,'قصص وأنشطة ورقية بتعرّف الصغيرين على الكمبيوتر.','نشاط واحد مطبوع في الأسبوع.',''],
-    [K_CODE,'Be Internet Awesome (Google)','https://beinternetawesome.withgoogle.com/','أمان على الإنترنت','مبتدئ',7,12,'لعبة Interland بتعلّم الأطفال كلمة السر والأمان والتصرف الصح أونلاين.','العبوا Interland سوا.',''],
-    [K_CODE,'Common Sense Media','https://www.commonsensemedia.org/','دليل للأهل','—',4,18,'تقييمات للتطبيقات والألعاب والأفلام حسب السن، للأهل والمدرسين.','قبل ما تنزّل تطبيق للطفل.',''],
-    // ---- coding (teens & adults) ----
-    [CODE,'MDN Web Docs','https://developer.mozilla.org/','توثيق','كل المستويات',13,99,'أهم مرجع لـ HTML وCSS وJavaScript، بإنجليزي تقني واضح.','اقرا صفحة عنصر أو دالة كل يوم.',''],
-    [CODE,'W3Schools','https://www.w3schools.com/','دروس وأمثلة','مبتدئ',12,99,'دروس قصيرة وأمثلة تجرّبها في المتصفح.','Try it Yourself في كل درس.',''],
-    [CODE,'freeCodeCamp Learn','https://www.freecodecamp.org/learn','منهج مجاني','مبتدئ → متوسط',13,99,'مناهج كاملة بشهادات مجانية، وكل التعليمات بالإنجليزي.','Responsive Web Design أو Python.',''],
-    [CODE,'The Odin Project','https://www.theodinproject.com/','منهج ويب','مبتدئ → متوسط',15,99,'منهج كامل لتطوير الويب مبني على قراءة التوثيق الحقيقي.','Foundations بالترتيب.',''],
-    [CODE,'CS50x (Harvard)','https://cs50.harvard.edu/x/','كورس جامعي','مبتدئ',15,99,'أشهر كورس مقدمة في علوم الحاسب، مجاني وبترجمة.','محاضرة في الأسبوع + Problem Set.',''],
-    [CODE,'Codecademy','https://www.codecademy.com/','كورسات تفاعلية','مبتدئ',13,99,'دروس تفاعلية بتكتب فيها كود حقيقي من أول دقيقة.','Learn Python 3 (الجزء المجاني).','p'],
-    [CODE,'Exercism','https://exercism.org/','تمارين + مراجعة','مبتدئ → متقدم',14,99,'تمارين في أكتر من 60 لغة، ومرشدين بيعلّقوا على كودك بالإنجليزي.','تمرين في اليوم، واقرا تعليقات المرشد.',''],
-    [CODE,'Python Tutor','https://pythontutor.com/','تصوّر الكود','مبتدئ',11,99,'بيوريك الكود بيتنفذ إزاي خطوة خطوة. ممتاز لفهم الـ variables والـ loops.','حط أي كود مش فاهمه وشوفه خطوة خطوة.',''],
-    [CODE,'Trinket','https://trinket.io/','محرر أونلاين','مبتدئ',10,99,'اكتب Python وHTML في المتصفح من غير تثبيت.','استخدمه لتمارين الأطفال الكبار.',''],
-    [CODE,'Replit','https://replit.com/','محرر أونلاين','مبتدئ → متوسط',13,99,'بيئة برمجة كاملة في المتصفح.','جرّب كود من غير ما تثبّت حاجة.','p'],
-    [CODE,'SoloLearn','https://www.sololearn.com/','تطبيق','مبتدئ',13,99,'دروس قصيرة على الموبايل ومجتمع أسئلة.','درس في المواصلات.','p'],
-    [CODE,'Mimo','https://mimo.org/','تطبيق','مبتدئ',13,99,'تعلم برمجة على الموبايل بدروس 5 دقايق.','درس في اليوم.','p'],
-    [CODE,'Khan Academy Computing','https://www.khanacademy.org/computing','كورسات','مبتدئ',10,99,'برمجة ورسوم وعلوم حاسب مجانًا بفيديوهات إنجليزي واضحة.','Intro to JS: Drawing & Animation.',''],
-    [CODE,'roadmap.sh','https://roadmap.sh/','خرائط تعلم','كل المستويات',15,99,'خرايط بتقولك تتعلم إيه بالترتيب في كل مجال.','اختار خريطة مجالك وعلّم على اللي خلصته.',''],
-    [CODE,'The Missing Semester (MIT)','https://missing.csail.mit.edu/','كورس أدوات','متوسط',16,99,'الأدوات اللي محدش بيعلّمهالك: Terminal وGit والـ Editors.','محاضرة Shell وVersion Control.',''],
-    [CODE,'Pro Git (الكتاب الرسمي)','https://git-scm.com/book/en/v2','كتاب مجاني','مبتدئ → متوسط',14,99,'الكتاب الرسمي لـ Git، مجاني ومترجم للغات كتير.','فصل 1 و2 و3.',''],
-    [CODE,'GitHub Docs','https://docs.github.com/','توثيق','كل المستويات',13,99,'توثيق GitHub: Repos وIssues وPull requests وPages.','ابدأ بـ Get started، وبعدين GitHub Pages.',''],
-    [CODE,'GitHub Skills','https://skills.github.com/','كورسات تفاعلية','مبتدئ',13,99,'كورسات بتتعمل جوه GitHub نفسه، وبوت بيرد عليك بالإنجليزي.','Introduction to GitHub.',''],
-    [CODE,'GitHub Pages','https://pages.github.com/','استضافة مجانية','مبتدئ',13,99,'انشر موقعك (زي الصفحة دي) مجانًا من Repo.','اتبع الخطوات في الصفحة الرئيسية.',''],
-    [CODE,'Eloquent JavaScript','https://eloquentjavascript.net/','كتاب مجاني','متوسط',15,99,'كتاب JavaScript مجاني وبإنجليزي أدبي جميل، وفيه تمارين.','فصل كل أسبوع.',''],
-    [CODE,'Invent with Python','https://inventwithpython.com/','كتب مجانية','مبتدئ',11,99,'كتب مجانية لنفس مؤلف Automate the Boring Stuff، منها صناعة ألعاب بـ Python.','Invent Your Own Computer Games with Python.',''],
-    [CODE,'Composing Programs','https://www.composingprograms.com/','كتاب مجاني','متوسط',16,99,'كتاب Berkeley لأساسيات البرمجة بـ Python.','فصل 1.',''],
-    [CODE,'PEP 8 — Style Guide for Python','https://peps.python.org/pep-0008/','مرجع رسمي','متوسط',14,99,'قواعد كتابة وتسمية كود Python الرسمية.','Naming Conventions وComments.',''],
-    [CODE,'PEP 257 — Docstring Conventions','https://peps.python.org/pep-0257/','مرجع رسمي','متوسط',14,99,'إزاي تكتب docstrings صح.','One-line و Multi-line Docstrings.',''],
-    [CODE,'n8n Docs','https://docs.n8n.io/','توثيق','متوسط',16,99,'توثيق n8n الرسمي. تمرين حقيقي على قراءة توثيق أداة بتشتغل بيها.','Courses → Level one.',''],
-    [CODE,'n8n Community','https://community.n8n.io/','منتدى','متوسط',16,99,'منتدى أسئلة وأجوبة. اقرا أسئلة الناس وإزاي اتردّ عليها.','اقرا 3 مواضيع محلولة في الأسبوع.',''],
-    [CODE,'DigitalOcean Tutorials','https://www.digitalocean.com/community/tutorials','مقالات','مبتدئ → متوسط',15,99,'شروحات بإنجليزي واضح جدًا ومنظّم خطوة بخطوة.','اختار شرح أداة بتستخدمها.',''],
-    [CODE,'DEV Community','https://dev.to/','مقالات مجتمع','كل المستويات',15,99,'مقالات قصيرة من مبرمجين، ممتازة للقراءة اليومية.','مقال قصير يوميًا مع قهوة الصبح.',''],
-    [CODE,'Stack Overflow','https://stackoverflow.com/','أسئلة وأجوبة','كل المستويات',14,99,'أكبر موقع أسئلة برمجة. اقرا الأسئلة الأعلى تقييمًا عشان تتعلم إزاي بتتكتب.','دوّر على رسالة الخطأ بتاعتك بالإنجليزي.',''],
-    [CODE,'Semantic Versioning','https://semver.org/','مواصفة','مبتدئ',14,99,'معنى أرقام الإصدارات زي 2.10.3، ولغة الـ breaking change.','Summary بس.',''],
-    [CODE,'Keep a Changelog','https://keepachangelog.com/','دليل','مبتدئ',14,99,'إزاي تكتب سجل تغييرات: Added وChanged وFixed وRemoved.','الصفحة كلها 5 دقايق.',''],
-    [CODE,'How to Write a Git Commit Message','https://cbea.ms/git-commit/','مقال','مبتدئ',14,99,'المقال المرجعي للـ commit messages: السبع قواعد.','اقراه واحفظ القواعد السبعة.',''],
-    [CODE,'Diátaxis','https://diataxis.fr/','إطار توثيق','متوسط',16,99,'إطار لتنظيم التوثيق: Tutorials وHow-to وReference وExplanation.','Start here.',''],
+    // ---- coding ----
+    [CODE,'MDN Web Docs','https://developer.mozilla.org/','توثيق','كل المستويات','أهم مرجع لـ HTML وCSS وJavaScript، بإنجليزي تقني واضح.','اقرا صفحة عنصر أو دالة كل يوم.',''],
+    [CODE,'W3Schools','https://www.w3schools.com/','دروس وأمثلة','مبتدئ','دروس قصيرة وأمثلة تجرّبها في المتصفح.','Try it Yourself في كل درس.',''],
+    [CODE,'freeCodeCamp Learn','https://www.freecodecamp.org/learn','منهج مجاني','مبتدئ → متوسط','مناهج كاملة بشهادات مجانية، وكل التعليمات بالإنجليزي.','Responsive Web Design أو Python.',''],
+    [CODE,'The Odin Project','https://www.theodinproject.com/','منهج ويب','مبتدئ → متوسط','منهج كامل لتطوير الويب مبني على قراءة التوثيق الحقيقي.','Foundations بالترتيب.',''],
+    [CODE,'CS50x (Harvard)','https://cs50.harvard.edu/x/','كورس جامعي','مبتدئ','أشهر كورس مقدمة في علوم الحاسب، مجاني وبترجمة.','محاضرة في الأسبوع + Problem Set.',''],
+    [CODE,'Codecademy','https://www.codecademy.com/','كورسات تفاعلية','مبتدئ','دروس تفاعلية بتكتب فيها كود حقيقي من أول دقيقة.','Learn Python 3 (الجزء المجاني).','p'],
+    [CODE,'Exercism','https://exercism.org/','تمارين + مراجعة','مبتدئ → متقدم','تمارين في أكتر من 60 لغة، ومرشدين بيعلّقوا على كودك بالإنجليزي.','تمرين في اليوم، واقرا تعليقات المرشد.',''],
+    [CODE,'Python Tutor','https://pythontutor.com/','تصوّر الكود','مبتدئ','بيوريك الكود بيتنفذ إزاي خطوة خطوة. ممتاز لفهم الـ variables والـ loops.','حط أي كود مش فاهمه وشوفه خطوة خطوة.',''],
+    [CODE,'Trinket','https://trinket.io/','محرر أونلاين','مبتدئ','اكتب Python وHTML في المتصفح من غير تثبيت.','جرّب فيه أمثلة الكود من غير ما تثبّت حاجة.',''],
+    [CODE,'Replit','https://replit.com/','محرر أونلاين','مبتدئ → متوسط','بيئة برمجة كاملة في المتصفح.','جرّب كود من غير ما تثبّت حاجة.','p'],
+    [CODE,'SoloLearn','https://www.sololearn.com/','تطبيق','مبتدئ','دروس قصيرة على الموبايل ومجتمع أسئلة.','درس في المواصلات.','p'],
+    [CODE,'Mimo','https://mimo.org/','تطبيق','مبتدئ','تعلم برمجة على الموبايل بدروس 5 دقايق.','درس في اليوم.','p'],
+    [CODE,'Khan Academy Computing','https://www.khanacademy.org/computing','كورسات','مبتدئ','برمجة ورسوم وعلوم حاسب مجانًا بفيديوهات إنجليزي واضحة.','Intro to JS: Drawing & Animation.',''],
+    [CODE,'roadmap.sh','https://roadmap.sh/','خرائط تعلم','كل المستويات','خرايط بتقولك تتعلم إيه بالترتيب في كل مجال.','اختار خريطة مجالك وعلّم على اللي خلصته.',''],
+    [CODE,'The Missing Semester (MIT)','https://missing.csail.mit.edu/','كورس أدوات','متوسط','الأدوات اللي محدش بيعلّمهالك: Terminal وGit والـ Editors.','محاضرة Shell وVersion Control.',''],
+    [CODE,'Pro Git (الكتاب الرسمي)','https://git-scm.com/book/en/v2','كتاب مجاني','مبتدئ → متوسط','الكتاب الرسمي لـ Git، مجاني ومترجم للغات كتير.','فصل 1 و2 و3.',''],
+    [CODE,'GitHub Docs','https://docs.github.com/','توثيق','كل المستويات','توثيق GitHub: Repos وIssues وPull requests وPages.','ابدأ بـ Get started، وبعدين GitHub Pages.',''],
+    [CODE,'GitHub Skills','https://skills.github.com/','كورسات تفاعلية','مبتدئ','كورسات بتتعمل جوه GitHub نفسه، وبوت بيرد عليك بالإنجليزي.','Introduction to GitHub.',''],
+    [CODE,'GitHub Pages','https://pages.github.com/','استضافة مجانية','مبتدئ','انشر موقعك (زي الصفحة دي) مجانًا من Repo.','اتبع الخطوات في الصفحة الرئيسية.',''],
+    [CODE,'Eloquent JavaScript','https://eloquentjavascript.net/','كتاب مجاني','متوسط','كتاب JavaScript مجاني وبإنجليزي أدبي جميل، وفيه تمارين.','فصل كل أسبوع.',''],
+    [CODE,'Invent with Python','https://inventwithpython.com/','كتب مجانية','مبتدئ','كتب مجانية لنفس مؤلف Automate the Boring Stuff، منها صناعة ألعاب بـ Python.','Invent Your Own Computer Games with Python.',''],
+    [CODE,'Composing Programs','https://www.composingprograms.com/','كتاب مجاني','متوسط','كتاب Berkeley لأساسيات البرمجة بـ Python.','فصل 1.',''],
+    [CODE,'PEP 8 — Style Guide for Python','https://peps.python.org/pep-0008/','مرجع رسمي','متوسط','قواعد كتابة وتسمية كود Python الرسمية.','Naming Conventions وComments.',''],
+    [CODE,'PEP 257 — Docstring Conventions','https://peps.python.org/pep-0257/','مرجع رسمي','متوسط','إزاي تكتب docstrings صح.','One-line و Multi-line Docstrings.',''],
+    [CODE,'n8n Docs','https://docs.n8n.io/','توثيق','متوسط','توثيق n8n الرسمي. تمرين حقيقي على قراءة توثيق أداة بتشتغل بيها.','Courses → Level one.',''],
+    [CODE,'n8n Community','https://community.n8n.io/','منتدى','متوسط','منتدى أسئلة وأجوبة. اقرا أسئلة الناس وإزاي اتردّ عليها.','اقرا 3 مواضيع محلولة في الأسبوع.',''],
+    [CODE,'DigitalOcean Tutorials','https://www.digitalocean.com/community/tutorials','مقالات','مبتدئ → متوسط','شروحات بإنجليزي واضح جدًا ومنظّم خطوة بخطوة.','اختار شرح أداة بتستخدمها.',''],
+    [CODE,'DEV Community','https://dev.to/','مقالات مجتمع','كل المستويات','مقالات قصيرة من مبرمجين، ممتازة للقراءة اليومية.','مقال قصير يوميًا مع قهوة الصبح.',''],
+    [CODE,'Stack Overflow','https://stackoverflow.com/','أسئلة وأجوبة','كل المستويات','أكبر موقع أسئلة برمجة. اقرا الأسئلة الأعلى تقييمًا عشان تتعلم إزاي بتتكتب.','دوّر على رسالة الخطأ بتاعتك بالإنجليزي.',''],
+    [CODE,'Semantic Versioning','https://semver.org/','مواصفة','مبتدئ','معنى أرقام الإصدارات زي 2.10.3، ولغة الـ breaking change.','Summary بس.',''],
+    [CODE,'Keep a Changelog','https://keepachangelog.com/','دليل','مبتدئ','إزاي تكتب سجل تغييرات: Added وChanged وFixed وRemoved.','الصفحة كلها 5 دقايق.',''],
+    [CODE,'How to Write a Git Commit Message','https://cbea.ms/git-commit/','مقال','مبتدئ','المقال المرجعي للـ commit messages: السبع قواعد.','اقراه واحفظ القواعد السبعة.',''],
+    [CODE,'Diátaxis','https://diataxis.fr/','إطار توثيق','متوسط','إطار لتنظيم التوثيق: Tutorials وHow-to وReference وExplanation.','Start here.',''],
     // ---- more dictionaries / writing / grammar / listening / reading ----
-    ['قواميس ونطق','Merriam-Webster','https://www.merriam-webster.com/','قاموس','كل المستويات',12,99,'قاموس أمريكي بنطق مسموع وأمثلة، وكلمة اليوم.','دوّر على الكلمة واسمع النطق.',''],
-    ['قواميس ونطق','Longman Dictionary','https://www.ldoceonline.com/','قاموس متعلمين','كل المستويات',12,99,'تعريفات بـ 2000 كلمة أساسية بس، وأمثلة مسموعة.','بديل ممتاز لـ Cambridge.',''],
-    ['قواميس ونطق','Collins Dictionary','https://www.collinsdictionary.com/','قاموس','كل المستويات',12,99,'قاموس فيه نطق وأمثلة وترجمة لغات.','شوف تكرار الكلمة (Frequency).',''],
-    ['قواميس ونطق','Forvo','https://forvo.com/','نطق','كل المستويات',10,99,'نطق كلمات بأصوات ناس حقيقيين من بلاد مختلفة.','لأسماء الأدوات والشركات (nginx, Kubernetes).',''],
-    ['قواميس ونطق','Thesaurus.com','https://www.thesaurus.com/','مرادفات','متوسط',12,99,'مرادفات وأضداد لأي كلمة.','لما تكرر نفس الكلمة في README.',''],
-    ['قواميس ونطق','Ludwig','https://ludwig.guru/','محرك جمل','متوسط',15,99,'بيوريك الجملة بتاعتك اتكتبت قبل كده في مصادر موثوقة ولا لأ.','لما تشك في تركيبة جملة.','p'],
-    ['قواميس ونطق','Google Books Ngram Viewer','https://books.google.com/ngrams','شيوع الكلمات','متقدم',15,99,'بيقارن أنهي تعبير أشهر في الكتب.','قارن "in the code" و "on the code".',''],
-    ['قواميس ونطق','Tatoeba','https://tatoeba.org/','جمل مترجمة','كل المستويات',12,99,'ملايين الجمل المترجمة بين لغات كتير منها العربي، وبعضها بصوت.','دوّر على كلمة واقرا 5 جمل بيها.',''],
-    ['قواميس ونطق','Oxford 3000 & 5000','https://www.oxfordlearnersdictionaries.com/wordlists/oxford3000-5000','قايمة كلمات','A1 → C1',10,99,'أهم 3000 و5000 كلمة إنجليزي مقسمة بمستويات CEFR.','فلتر على A1 وA2 للأطفال، وB1 وB2 للكبار.',''],
-    ['قواميس ونطق','English Vocabulary Profile','https://www.englishprofile.org/wordlists','مستوى الكلمات','A1 → C2',15,99,'بيقولك كل كلمة (وكل معنى ليها) في أنهي مستوى CEFR.','تحقق من مستوى كلمة قبل ما تعلّمها.',''],
-    ['كتابة تقنية','Plain Language Guidelines','https://www.plainlanguage.gov/guidelines/','دليل','متوسط',15,99,'إرشادات الكتابة البسيطة الواضحة.','جزء Write for your audience.',''],
-    ['كتابة تقنية','Purdue OWL','https://owl.purdue.edu/','مرجع كتابة','متوسط',14,99,'مرجع جامعي للكتابة والقواعد وعلامات الترقيم.','Punctuation وSentence Clarity.',''],
-    ['تصحيح الكتابة','Grammarly','https://www.grammarly.com/','أداة تصحيح','كل المستويات',13,99,'تصحيح قواعد وأسلوب وهو بيشرح الغلطة.','اقرا شرح كل تصحيح، متقبلوش وخلاص.','p'],
-    ['تصحيح الكتابة','QuillBot','https://quillbot.com/','إعادة صياغة','كل المستويات',13,99,'إعادة صياغة وتدقيق. استخدمه عشان تشوف طرق تانية لنفس الجملة.','اكتب جملتك، وقارن بـ 3 صياغات.','p'],
-    ['تصحيح الكتابة','Google Translate','https://translate.google.com/','مترجم','كل المستويات',8,99,'ترجمة سريعة ونطق. ممتاز للكلمة الواحدة، وضعيف في الجمل التقنية الطويلة.','استخدم زرار السماعة للنطق.',''],
-    ['قواعد','Grammar Monster','https://www.grammar-monster.com/','شرح + اختبارات','مبتدئ → متوسط',11,99,'شرح قواعد بأمثلة واختبارات قصيرة.','Common grammar errors.',''],
-    ['قواعد','EnglishClub','https://www.englishclub.com/','دروس','مبتدئ → متوسط',10,99,'دروس قواعد ومفردات ونطق منظّمة.','Grammar → Verbs.',''],
-    ['قواعد','Randall’s ESL Cyber Listening Lab','https://www.esl-lab.com/','استماع + أسئلة','مبتدئ → متقدم',10,99,'مقاطع استماع مع أسئلة فهم حسب المستوى.','مقطع Easy في اليوم.',''],
-    ['استماع','BBC Learning English (YouTube)','https://www.youtube.com/@bbclearningenglish','فيديوهات','مبتدئ → متوسط',10,99,'فيديوهات قصيرة للنطق والقواعد والتعبيرات.','Pronunciation playlist.',''],
-    ['استماع','Rachel’s English','https://www.youtube.com/@rachelsenglish','نطق أمريكي','متوسط',13,99,'أفضل قناة لتفاصيل النطق الأمريكي وربط الكلمات.','فيديو في الأسبوع + Shadowing.',''],
-    ['استماع','English with Lucy','https://www.youtube.com/@EnglishwithLucy','نطق وقواعد','متوسط',13,99,'نطق بريطاني وقواعد ومفردات.','فيديو في الأسبوع.',''],
-    ['استماع','TED-Ed','https://ed.ted.com/','دروس متحركة','A2 → B2',10,99,'دروس كرتون قصيرة عن العلوم والتكنولوجيا بنص مكتوب.','فيديو 5 دقايق مع الترجمة الإنجليزي.',''],
-    ['استماع','Crash Course','https://www.youtube.com/@crashcourse','فيديوهات تعليمية','متوسط',13,99,'سلاسل سريعة، منها Computer Science.','سلسلة Computer Science بالترتيب.',''],
-    ['استماع','Kurzgesagt','https://www.youtube.com/@kurzgesagt','علوم متحركة','متوسط',11,99,'فيديوهات علمية جميلة بإنجليزي واضح.','فيديو في الأسبوع بالترجمة الإنجليزي.',''],
-    ['استماع','Fireship','https://www.youtube.com/@Fireship','فيديوهات برمجة','متوسط',15,99,'شرح تقنيات في 100 ثانية، إنجليزي سريع. تحدي استماع ممتاز.','«in 100 Seconds» مرتين: بترجمة ومن غير.',''],
-    ['استماع','Traversy Media','https://www.youtube.com/@TraversyMedia','فيديوهات برمجة','مبتدئ → متوسط',14,99,'كورسات ويب بإنجليزي واضح.','Crash courses.',''],
-    ['استماع','CS Dojo','https://www.youtube.com/@CSDojo','فيديوهات برمجة','مبتدئ',12,99,'شرح Python وخوارزميات بهدوء وبساطة.','Python for beginners playlist.',''],
-    ['استماع','Tech With Tim','https://www.youtube.com/@TechWithTim','فيديوهات برمجة','مبتدئ → متوسط',13,99,'مشاريع Python عملية.','مشروع واحد في الأسبوع.',''],
-    ['استماع','The Net Ninja','https://www.youtube.com/@NetNinja','فيديوهات برمجة','مبتدئ → متوسط',14,99,'سلاسل قصيرة ومنظّمة جدًا لأدوات الويب.','سلسلة أداة بتتعلمها.',''],
-    ['استماع','Talk Python To Me','https://talkpython.fm/','بودكاست','متوسط',16,99,'بودكاست Python أسبوعي بمقابلات مع مطورين.','حلقة في الأسبوع وانت ماشي.',''],
-    ['استماع','Python Bytes','https://pythonbytes.fm/','بودكاست','متوسط',16,99,'أخبار Python في حلقات قصيرة.','حلقة في الأسبوع.',''],
-    ['استماع','Real Python Podcast','https://realpython.com/podcasts/rpp/','بودكاست','متوسط',16,99,'نقاشات Python عملية بإنجليزي واضح.','حلقة في الأسبوع.',''],
-    ['استماع','Syntax','https://syntax.fm/','بودكاست','متوسط',16,99,'بودكاست تطوير ويب بأسلوب خفيف.','حلقة Hasty Treat قصيرة.',''],
-    ['استماع','The Changelog','https://changelog.com/podcast','بودكاست','متقدم',16,99,'مقابلات عن البرمجيات مفتوحة المصدر.','لما تتقدم في الاستماع.',''],
-    ['استماع','CodeNewbie Podcast','https://www.codenewbie.org/podcast','بودكاست','مبتدئ',15,99,'قصص ناس بتبدأ في البرمجة.','حلقة في الأسبوع.',''],
-    ['استماع','All Ears English','https://www.allearsenglish.com/','بودكاست','متوسط',15,99,'إنجليزي أمريكي طبيعي للمحادثة اليومية.','حلقة 15 دقيقة.',''],
-    ['استماع','Luke’s English Podcast','https://teacherluke.co.uk/','بودكاست','متوسط → متقدم',15,99,'بودكاست بريطاني طويل وممتع.','حلقة في الأسبوع على مراحل.',''],
-    ['قراءة','Breaking News English','https://breakingnewsenglish.com/','أخبار بمستويات','A1 → C1',10,99,'نفس الخبر مكتوب بـ 7 مستويات، ومعاه صوت وتمارين.','اقرا الخبر في مستواك، وبعدين المستوى اللي فوقه.',''],
-    ['قراءة','News in Levels','https://www.newsinlevels.com/','أخبار بمستويات','A1 → B1',10,99,'أخبار قصيرة بـ 3 مستويات ومعاها فيديو.','Level 1 للأطفال، Level 3 للكبار.',''],
-    ['قراءة','Newsela','https://newsela.com/','مقالات بمستويات','A2 → C1',8,18,'مقالات أخبار وعلوم بمستويات قراءة للمدارس.','مقال في الأسبوع.','p'],
-    ['قراءة','Project Gutenberg','https://www.gutenberg.org/','كتب مجانية','متوسط → متقدم',10,99,'أكتر من 70 ألف كتاب كلاسيكي مجاني.','Alice’s Adventures in Wonderland للأطفال الكبار.',''],
-    ['قراءة','Readlang','https://readlang.com/','قراءة مع ترجمة','كل المستويات',13,99,'اضغط على أي كلمة في أي صفحة تشوف ترجمتها وتتحفظ كبطاقة.','استخدمه وانت بتقرا التوثيق.','p'],
-    ['قراءة','LingQ','https://www.lingq.com/','قراءة واستماع','كل المستويات',13,99,'قراءة نصوص مع صوتها وحفظ الكلمات الجديدة.','درس في اليوم.','p'],
-    ['حفظ الكلمات','Memrise','https://www.memrise.com/','تطبيق كلمات','كل المستويات',10,99,'حفظ كلمات بفيديوهات لناس بتتكلم.','10 دقايق يوميًا.','p'],
-    ['حفظ الكلمات','Vocabulary.com','https://www.vocabulary.com/','قاموس + ألعاب','متوسط',11,99,'شرح بسيط لكل كلمة وألعاب تكرار ذكية.','قايمة كلمات تقنية.','p'],
-    ['حفظ الكلمات','Duolingo','https://www.duolingo.com/','تطبيق لغات','مبتدئ → متوسط',8,99,'تطبيق يومي مجاني، فيه كورس إنجليزي للمتكلمين بالعربي.','درس يومي عشان الـ streak.',''],
-    ['حفظ الكلمات','LyricsTraining','https://lyricstraining.com/','أغاني','كل المستويات',9,99,'بتكمّل كلمات الأغاني وانت بتسمعها.','أغنية تحبها في مستوى Beginner.',''],
-    ['حفظ الكلمات','Monkeytype','https://monkeytype.com/','سرعة كتابة','كل المستويات',10,99,'تدريب سرعة الكتابة بالإنجليزي، وفيه وضع كود.','5 دقايق يوميًا.',''],
-    ['حفظ الكلمات','keybr','https://www.keybr.com/','تعلم الكتابة','مبتدئ',9,99,'تعلم الكتابة باللمس خطوة خطوة.','10 دقايق يوميًا.',''],
-    ['حفظ الكلمات','TypingClub','https://www.typingclub.com/','تعلم الكتابة','مبتدئ',7,99,'دروس كتابة على الكيبورد للأطفال والكبار.','درس في اليوم.',''],
+    ['قواميس ونطق','Merriam-Webster','https://www.merriam-webster.com/','قاموس','كل المستويات','قاموس أمريكي بنطق مسموع وأمثلة، وكلمة اليوم.','دوّر على الكلمة واسمع النطق.',''],
+    ['قواميس ونطق','Longman Dictionary','https://www.ldoceonline.com/','قاموس متعلمين','كل المستويات','تعريفات بـ 2000 كلمة أساسية بس، وأمثلة مسموعة.','بديل ممتاز لـ Cambridge.',''],
+    ['قواميس ونطق','Collins Dictionary','https://www.collinsdictionary.com/','قاموس','كل المستويات','قاموس فيه نطق وأمثلة وترجمة لغات.','شوف تكرار الكلمة (Frequency).',''],
+    ['قواميس ونطق','Forvo','https://forvo.com/','نطق','كل المستويات','نطق كلمات بأصوات ناس حقيقيين من بلاد مختلفة.','لأسماء الأدوات والشركات (nginx, Kubernetes).',''],
+    ['قواميس ونطق','Thesaurus.com','https://www.thesaurus.com/','مرادفات','متوسط','مرادفات وأضداد لأي كلمة.','لما تكرر نفس الكلمة في README.',''],
+    ['قواميس ونطق','Ludwig','https://ludwig.guru/','محرك جمل','متوسط','بيوريك الجملة بتاعتك اتكتبت قبل كده في مصادر موثوقة ولا لأ.','لما تشك في تركيبة جملة.','p'],
+    ['قواميس ونطق','Google Books Ngram Viewer','https://books.google.com/ngrams','شيوع الكلمات','متقدم','بيقارن أنهي تعبير أشهر في الكتب.','قارن "in the code" و "on the code".',''],
+    ['قواميس ونطق','Tatoeba','https://tatoeba.org/','جمل مترجمة','كل المستويات','ملايين الجمل المترجمة بين لغات كتير منها العربي، وبعضها بصوت.','دوّر على كلمة واقرا 5 جمل بيها.',''],
+    ['قواميس ونطق','Oxford 3000 & 5000','https://www.oxfordlearnersdictionaries.com/wordlists/oxford3000-5000','قايمة كلمات','A1 → C1','أهم 3000 و5000 كلمة إنجليزي مقسمة بمستويات CEFR.','ابدأ بقايمة B1 وB2، وعلّم على الكلمات اللي تعرفها.',''],
+    ['قواميس ونطق','English Vocabulary Profile','https://www.englishprofile.org/wordlists','مستوى الكلمات','A1 → C2','بيقولك كل كلمة (وكل معنى ليها) في أنهي مستوى CEFR.','تحقق من مستوى كلمة قبل ما تعلّمها.',''],
+    ['كتابة تقنية','Plain Language Guidelines','https://www.plainlanguage.gov/guidelines/','دليل','متوسط','إرشادات الكتابة البسيطة الواضحة.','جزء Write for your audience.',''],
+    ['كتابة تقنية','Purdue OWL','https://owl.purdue.edu/','مرجع كتابة','متوسط','مرجع جامعي للكتابة والقواعد وعلامات الترقيم.','Punctuation وSentence Clarity.',''],
+    ['تصحيح الكتابة','Grammarly','https://www.grammarly.com/','أداة تصحيح','كل المستويات','تصحيح قواعد وأسلوب وهو بيشرح الغلطة.','اقرا شرح كل تصحيح، متقبلوش وخلاص.','p'],
+    ['تصحيح الكتابة','QuillBot','https://quillbot.com/','إعادة صياغة','كل المستويات','إعادة صياغة وتدقيق. استخدمه عشان تشوف طرق تانية لنفس الجملة.','اكتب جملتك، وقارن بـ 3 صياغات.','p'],
+    ['تصحيح الكتابة','Google Translate','https://translate.google.com/','مترجم','كل المستويات','ترجمة سريعة ونطق. ممتاز للكلمة الواحدة، وضعيف في الجمل التقنية الطويلة.','استخدم زرار السماعة للنطق.',''],
+    ['قواعد','Grammar Monster','https://www.grammar-monster.com/','شرح + اختبارات','مبتدئ → متوسط','شرح قواعد بأمثلة واختبارات قصيرة.','Common grammar errors.',''],
+    ['قواعد','EnglishClub','https://www.englishclub.com/','دروس','مبتدئ → متوسط','دروس قواعد ومفردات ونطق منظّمة.','Grammar → Verbs.',''],
+    ['قواعد','Randall’s ESL Cyber Listening Lab','https://www.esl-lab.com/','استماع + أسئلة','مبتدئ → متقدم','مقاطع استماع مع أسئلة فهم حسب المستوى.','مقطع Easy في اليوم.',''],
+    ['استماع','BBC Learning English (YouTube)','https://www.youtube.com/@bbclearningenglish','فيديوهات','مبتدئ → متوسط','فيديوهات قصيرة للنطق والقواعد والتعبيرات.','Pronunciation playlist.',''],
+    ['استماع','Rachel’s English','https://www.youtube.com/@rachelsenglish','نطق أمريكي','متوسط','أفضل قناة لتفاصيل النطق الأمريكي وربط الكلمات.','فيديو في الأسبوع + Shadowing.',''],
+    ['استماع','English with Lucy','https://www.youtube.com/@EnglishwithLucy','نطق وقواعد','متوسط','نطق بريطاني وقواعد ومفردات.','فيديو في الأسبوع.',''],
+    ['استماع','TED-Ed','https://ed.ted.com/','دروس متحركة','A2 → B2','دروس كرتون قصيرة عن العلوم والتكنولوجيا بنص مكتوب.','فيديو 5 دقايق مع الترجمة الإنجليزي.',''],
+    ['استماع','Crash Course','https://www.youtube.com/@crashcourse','فيديوهات تعليمية','متوسط','سلاسل سريعة، منها Computer Science.','سلسلة Computer Science بالترتيب.',''],
+    ['استماع','Kurzgesagt','https://www.youtube.com/@kurzgesagt','علوم متحركة','متوسط','فيديوهات علمية جميلة بإنجليزي واضح.','فيديو في الأسبوع بالترجمة الإنجليزي.',''],
+    ['استماع','Fireship','https://www.youtube.com/@Fireship','فيديوهات برمجة','متوسط','شرح تقنيات في 100 ثانية، إنجليزي سريع. تحدي استماع ممتاز.','«in 100 Seconds» مرتين: بترجمة ومن غير.',''],
+    ['استماع','Traversy Media','https://www.youtube.com/@TraversyMedia','فيديوهات برمجة','مبتدئ → متوسط','كورسات ويب بإنجليزي واضح.','Crash courses.',''],
+    ['استماع','CS Dojo','https://www.youtube.com/@CSDojo','فيديوهات برمجة','مبتدئ','شرح Python وخوارزميات بهدوء وبساطة.','Python for beginners playlist.',''],
+    ['استماع','Tech With Tim','https://www.youtube.com/@TechWithTim','فيديوهات برمجة','مبتدئ → متوسط','مشاريع Python عملية.','مشروع واحد في الأسبوع.',''],
+    ['استماع','The Net Ninja','https://www.youtube.com/@NetNinja','فيديوهات برمجة','مبتدئ → متوسط','سلاسل قصيرة ومنظّمة جدًا لأدوات الويب.','سلسلة أداة بتتعلمها.',''],
+    ['استماع','Talk Python To Me','https://talkpython.fm/','بودكاست','متوسط','بودكاست Python أسبوعي بمقابلات مع مطورين.','حلقة في الأسبوع وانت ماشي.',''],
+    ['استماع','Python Bytes','https://pythonbytes.fm/','بودكاست','متوسط','أخبار Python في حلقات قصيرة.','حلقة في الأسبوع.',''],
+    ['استماع','Real Python Podcast','https://realpython.com/podcasts/rpp/','بودكاست','متوسط','نقاشات Python عملية بإنجليزي واضح.','حلقة في الأسبوع.',''],
+    ['استماع','Syntax','https://syntax.fm/','بودكاست','متوسط','بودكاست تطوير ويب بأسلوب خفيف.','حلقة Hasty Treat قصيرة.',''],
+    ['استماع','The Changelog','https://changelog.com/podcast','بودكاست','متقدم','مقابلات عن البرمجيات مفتوحة المصدر.','لما تتقدم في الاستماع.',''],
+    ['استماع','CodeNewbie Podcast','https://www.codenewbie.org/podcast','بودكاست','مبتدئ','قصص ناس بتبدأ في البرمجة.','حلقة في الأسبوع.',''],
+    ['استماع','All Ears English','https://www.allearsenglish.com/','بودكاست','متوسط','إنجليزي أمريكي طبيعي للمحادثة اليومية.','حلقة 15 دقيقة.',''],
+    ['استماع','Luke’s English Podcast','https://teacherluke.co.uk/','بودكاست','متوسط → متقدم','بودكاست بريطاني طويل وممتع.','حلقة في الأسبوع على مراحل.',''],
+    ['قراءة','Breaking News English','https://breakingnewsenglish.com/','أخبار بمستويات','A1 → C1','نفس الخبر مكتوب بـ 7 مستويات، ومعاه صوت وتمارين.','اقرا الخبر في مستواك، وبعدين المستوى اللي فوقه.',''],
+    ['قراءة','News in Levels','https://www.newsinlevels.com/','أخبار بمستويات','A1 → B1','أخبار قصيرة بـ 3 مستويات ومعاها فيديو.','ابدأ بـ Level 2، ولما يبقى سهل انقل لـ Level 3.',''],
+    ['قراءة','Project Gutenberg','https://www.gutenberg.org/','كتب مجانية','متوسط → متقدم','أكتر من 70 ألف كتاب كلاسيكي مجاني.','ابدأ بكتاب قصير زي The Time Machine.',''],
+    ['قراءة','Readlang','https://readlang.com/','قراءة مع ترجمة','كل المستويات','اضغط على أي كلمة في أي صفحة تشوف ترجمتها وتتحفظ كبطاقة.','استخدمه وانت بتقرا التوثيق.','p'],
+    ['قراءة','LingQ','https://www.lingq.com/','قراءة واستماع','كل المستويات','قراءة نصوص مع صوتها وحفظ الكلمات الجديدة.','درس في اليوم.','p'],
+    ['حفظ الكلمات','Memrise','https://www.memrise.com/','تطبيق كلمات','كل المستويات','حفظ كلمات بفيديوهات لناس بتتكلم.','10 دقايق يوميًا.','p'],
+    ['حفظ الكلمات','Vocabulary.com','https://www.vocabulary.com/','قاموس + ألعاب','متوسط','شرح بسيط لكل كلمة وألعاب تكرار ذكية.','قايمة كلمات تقنية.','p'],
+    ['حفظ الكلمات','Duolingo','https://www.duolingo.com/','تطبيق لغات','مبتدئ → متوسط','تطبيق يومي مجاني، فيه كورس إنجليزي للمتكلمين بالعربي.','درس يومي عشان الـ streak.',''],
+    ['حفظ الكلمات','LyricsTraining','https://lyricstraining.com/','أغاني','كل المستويات','بتكمّل كلمات الأغاني وانت بتسمعها.','أغنية تحبها في مستوى Beginner.',''],
+    ['حفظ الكلمات','Monkeytype','https://monkeytype.com/','سرعة كتابة','كل المستويات','تدريب سرعة الكتابة بالإنجليزي، وفيه وضع كود.','5 دقايق يوميًا.',''],
+    ['حفظ الكلمات','keybr','https://www.keybr.com/','تعلم الكتابة','مبتدئ','تعلم الكتابة باللمس خطوة خطوة.','10 دقايق يوميًا.',''],
+    ['حفظ الكلمات','TypingClub','https://www.typingclub.com/','تعلم الكتابة','مبتدئ','دروس كتابة على الكيبورد بالعشر صوابع خطوة خطوة.','درس في اليوم.',''],
     // ---- speaking ----
-    [TALK,'ELSA Speak','https://elsaspeak.com/','تصحيح نطق بالذكاء الاصطناعي','كل المستويات',10,99,'بيسمعك ويقولك أنهي صوت بالظبط نطقته غلط.','10 دقايق يوميًا.','p'],
-    [TALK,'Tandem','https://www.tandem.net/','تبادل لغات','متوسط',18,99,'اتكلم مع متحدثين أصليين وعلّمهم عربي في المقابل.','محادثة 15 دقيقة في الأسبوع.','p'],
-    [TALK,'HelloTalk','https://www.hellotalk.com/','تبادل لغات','متوسط',18,99,'دردشة كتابة وصوت مع متعلمين من كل العالم، وتصحيح لرسايلك.','اكتب 3 رسايل يوميًا.','p'],
-    [TALK,'italki','https://www.italki.com/','مدرسين أونلاين','كل المستويات',8,99,'حصص خاصة مع مدرسين، ومنهم متخصصين في Business وTech English.','حصة في الأسبوع للمقابلات التجريبية.','p'],
-    [TALK,'Preply','https://preply.com/','مدرسين أونلاين','كل المستويات',6,99,'مدرسين إنجليزي للأطفال والكبار.','حصة تجريبية الأول.','p'],
+    [TALK,'ELSA Speak','https://elsaspeak.com/','تصحيح نطق بالذكاء الاصطناعي','كل المستويات','بيسمعك ويقولك أنهي صوت بالظبط نطقته غلط.','10 دقايق يوميًا.','p'],
+    [TALK,'Tandem','https://www.tandem.net/','تبادل لغات','متوسط','اتكلم مع متحدثين أصليين وعلّمهم عربي في المقابل.','محادثة 15 دقيقة في الأسبوع.','p'],
+    [TALK,'HelloTalk','https://www.hellotalk.com/','تبادل لغات','متوسط','دردشة كتابة وصوت مع متعلمين من كل العالم، وتصحيح لرسايلك.','اكتب 3 رسايل يوميًا.','p'],
+    [TALK,'italki','https://www.italki.com/','مدرسين أونلاين','كل المستويات','حصص خاصة مع مدرسين، ومنهم متخصصين في Business وTech English.','حصة في الأسبوع للمقابلات التجريبية.','p'],
+    [TALK,'Preply','https://preply.com/','مدرسين أونلاين','كل المستويات','مدرسين إنجليزي، ومنهم متخصصين في إنجليزي الشغل والمقابلات.','حصة تجريبية الأول.','p'],
     // ---- level tests ----
-    [TEST,'EF SET','https://www.efset.org/','اختبار مستوى مجاني','كل المستويات',15,99,'اختبار مجاني للقراءة والاستماع بنتيجة مرتبطة بـ CEFR.','اعمله في أول الخطة وفي آخرها وقارن.',''],
-    [TEST,'Cambridge — Test your English','https://www.cambridgeenglish.org/test-your-english/','اختبار مستوى','كل المستويات',8,99,'اختبار سريع من كامبريدج، وفيه نسخة للأطفال (Young learners).','اختار Young learners للأطفال.',''],
-    [TEST,'Cambridge English Qualifications for Schools','https://www.cambridgeenglish.org/exams-and-tests/qualifications/schools/','امتحانات مدرسية','A1 → B2',6,18,'دليل امتحانات كامبريدج حسب السن والمستوى.','اعرف الامتحان المناسب لسن الطفل.',''],
-    [TEST,'CEFR — Council of Europe','https://www.coe.int/en/web/common-european-framework-reference-languages','الإطار المرجعي','—',15,99,'الإطار الأوروبي لمستويات اللغة من A1 لـ C2.','Global scale: اعرف كل مستوى يقدر يعمل إيه.',''],
+    [TEST,'EF SET','https://www.efset.org/','اختبار مستوى مجاني','كل المستويات','اختبار مجاني للقراءة والاستماع بنتيجة مرتبطة بـ CEFR.','اعمله في أول الخطة وفي آخرها وقارن.',''],
+    [TEST,'Cambridge — Test your English','https://www.cambridgeenglish.org/test-your-english/','اختبار مستوى','كل المستويات','اختبار سريع من كامبريدج يقولك مستواك التقريبي.','اختار General English.',''],
+    [TEST,'CEFR — Council of Europe','https://www.coe.int/en/web/common-european-framework-reference-languages','الإطار المرجعي','—','الإطار الأوروبي لمستويات اللغة من A1 لـ C2.','Global scale: اعرف كل مستوى يقدر يعمل إيه.',''],
+    // ---- Git & review, security, AI, jobs, more reading ----
+    ["Git وكود ريفيو", "Google Engineering Practices: Code Review", "https://google.github.io/eng-practices/review/", "دليل", "متوسط", "إزاي Google بتعمل code review، وإزاي تكتب تعليقات مفيدة ومؤدبة.", "The Code Reviewer’s Guide، وبعدين How to write code review comments.", ""],
+    ["Git وكود ريفيو", "Learn Git Branching", "https://learngitbranching.js.org/", "لعبة تفاعلية", "مبتدئ → متوسط", "بتتعلم أوامر Git بالرسم والتجربة، وكل الشرح بالإنجليزي.", "المستوى Main: Introduction Sequence.", ""],
+    ["Git وكود ريفيو", "GitHub Docs: Pull requests", "https://docs.github.com/en/pull-requests", "توثيق", "مبتدئ", "كل حاجة عن الـ pull requests والمراجعة والدمج.", "Collaborating with pull requests.", ""],
+    ["Git وكود ريفيو", "Git Reference", "https://git-scm.com/docs", "مرجع", "متوسط", "مرجع كل أوامر Git بالتفصيل.", "لما تشوف أمر مش فاهمه في رسالة أو شرح.", ""],
+    ["أمان", "OWASP Top 10", "https://owasp.org/www-project-top-ten/", "مرجع أمان", "متوسط", "أشهر 10 مخاطر أمان في تطبيقات الويب، بالمصطلحات اللي هتسمعها كتير.", "اقرا عناوين الـ 10 ومعنى كل واحد.", ""],
+    ["أمان", "OWASP Cheat Sheet Series", "https://cheatsheetseries.owasp.org/", "أوراق مختصرة", "متوسط", "صفحات قصيرة وعملية لكل موضوع أمان.", "Password Storage وInput Validation.", ""],
+    ["أمان", "GitHub Docs: Secret scanning", "https://docs.github.com/en/code-security/secret-scanning", "توثيق", "مبتدئ", "إزاي GitHub بيكتشف المفاتيح اللي اترفعت بالغلط.", "About secret scanning.", ""],
+    ["ذكاء اصطناعي", "Google Machine Learning Glossary", "https://developers.google.com/machine-learning/glossary", "قاموس مصطلحات", "متوسط", "تعريفات واضحة لمصطلحات الذكاء الاصطناعي وتعلم الآلة.", "دوّر على token وembedding وinference.", ""],
+    ["ذكاء اصطناعي", "Google Machine Learning Crash Course", "https://developers.google.com/machine-learning/crash-course", "كورس مجاني", "مبتدئ → متوسط", "كورس Google لأساسيات تعلم الآلة بفيديوهات وتمارين.", "وحدة في الأسبوع.", ""],
+    ["ذكاء اصطناعي", "Hugging Face Learn", "https://huggingface.co/learn", "كورسات مجانية", "متوسط", "كورسات عن النماذج اللغوية والـ agents بإنجليزي تقني حقيقي.", "LLM Course: Chapter 1.", ""],
+    ["مقابلات وشغل", "Tech Interview Handbook", "https://www.techinterviewhandbook.org/", "دليل مجاني", "متوسط", "دليل مجاني للمقابلات التقنية: السيرة الذاتية والأسئلة السلوكية والتفاوض.", "Behavioral interview questions.", ""],
+    ["مقابلات وشغل", "The Scrum Guide", "https://scrumguides.org/", "دليل رسمي", "مبتدئ", "مصطلحات Sprint وBacklog وRetrospective من مصدرها.", "اقرا الدليل على مراحل.", ""],
+    ["مقابلات وشغل", "Atlassian: Incident postmortems", "https://www.atlassian.com/incident-management/postmortem", "دليل", "متوسط", "إزاي تكتب تقرير post-mortem من غير لوم.", "Blameless postmortems.", ""],
+    ["مقابلات وشغل", "LinkedIn Jobs", "https://www.linkedin.com/jobs/", "إعلانات شغل", "متوسط", "إعلانات حقيقية بتعلّمك لغة المتطلبات والمهام.", "اقرا 3 إعلانات في الأسبوع وحدد الكلمات المتكررة.", ""],
+    ["تعلم البرمجة", "MDN: JavaScript error reference", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors", "مرجع أخطاء", "مبتدئ → متوسط", "شرح كل رسالة خطأ في JavaScript: معناها وأمثلة وحلها.", "لما تظهرلك رسالة في الكونسول دوّر عليها هنا.", ""],
+    ["تعلم البرمجة", "MDN: HTTP response status codes", "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status", "مرجع", "مبتدئ", "كل أكواد HTTP ومعناها.", "احفظ 200 و201 و400 و401 و403 و404 و429 و500.", ""],
+    ["قراءة", "Simple English Wikipedia", "https://simple.wikipedia.org/", "موسوعة مبسطة", "A2 → B1", "ويكيبيديا بكلمات وجمل أبسط. ممتازة للقراءة عن أي موضوع تقني.", "اقرا مقال Computer وInternet وProgramming language.", ""],
+    ["قراءة", "ReadTheory", "https://readtheory.org/", "قراءة متكيّفة", "A1 → C1", "بيختبر مستواك في القراءة ويديك نصوص على قدّك.", "3 نصوص في الأسبوع.", ""],
+    ["قراءة", "Hacker News", "https://news.ycombinator.com/", "أخبار تقنية", "متقدم", "أخبار ونقاشات تقنية يومية، وتعليقات مبرمجين حقيقيين.", "اقرا عنوانين وتعليقات واحد منهم كل يوم.", ""],
+    ["قواميس ونطق", "Merriam-Webster Learner’s Dictionary", "https://www.learnersdictionary.com/", "قاموس مبسّط", "A2 → B2", "تعريفات بسيطة ونطق مسموع للمتعلمين.", "استخدمه بدل الترجمة المباشرة.", ""],
+    ["استماع", "Software Engineering Daily", "https://softwareengineeringdaily.com/", "بودكاست", "متقدم", "مقابلات يومية مع مهندسين عن أدوات وأنظمة حقيقية.", "حلقة في الأسبوع في موضوع تعرفه.", ""],
     // ---- Arabic resources ----
-    [AR,'أكاديمية حسوب','https://academy.hsoub.com/','مقالات ودورات','مبتدئ → متوسط',13,99,'مقالات برمجة بالعربي، ومنها مقالات مترجمة لتوثيق رسمي. قارن الترجمة بالأصل.','اقرا المقال بالعربي، وبعدين المصدر الإنجليزي.','a'],
-    [AR,'موسوعة حسوب','https://wiki.hsoub.com/','توثيق مترجم','كل المستويات',13,99,'ترجمة عربي لتوثيق HTML وCSS وJavaScript وPython.','افتح الصفحة العربي جنب الصفحة الإنجليزي في MDN.','a'],
-    [AR,'Elzero Web School','https://www.youtube.com/@ElzeroWebSchool','فيديوهات برمجة','مبتدئ → متوسط',12,99,'كورسات برمجة بالعربي المصري لكل حاجة تقريبًا.','اتعلم المفهوم بالعربي، وبعدين اقرا توثيقه بالإنجليزي.','a'],
-    [AR,'إدراك','https://www.edraak.org/','منصة دورات','مبتدئ',10,99,'دورات مجانية بالعربي، منها إنجليزي وبرمجة، وفيه قسم للمدارس.','كورس Programming أو English Language.','a'],
-    [AR,'رواق','https://www.rwaq.org/','منصة دورات','مبتدئ',15,99,'دورات جامعية مجانية بالعربي.','دوّر على «برمجة» أو «لغة إنجليزية».','a'],
-    [AR,'منصة مدرسة','https://madrasa.org/','دروس مدرسية','حسب الصف',6,18,'آلاف الفيديوهات التعليمية بالعربي للمدارس، ومنها علوم الحاسب.','قسم الرياضيات والعلوم والحاسب.','a'],
-    [AR,'قاموس المعاني','https://www.almaany.com/','قاموس عربي إنجليزي','كل المستويات',8,99,'قاموس عربي ↔ إنجليزي بمعاني كتير لكل كلمة.','لما تحتاج معنى عربي دقيق لكلمة.','a'],
-    [AR,'Code.org بالعربي','https://studio.code.org/courses?lang=ar','كورسات برمجة','مبتدئ',6,14,'نفس كورسات Code.org بواجهة عربي، مفيد لو الطفل لسه بيبدأ إنجليزي.','ابدأ بالعربي، وبعد شهر حوّل الواجهة إنجليزي.','a'],
-    [AR,'Scratch بالعربي','https://scratch.mit.edu/ideas','برمجة بالبلوكات','مبتدئ',8,14,'Scratch بيدعم العربي بالكامل من قايمة اللغة تحت الصفحة.','لعبة بالعربي، وبعدين نفس اللعبة والواجهة إنجليزي عشان يتعلم الكلمات.','a'],
-    [CODE,'Coursera','https://www.coursera.org/','منصة دورات','كل المستويات',15,99,'دورات جامعية بترجمة عربي، ومنها Learn English وPython for Everybody.','Python for Everybody (ترجمة عربي متاحة).','p'],
-    [CODE,'edX','https://www.edx.org/','منصة دورات','كل المستويات',15,99,'دورات من هارفارد وMIT، ومنها CS50.','ادرس الكورس مجانًا (Audit).','p']
+    [AR,'أكاديمية حسوب','https://academy.hsoub.com/','مقالات ودورات','مبتدئ → متوسط','مقالات برمجة بالعربي، ومنها مقالات مترجمة لتوثيق رسمي. قارن الترجمة بالأصل.','اقرا المقال بالعربي، وبعدين المصدر الإنجليزي.','a'],
+    [AR,'موسوعة حسوب','https://wiki.hsoub.com/','توثيق مترجم','كل المستويات','ترجمة عربي لتوثيق HTML وCSS وJavaScript وPython.','افتح الصفحة العربي جنب الصفحة الإنجليزي في MDN.','a'],
+    [AR,'Elzero Web School','https://www.youtube.com/@ElzeroWebSchool','فيديوهات برمجة','مبتدئ → متوسط','كورسات برمجة بالعربي المصري لكل حاجة تقريبًا.','اتعلم المفهوم بالعربي، وبعدين اقرا توثيقه بالإنجليزي.','a'],
+    [AR,'إدراك','https://www.edraak.org/','منصة دورات','مبتدئ','دورات مجانية بالعربي، منها إنجليزي وبرمجة.','كورس Programming أو English Language.','a'],
+    [AR,'رواق','https://www.rwaq.org/','منصة دورات','مبتدئ','دورات جامعية مجانية بالعربي.','دوّر على «برمجة» أو «لغة إنجليزية».','a'],
+    [AR,'قاموس المعاني','https://www.almaany.com/','قاموس عربي إنجليزي','كل المستويات','قاموس عربي ↔ إنجليزي بمعاني كتير لكل كلمة.','لما تحتاج معنى عربي دقيق لكلمة.','a'],
+    [CODE,'Coursera','https://www.coursera.org/','منصة دورات','كل المستويات','دورات جامعية بترجمة عربي، ومنها Learn English وPython for Everybody.','Python for Everybody (ترجمة عربي متاحة).','p'],
+    [CODE,'edX','https://www.edx.org/','منصة دورات','كل المستويات','دورات من هارفارد وMIT، ومنها CS50.','ادرس الكورس مجانًا (Audit).','p']
   ].forEach(function(r){
-    LIBRARY.push({c:r[0], t:r[1], url:r[2], type:r[3], lvl:r[4], age:[r[5], r[6]], why:r[7], read:r[8], days:[],
-      lang: r[9].indexOf('a') !== -1 ? 'ar' : 'en', paid: r[9].indexOf('p') !== -1});
+    LIBRARY.push({c:r[0], t:r[1], url:r[2], type:r[3], lvl:r[4], why:r[5], read:r[6], days:[],
+      lang: r[7].indexOf('a') !== -1 ? 'ar' : 'en', paid: r[7].indexOf('p') !== -1});
   });
 
   // ================= Python errors (with key word) =================
   var ERRORS = [
-    {msg:"NameError: name 'x' is not defined", kw:'not defined = مش متعرّف', meaning:'بتستخدم متغيّر أو اسم لسه معملتلوش تعريف.', cause:'غالبًا كتبت الاسم غلط أو استخدمته قبل ما تعمله.'},
-    {msg:'SyntaxError: invalid syntax', kw:'syntax = صياغة', meaning:'فيه خطأ في صياغة الكود نفسه.', cause:'ناقص نقطتين (:) أو قوس، أو كتبت الكود بشكل غلط.'},
-    {msg:'IndentationError: unexpected indent', kw:'indent = مسافة بادئة', meaning:'المسافة البادئة في بداية السطر غلط.', cause:'خلطت بين المسافات (spaces) والتاب (tab)، أو زوّدت مسافة مش محتاجها.'},
-    {msg:"TypeError: unsupported operand type(s)", kw:'operand = القيمة اللي في العملية', meaning:'بتحاول تعمل عملية بين نوعين بيانات مش متوافقين.', cause:'زي ما تجمع نص (string) مع رقم (int) من غير تحويل.'},
-    {msg:"ValueError: invalid literal for int()", kw:'literal = القيمة المكتوبة', meaning:'القيمة اللي بتحاول تحوّلها لرقم مش رقم فعلاً.', cause:'استخدمت int() على نص فيه حروف مش أرقام.'},
-    {msg:'IndexError: list index out of range', kw:'out of range = برّه الحدود', meaning:'بتحاول توصل لعنصر برقم فهرس مش موجود.', cause:'القائمة أقصر من الرقم اللي بتحاول توصله.'},
-    {msg:"KeyError: 'key'", kw:'key = مفتاح', meaning:'المفتاح ده مش موجود في القاموس.', cause:'كتبت اسم المفتاح غلط أو لسه مضفتوش للقاموس.'},
-    {msg:"AttributeError: 'NoneType' object has no attribute 'x'", kw:'attribute = خاصية', meaning:'بتحاول تستخدم تابع أو خاصية على قيمة None.', cause:'دالة رجّعت None بدل الكائن اللي كنت متوقعه.'},
-    {msg:"ModuleNotFoundError: No module named 'x'", kw:'module = وحدة / مكتبة', meaning:'الوحدة أو الحزمة دي مش مثبتة.', cause:'نسيت تثبتها بـ pip install أو كتبت اسمها غلط.'},
-    {msg:'ZeroDivisionError: division by zero', kw:'division = قسمة', meaning:'بتحاول تقسم رقم على صفر.', cause:'قيمة المقام طلعت صفر من غير ما تتوقع.'},
-    {msg:'FileNotFoundError: [Errno 2] No such file or directory', kw:'No such = مفيش كده', meaning:'الملف اللي بتحاول تفتحه مش موجود في المسار ده.', cause:'مسار الملف غلط أو الملف اتنقل أو اتمسح.'},
-    {msg:'PermissionError: [Errno 13] Permission denied', kw:'denied = مرفوض', meaning:'مفيش صلاحية كافية للتعامل مع الملف.', cause:'الملف محمي، أو مفتوح في برنامج تاني، أو الفولدر محتاج صلاحيات أعلى.'},
-    {msg:"TypeError: missing 1 required positional argument: 'name'", kw:'missing required = ناقص إجباري', meaning:'ناديت دالة من غير ما تبعت وسيط إجباري.', cause:'نسيت تبعت name، أو نسيت self في تعريف تابع جوه class.'},
-    {msg:"UnicodeEncodeError: 'charmap' codec can't encode characters", kw:'encode = يحوّل لترميز', meaning:'الترميز مش قادر يكتب حروف معيّنة (زي العربي).', cause:'بتكتب ملف على Windows من غير encoding="utf-8".'},
-    {msg:'RecursionError: maximum recursion depth exceeded', kw:'exceeded = اتعدّى', meaning:'الدالة نادت نفسها مرات كتير جدًا.', cause:'ناقص شرط توقف (base case) في الـ recursion.'},
-    {msg:'json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)', kw:'Expecting value = مستني قيمة', meaning:'اللي بتقراه مش JSON صالح.', cause:'الرد فاضي أو صفحة HTML بدل JSON. اطبع النص الخام الأول.'}
+    {g:'Python', msg:"NameError: name 'x' is not defined", kw:'not defined = مش متعرّف', meaning:'بتستخدم متغيّر أو اسم لسه معملتلوش تعريف.', cause:'غالبًا كتبت الاسم غلط أو استخدمته قبل ما تعمله.'},
+    {g:'Python', msg:'SyntaxError: invalid syntax', kw:'syntax = صياغة', meaning:'فيه خطأ في صياغة الكود نفسه.', cause:'ناقص نقطتين (:) أو قوس، أو كتبت الكود بشكل غلط.'},
+    {g:'Python', msg:'IndentationError: unexpected indent', kw:'indent = مسافة بادئة', meaning:'المسافة البادئة في بداية السطر غلط.', cause:'خلطت بين المسافات (spaces) والتاب (tab)، أو زوّدت مسافة مش محتاجها.'},
+    {g:'Python', msg:"TypeError: unsupported operand type(s)", kw:'operand = القيمة اللي في العملية', meaning:'بتحاول تعمل عملية بين نوعين بيانات مش متوافقين.', cause:'زي ما تجمع نص (string) مع رقم (int) من غير تحويل.'},
+    {g:'Python', msg:"ValueError: invalid literal for int()", kw:'literal = القيمة المكتوبة', meaning:'القيمة اللي بتحاول تحوّلها لرقم مش رقم فعلاً.', cause:'استخدمت int() على نص فيه حروف مش أرقام.'},
+    {g:'Python', msg:'IndexError: list index out of range', kw:'out of range = برّه الحدود', meaning:'بتحاول توصل لعنصر برقم فهرس مش موجود.', cause:'القائمة أقصر من الرقم اللي بتحاول توصله.'},
+    {g:'Python', msg:"KeyError: 'key'", kw:'key = مفتاح', meaning:'المفتاح ده مش موجود في القاموس.', cause:'كتبت اسم المفتاح غلط أو لسه مضفتوش للقاموس.'},
+    {g:'Python', msg:"AttributeError: 'NoneType' object has no attribute 'x'", kw:'attribute = خاصية', meaning:'بتحاول تستخدم تابع أو خاصية على قيمة None.', cause:'دالة رجّعت None بدل الكائن اللي كنت متوقعه.'},
+    {g:'Python', msg:"ModuleNotFoundError: No module named 'x'", kw:'module = وحدة / مكتبة', meaning:'الوحدة أو الحزمة دي مش مثبتة.', cause:'نسيت تثبتها بـ pip install أو كتبت اسمها غلط.'},
+    {g:'Python', msg:'ZeroDivisionError: division by zero', kw:'division = قسمة', meaning:'بتحاول تقسم رقم على صفر.', cause:'قيمة المقام طلعت صفر من غير ما تتوقع.'},
+    {g:'Python', msg:'FileNotFoundError: [Errno 2] No such file or directory', kw:'No such = مفيش كده', meaning:'الملف اللي بتحاول تفتحه مش موجود في المسار ده.', cause:'مسار الملف غلط أو الملف اتنقل أو اتمسح.'},
+    {g:'Python', msg:'PermissionError: [Errno 13] Permission denied', kw:'denied = مرفوض', meaning:'مفيش صلاحية كافية للتعامل مع الملف.', cause:'الملف محمي، أو مفتوح في برنامج تاني، أو الفولدر محتاج صلاحيات أعلى.'},
+    {g:'Python', msg:"TypeError: missing 1 required positional argument: 'name'", kw:'missing required = ناقص إجباري', meaning:'ناديت دالة من غير ما تبعت وسيط إجباري.', cause:'نسيت تبعت name، أو نسيت self في تعريف تابع جوه class.'},
+    {g:'Python', msg:"UnicodeEncodeError: 'charmap' codec can't encode characters", kw:'encode = يحوّل لترميز', meaning:'الترميز مش قادر يكتب حروف معيّنة (زي العربي).', cause:'بتكتب ملف على Windows من غير encoding="utf-8".'},
+    {g:'Python', msg:'RecursionError: maximum recursion depth exceeded', kw:'exceeded = اتعدّى', meaning:'الدالة نادت نفسها مرات كتير جدًا.', cause:'ناقص شرط توقف (base case) في الـ recursion.'},
+    {g:'Python', msg:'json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)', kw:'Expecting value = مستني قيمة', meaning:'اللي بتقراه مش JSON صالح.', cause:'الرد فاضي أو صفحة HTML بدل JSON. اطبع النص الخام الأول.'},
+    {"g": "JavaScript", "msg": "Uncaught TypeError: Cannot read properties of undefined (reading 'x')", "kw": "undefined = مش متعرّف", "meaning": "بتحاول تقرا خاصية من متغيّر قيمته undefined.", "cause": "البيانات لسه ماوصلتش، أو اسم الحقل غلط، أو العنصر مش موجود في الصفحة.", "fix": "اطبع المتغيّر، واستخدم optional chaining: `obj?.x`."},
+    {"g": "JavaScript", "msg": "ReferenceError: x is not defined", "kw": "not defined = مش متعرّف", "meaning": "بتستخدم اسم متغيّر أو دالة مش متعرّفة.", "cause": "غلطة إملائية، أو المتغيّر متعرّف في scope تاني، أو السكربت ما اتحمّلش.", "fix": "راجع الاسم وحروفه الكبيرة والصغيرة، واتأكد إنه متعرّف قبل ما تستخدمه."},
+    {"g": "JavaScript", "msg": "TypeError: x is not a function", "kw": "is not a function = مش دالة", "meaning": "بتنادي حاجة كأنها دالة وهي مش دالة.", "cause": "اسم الدالة غلط، أو القيمة array أو object، أو ناسي import.", "fix": "اطبع `typeof x` وشوف نوعه."},
+    {"g": "JavaScript", "msg": "SyntaxError: Unexpected token '}'", "kw": "Unexpected token = رمز مش متوقع", "meaning": "فيه رمز في مكان غلط في الكود.", "cause": "قوس ناقص أو زيادة، أو فاصلة ناقصة.", "fix": "روح للسطر المذكور ودوّر على القوس اللي قبله."},
+    {"g": "JavaScript", "msg": "SyntaxError: Unexpected end of JSON input", "kw": "end of input = آخر المدخلات", "meaning": "بتحاول تحوّل نص فاضي أو ناقص لـ JSON.", "cause": "الرد من السيرفر فاضي أو اتقطع.", "fix": "اطبع النص الخام قبل `JSON.parse`."},
+    {"g": "JavaScript", "msg": "RangeError: Maximum call stack size exceeded", "kw": "call stack = سجل الاستدعاءات", "meaning": "دالة بتنادي نفسها من غير نهاية.", "cause": "recursion من غير شرط توقف، أو دالتين بينادوا بعض.", "fix": "ضيف base case أو غيّر المنطق."},
+    {"g": "JavaScript", "msg": "Access to fetch at '…' has been blocked by CORS policy", "kw": "blocked = اتمنع", "meaning": "المتصفح منع صفحتك تقرا رد من دومين تاني.", "cause": "السيرفر مش باعت header اسمه Access-Control-Allow-Origin لموقعك.", "fix": "اظبط CORS على السيرفر، أو ابعت الطلب من الـ backend."},
+    {"g": "JavaScript", "msg": "TypeError: Failed to fetch", "kw": "Failed = فشل", "meaning": "الطلب ماوصلش للسيرفر أصلاً.", "cause": "مفيش نت، أو الرابط غلط، أو CORS، أو السيرفر واقع.", "fix": "افتح تبويب Network في DevTools وشوف الطلب."},
+    {"g": "Git", "msg": "fatal: not a git repository (or any of the parent directories): .git", "kw": "fatal = خطأ وقّف التنفيذ", "meaning": "انت مش جوه فولدر فيه Git.", "cause": "فاتح Terminal في فولدر غلط، أو لسه ما عملتش git init.", "fix": "روح للفولدر الصح بـ `cd` أو اعمل `git init`."},
+    {"g": "Git", "msg": "! [rejected] main -> main (fetch first)\nerror: failed to push some refs", "kw": "rejected = اترفض", "meaning": "الـ repo على GitHub فيه commits مش عندك.", "cause": "حد تاني (أو انت من جهاز تاني) رفع تعديلات.", "fix": "اعمل `git pull` الأول، وصلّح أي تعارض، وبعدين `git push`."},
+    {"g": "Git", "msg": "CONFLICT (content): Merge conflict in app.py", "kw": "conflict = تعارض", "meaning": "نفس السطور اتعدّلت في فرعين.", "cause": "انت وحد تاني غيّرتوا نفس الجزء.", "fix": "اختار الكود الصح بين <<<<<<< و>>>>>>>، وبعدين add وcommit."},
+    {"g": "Git", "msg": "Your branch is behind 'origin/main' by 3 commits", "kw": "behind = متأخر", "meaning": "النسخة اللي عندك أقدم من اللي على السيرفر.", "cause": "فيه تعديلات جديدة اترفعت.", "fix": "`git pull`."},
+    {"g": "Git", "msg": "Permission denied (publickey)", "kw": "publickey = المفتاح العام", "meaning": "GitHub مش عارف يتحقق منك بمفتاح SSH.", "cause": "مفيش مفتاح SSH متضاف لحسابك، أو بتستخدم مفتاح غلط.", "fix": "ضيف مفتاح SSH في إعدادات GitHub، أو استخدم رابط HTTPS."},
+    {"g": "Git", "msg": "You are in 'detached HEAD' state", "kw": "detached = منفصل", "meaning": "انت واقف على commit معيّن مش على فرع.", "cause": "عملت checkout لـ commit أو tag.", "fix": "لو هتعدّل، اعمل فرع: `git switch -c new-branch`."},
+    {"g": "Git", "msg": "error: Your local changes to the following files would be overwritten by merge", "kw": "overwritten = هيتكتب فوقه", "meaning": "عندك تعديلات هتضيع لو عملت pull.", "cause": "عدّلت ملفات وما عملتلهاش commit.", "fix": "اعمل commit أو `git stash` الأول."},
+    {"g": "HTTP", "msg": "400 Bad Request", "kw": "Bad = غلط", "meaning": "الطلب نفسه فيه مشكلة.", "cause": "JSON غلط، أو حقل ناقص، أو نوع بيانات غلط.", "fix": "اقرا رسالة الخطأ في الرد وقارن الطلب بالتوثيق."},
+    {"g": "HTTP", "msg": "401 Unauthorized", "kw": "Unauthorized = مش متحقق منك", "meaning": "السيرفر مش عارف انت مين.", "cause": "مفيش token، أو الـ token غلط أو منتهي.", "fix": "راجع الـ Authorization header وجدّد الـ token."},
+    {"g": "HTTP", "msg": "403 Forbidden", "kw": "Forbidden = ممنوع", "meaning": "السيرفر عارف انت مين، بس مالكش صلاحية.", "cause": "الحساب أو المفتاح صلاحياته ناقصة.", "fix": "زوّد الصلاحيات (scopes) أو استخدم حساب تاني."},
+    {"g": "HTTP", "msg": "404 Not Found", "kw": "Not Found = مش موجود", "meaning": "الرابط أو العنصر مش موجود.", "cause": "رابط غلط، أو ID مش موجود، أو الـ endpoint اتغيّر.", "fix": "راجع الرابط والـ ID في التوثيق."},
+    {"g": "HTTP", "msg": "405 Method Not Allowed", "kw": "Method = نوع الطلب", "meaning": "الـ endpoint مش بيقبل نوع الطلب ده.", "cause": "بعت GET بدل POST مثلاً.", "fix": "غيّر الـ HTTP method."},
+    {"g": "HTTP", "msg": "409 Conflict", "kw": "Conflict = تعارض", "meaning": "الطلب بيتعارض مع حالة البيانات الحالية.", "cause": "العنصر موجود قبل كده، أو حد عدّله في نفس الوقت.", "fix": "اقرا الحالة الحالية وبعدين حاول تاني."},
+    {"g": "HTTP", "msg": "422 Unprocessable Content", "kw": "Unprocessable = مش قابل للمعالجة", "meaning": "الصيغة صح، بس البيانات نفسها مش مقبولة.", "cause": "إيميل مش صالح، أو قيمة برّه المسموح.", "fix": "اقرا قايمة الأخطاء في الرد وصلّح الحقول."},
+    {"g": "HTTP", "msg": "429 Too Many Requests", "kw": "Too Many = كتير أوي", "meaning": "عدّيت الحد المسموح من الطلبات.", "cause": "rate limit.", "fix": "استنى المدة اللي في Retry-After، وقلّل الطلبات أو استخدم batch."},
+    {"g": "HTTP", "msg": "500 Internal Server Error", "kw": "Internal = داخلي", "meaning": "حصل خطأ جوه السيرفر.", "cause": "غالبًا bug في السيرفر نفسه مش في طلبك.", "fix": "جرّب تاني، ولو استمر بلّغ صاحب الـ API ومعاك الوقت والطلب."},
+    {"g": "HTTP", "msg": "502 Bad Gateway", "kw": "Gateway = وسيط", "meaning": "السيرفر الوسيط وصله رد غلط من السيرفر اللي وراه.", "cause": "الخدمة الأساسية واقعة أو بتعيد التشغيل.", "fix": "استنى شوية وجرّب تاني."},
+    {"g": "HTTP", "msg": "503 Service Unavailable", "kw": "Unavailable = مش متاح", "meaning": "الخدمة مش متاحة مؤقتًا.", "cause": "صيانة أو ضغط عالي.", "fix": "جرّب بعدين، وشوف صفحة الـ status بتاعة الخدمة."},
+    {"g": "HTTP", "msg": "504 Gateway Timeout", "kw": "Timeout = الوقت خلص", "meaning": "الوسيط استنى رد وماجاش في الوقت.", "cause": "العملية تقيلة أو السيرفر بطيء.", "fix": "قلّل حجم الطلب أو زوّد الـ timeout."},
+    {"g": "Terminal", "msg": "'python' is not recognized as an internal or external command", "kw": "not recognized = مش متعرّف عليه", "meaning": "النظام مش لاقي البرنامج ده (على Linux وMac: command not found).", "cause": "البرنامج مش متثبّت أو مش موجود في PATH.", "fix": "ثبّته، أو ضيف مكانه لـ PATH، أو جرّب `py` أو `python3`."},
+    {"g": "Terminal", "msg": "Error: listen EADDRINUSE: address already in use :::3000", "kw": "already in use = مستخدم بالفعل", "meaning": "البورت 3000 فيه برنامج تاني شغال.", "cause": "نسخة قديمة من السيرفر لسه شغالة.", "fix": "اقفل البرنامج التاني أو غيّر البورت."},
+    {"g": "Terminal", "msg": "connect ECONNREFUSED 127.0.0.1:5432", "kw": "REFUSED = مرفوض", "meaning": "مفيش حاجة بترد على العنوان والبورت ده.", "cause": "قاعدة البيانات أو السيرفر مش شغال.", "fix": "شغّل الخدمة واتأكد من البورت."},
+    {"g": "Terminal", "msg": "npm ERR! code ENOENT", "kw": "ENOENT = مفيش ملف أو فولدر بالاسم ده", "meaning": "npm مش لاقي ملف محتاجه (غالبًا package.json).", "cause": "انت في فولدر غلط.", "fix": "روح لفولدر المشروع اللي فيه package.json."},
+    {"g": "Terminal", "msg": "ERROR: Could not find a version that satisfies the requirement xyz", "kw": "satisfies = يحقق / يطابق", "meaning": "pip مش لاقي الحزمة بالاسم أو الإصدار ده.", "cause": "اسم الحزمة غلط، أو مش متاحة لإصدار Python بتاعك.", "fix": "راجع الاسم على pypi.org، وإصدار Python."},
+    {"g": "Terminal", "msg": "error: externally-managed-environment", "kw": "externally-managed = بيديره النظام", "meaning": "النظام مش عايزك تثبّت حزم على Python بتاعه مباشرة.", "cause": "توزيعات Linux الجديدة وHomebrew بيحموا Python بتاعهم.", "fix": "اعمل virtual environment: `python -m venv .venv`."}
+  ];
+
+  // mixed review quiz (not tied to a sprint day)
+  var EXTRA_QUIZ = [
+    {"q": "\"LGTM\" في تعليق على PR معناها؟", "o": ["فيه مشكلة كبيرة", "شكله تمام وموافق", "لسه شغال عليه", "ابعته تاني"], "a": 1, "why": "LGTM = Looks good to me."},
+    {"q": "\"WIP\" في عنوان PR معناها؟", "o": ["جاهز للدمج", "لسه شغال عليه، متدمجوش", "فيه ثغرة", "اتقفل"], "a": 1, "why": "WIP = work in progress."},
+    {"q": "السيرفر عارف انت مين بس مالكش صلاحية. أنهي كود؟", "o": ["401 Unauthorized", "403 Forbidden", "404 Not Found", "500 Internal Server Error"], "a": 1, "why": "401 = مش عارف انت مين. 403 = عارفك بس ممنوع."},
+    {"q": "جالك 429 Too Many Requests. تعمل إيه؟", "o": ["تبعت الطلب 100 مرة بسرعة", "تستنى المدة اللي في Retry-After وتقلل الطلبات", "تغيّر الباسورد", "تمسح الكاش"], "a": 1, "why": "429 = عدّيت الـ rate limit."},
+    {"q": "\"I suggest ___ a cache.\"", "o": ["to use", "using", "use", "used"], "a": 1, "why": "suggest بييجي بعدها ing."},
+    {"q": "\"I have worked here ___ 2023.\"", "o": ["for", "since", "from", "at"], "a": 1, "why": "since + نقطة بداية."},
+    {"q": "\"Can you ___ a look at my PR?\"", "o": ["make", "take", "do", "give to"], "a": 1, "why": "take a look."},
+    {"q": "\"We have three ___.\"", "o": ["API's", "APIs", "APIes", "API"], "a": 1, "why": "الجمع من غير apostrophe."},
+    {"q": "\"Please back up the database\" معناها؟", "o": ["ارجع لقاعدة البيانات", "خد نسخة احتياطية من قاعدة البيانات", "امسح قاعدة البيانات", "اقفل قاعدة البيانات"], "a": 1, "why": "back up = ياخد نسخة احتياطية."},
+    {"q": "\"Let's wrap up\" في اجتماع معناها؟", "o": ["يلا نبدأ", "يلا نختم", "يلا نأجّل", "يلا نصوّت"], "a": 1, "why": "wrap up = يختم."},
+    {"q": "\"Your branch is behind 'origin/main' by 2 commits\". تعمل إيه؟", "o": ["git push --force", "git pull", "تمسح الفولدر", "git init"], "a": 1, "why": "behind = متأخر، فتسحب التعديلات الجديدة."},
+    {"q": "رسالة \"blocked by CORS policy\" بتظهر فين غالبًا؟", "o": ["في المتصفح لما صفحتك تطلب من دومين تاني", "في Excel", "في Python لما تقسم على صفر", "في Git"], "a": 0, "why": "CORS قاعدة أمان في المتصفح."},
+    {"q": "\"hallucination\" في الذكاء الاصطناعي؟", "o": ["إن النموذج يألّف معلومة غلط بثقة", "إن النموذج يقفل", "إن النموذج يبقى أسرع", "إن الـ prompt طويل"], "a": 0, "why": "عشان كده لازم تراجع المعلومات."},
+    {"q": "\"scope creep\" معناها؟", "o": ["تقليل المطلوب", "زيادة المطلوب تدريجيًا بعد الاتفاق", "خطأ في الكود", "نسخة جديدة"], "a": 1, "why": "متعملش شغل زيادة من غير اتفاق جديد."},
+    {"q": "أنهي جملة صح؟", "o": ["The client said me he want a report.", "The client told me that he wants a report.", "The client told that he want a report.", "The client said to me he want report."], "a": 1, "why": "told + شخص، وhe wants بـ s."},
+    {"q": "\"I'm running behind\" معناها؟", "o": ["أنا بجري", "أنا متأخر عن الجدول", "أنا سابق الجدول", "أنا خلّصت"], "a": 1, "why": "running behind = متأخر."},
+    {"q": "\"The database is the bottleneck\" معناها؟", "o": ["قاعدة البيانات هي اللي مبطّأة النظام", "قاعدة البيانات اتمسحت", "قاعدة البيانات جديدة", "قاعدة البيانات آمنة"], "a": 0, "why": "bottleneck = عنق الزجاجة."},
+    {"q": "أحسن أول سطر في وصف PR؟", "o": ["i did some changes", "This PR adds CSV export to the reports page.", "PR!!!", "Changes"], "a": 1, "why": "محدد وبيقول الـ PR بيعمل إيه."},
+    {"q": "\"TypeError: x is not a function\". أول حاجة تعملها؟", "o": ["تعيد تشغيل الجهاز", "تطبع typeof x وتشوف نوعه", "تمسح الملف", "تغيّر المتصفح"], "a": 1, "why": "اعرف القيمة نوعها إيه الأول."},
+    {"q": "\"blameless post-mortem\" يعني؟", "o": ["تقرير بيدوّر على مين الغلطان", "تقرير بيركّز على تحسين النظام من غير لوم أشخاص", "تقرير سري", "تقرير للعميل بس"], "a": 1, "why": "الهدف منع تكرار المشكلة."},
+    {"q": "\"Nit:\" في أول تعليق مراجعة معناها؟", "o": ["مشكلة لازم تتصلح فورًا", "ملاحظة صغيرة مش هتوقف الموافقة", "رفض للـ PR", "سؤال عن المرتب"], "a": 1, "why": "nit = nitpick، ملاحظة صغيرة."},
+    {"q": "\"The file is ___ to upload.\" (أكبر من المسموح)", "o": ["enough big", "too big", "big too", "very enough"], "a": 1, "why": "too + صفة = زيادة عن اللزوم."}
   ];
 
   // ================= 12-week plan =================
@@ -1996,7 +2139,7 @@
      write:'اكتب docstring كامل لـ 5 دوال (Description وParameters وReturns وRaises).',
      speak:'اقرا صفحة توثيق بصوت عالي 5 دقايق، وركّز على نطق الكلمات الطويلة.',
      project:{t:'توثيق مكتبتي', d:'README صغير بيوثّق 5 دوال من كودك بأسلوب التوثيق الرسمي.'}},
-    {n:4, theme:'Git والتعاون على GitHub', short:'Git', cats:['Git','سطر الأوامر'],
+    {n:4, theme:'Git والتعاون على GitHub', short:'Git', cats:['Git','سطر الأوامر','DevOps والسحابة'],
      goal:'تفهم أوامر Git ورسائله بالإنجليزي، وتكتب commits واضحة، وتقرا issues وpull requests.',
      grammar:{name:'Imperative (الأمر)', rule:'الفعل في أول الجملة من غير فاعل: للخطوات والـ commits.', ex:'Add login page. Fix typo in README. Run the tests.'},
      read:{t:'Pro Git — Chapter 1 & 2', url:'https://git-scm.com/book/en/v2', what:'اقرا Getting Started وGit Basics بالإنجليزي، وجرّب كل أمر وانت بتقرا.'},
@@ -2014,7 +2157,7 @@
      write:'اكتب README كامل لمشروع عندك، وبعدين قصّره 30% في Hemingway.',
      speak:'اعرض README بتاعك بصوتك في دقيقتين كأنك بتقدّمه لفريق.',
      project:{t:'README احترافي', d:'README فيه Title وFeatures وInstallation وUsage وScreenshots، ومراجَع في LanguageTool.'}},
-    {n:6, theme:'الويب والـ APIs', short:'الويب والـ APIs', cats:['الويب','قواعد بيانات'],
+    {n:6, theme:'الويب والـ APIs', short:'الويب والـ APIs', cats:['الويب','قواعد بيانات','JavaScript والويب','الأتمتة وn8n'],
      goal:'تقرا توثيق أي API وتفهم الـ endpoints والـ authentication والـ status codes، وتشرح طلب HTTP بالإنجليزي.',
      grammar:{name:'Prepositions (in / on / at / to / from)', rule:'in a file، on line 5، at 10 PM، send to the server، get from the API.', ex:'The error is on line 12 in main.py. The data comes from the API.'},
      read:{t:'MDN — An overview of HTTP', url:'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview', what:'الصفحة كلها، ودوّن كل كلمة ليها علاقة بالطلب والرد.'},
@@ -2032,7 +2175,7 @@
      write:'اكتب وصف لسكربت بينضّف بيانات: البيانات كانت إزاي، وعملت إيه، والنتيجة.',
      speak:'اشرح جدول بيانات بصوتك: الأعمدة، والصفوف، وأهم رقم فيه.',
      project:{t:'تقرير بيانات', d:'تقرير 1 صفحة بالإنجليزي عن ملف بيانات حقيقي: المشكلة، والتنضيف، والنتايج.'}},
-    {n:8, theme:'Bug reports والاختبارات', short:'Bug reports', cats:['اختبار البرمجيات','الكتابة'],
+    {n:8, theme:'Bug reports والاختبارات', short:'Bug reports', cats:['اختبار البرمجيات','الكتابة','الأمان'],
      goal:'تكتب bug report كامل وتفهم issues الناس وترد عليها، وتفهم لغة الاختبارات.',
      grammar:{name:'Present perfect', rule:'have/has + التصريف التالت: للمحاولات والنتايج اللي لسه أثرها موجود.', ex:'I have tried restarting it. The test has failed twice.'},
      read:{t:'GitHub Issues — n8n', url:'https://github.com/n8n-io/n8n/issues', what:'اقرا 5 issues: Steps وExpected وActual والردود عليهم.'},
@@ -2041,7 +2184,7 @@
      write:'اكتب 3 bug reports كاملة لمشاكل حقيقية قابلتك.',
      speak:'بلّغ عن bug بصوتك في دقيقة كأنك في standup.',
      project:{t:'Issue حقيقي', d:'افتح issue حقيقي أو رد على واحد في مشروع مفتوح المصدر أو في community.n8n.io.'}},
-    {n:9, theme:'التواصل في الفريق ومع العملاء', short:'التواصل', cats:['التواصل','بريد وإشعارات'],
+    {n:9, theme:'التواصل في الفريق ومع العملاء', short:'التواصل', cats:['التواصل','بريد وإشعارات','اختصارات الشغل','أفعال مركّبة (Phrasal verbs)'],
      goal:'تكتب إيميلات ورسايل Slack مؤدبة وواضحة، وتسأل وتطلب وتتابع وتعتذر باحترافية.',
      grammar:{name:'Modal verbs للطلبات', rule:'Could you…? وWould you mind…? وI would like to… أكتر أدب من الأمر المباشر.', ex:'Could you review my PR? Would you mind sharing the logs?'},
      read:{t:'Stack Overflow — How to ask a good question', url:'https://stackoverflow.com/help/how-to-ask', what:'الصفحة كلها، وبعدين Minimal Reproducible Example.'},
@@ -2059,7 +2202,7 @@
      write:'اكتب 10 أسئلة ممكن تسألها في اجتماع تقني، و5 جمل توضيح (Just to make sure I understand…).',
      speak:'Shadowing يومي 10 دقايق على فيديو Corey Schafer، وسجّل نفسك في أول يوم وآخر يوم وقارن.',
      project:{t:'تسجيل 3 دقايق', d:'تسجيل صوتي 3 دقايق بتشرح فيه مشروع كامل، ومعاه قايمة الكلمات اللي صلّحت نطقها.'}},
-    {n:11, theme:'العملاء والعروض (Proposals)', short:'العملاء', cats:['المقابلات','التواصل'],
+    {n:11, theme:'العملاء والعروض (Proposals)', short:'العملاء', cats:['المقابلات','التواصل','الاجتماعات والشغل'],
      goal:'تقرا إعلانات الشغل وتفهمها، وتكتب proposals بتجيب ردود، وتتفاوض على المطلوب والمواعيد.',
      grammar:{name:'Conditionals (If)', rule:'If + مضارع، will + فعل: للعروض والوعود.', ex:'If you share access to the sheet, I will finish the setup by Friday.'},
      read:{t:'إعلانات شغل حقيقية (Upwork / مستقل / LinkedIn)', url:'https://www.linkedin.com/jobs/', what:'اقرا 10 إعلانات في الأتمتة أو Python، وحدد Responsibilities وRequirements وNice to have.'},
@@ -2068,7 +2211,7 @@
      write:'اكتب 3 proposals لإعلانات حقيقية (أول سطر عن مشكلة العميل).',
      speak:'اعمل «مكالمة عميل» تجريبية: اسأل 5 أسئلة توضيح عن مشروعه.',
      project:{t:'3 Proposals', d:'3 عروض حقيقية متبعتة على منصة شغل، ومراجَعة في LanguageTool.'}},
-    {n:12, theme:'المقابلات والبورتفوليو', short:'المقابلات', cats:['المقابلات'],
+    {n:12, theme:'المقابلات والبورتفوليو', short:'المقابلات', cats:['المقابلات','الذكاء الاصطناعي'],
      goal:'تقدّم نفسك وتشرح مشاريعك وتجاوب على أسئلة المقابلات بالإنجليزي بثقة.',
      grammar:{name:'Past simple مقابل Present perfect', rule:'Past simple لوقت محدد (In 2025 I built…). Present perfect لخبرتك من غير وقت (I have built 10 workflows).', ex:'I have worked with n8n for a year. Last month I built a CRM sync.'},
      read:{t:'GitHub ReadME Guides', url:'https://github.com/readme/guides', what:'مقالين عن البورتفوليو أو الكتابة عن شغلك.'},
@@ -2458,7 +2601,7 @@
   function renderQuiz(){
     var tabs = $('quizTabs');
     tabs.innerHTML = '';
-    [['all','كل الأسئلة']].concat(SPRINT.map(function(d){ return [d.d, 'اليوم ' + d.d]; })).concat([['wrong','اللي غلطت فيها']]).forEach(function(t){
+    [['all','كل الأسئلة']].concat(SPRINT.map(function(d){ return [d.d, 'اليوم ' + d.d]; })).concat([['x','مراجعة شاملة'],['wrong','اللي غلطت فيها']]).forEach(function(t){
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'cat-tab' + (quizTab === t[0] ? ' active' : '');
@@ -2467,7 +2610,7 @@
       tabs.appendChild(b);
     });
     var qs = [];
-    SPRINT.forEach(function(day){
+    SPRINT.concat([{d:'x', quiz:EXTRA_QUIZ}]).forEach(function(day){
       day.quiz.forEach(function(q, i){
         var id = quizId(day.d, i), ans = state.quiz[id];
         if(quizTab === 'all' || quizTab === day.d || (quizTab === 'wrong' && ans !== undefined && ans !== q.a)) qs.push({q:q, id:id, d:day.d, i:i});
@@ -2497,7 +2640,7 @@
       var ans = state.quiz[x.id];
       var card = document.createElement('div');
       card.className = 'q-card';
-      var h = '<div class="qn">DAY ' + x.d + ' · Q' + (x.i + 1) + '</div><div class="qq">' + fmt(x.q.q) + '</div><div class="q-opts">';
+      var h = '<div class="qn">' + (x.d === 'x' ? 'REVIEW' : 'DAY ' + x.d) + ' · Q' + (x.i + 1) + '</div><div class="qq">' + fmt(x.q.q) + '</div><div class="q-opts">';
       x.q.o.forEach(function(o, oi){
         var cls = '';
         if(ans !== undefined){ if(oi === x.q.a) cls = ' right'; else if(oi === ans) cls = ' wrong'; }
@@ -2716,18 +2859,12 @@
 
   // ================= library =================
   var libCats = ['الكل', 'في الأسبوع المكثّف'].concat(Array.from(new Set(LIBRARY.map(function(b){ return b.c; }))));
-  var activeLib = 'الكل', libAge = 'all', libMisc = {free:false, ar:false, fav:false, unread:false}, libShown = 24;
-  var AGE_BANDS = [['all','كل الأعمار'],['6-8','6–8 سنين',6,8],['9-12','9–12 سنة',9,12],['13-17','13–17',13,17],['18+','الكبار',18,99]];
+  var activeLib = 'الكل', libMisc = {free:false, ar:false, fav:false, unread:false}, libShown = 24;
   function libKey(b){ return 'l_' + b.url.replace(/[^a-z0-9]+/gi, '_').slice(-60); }
-  function ageLabel(b){ return b.age[1] >= 99 ? (b.age[0] >= 18 ? 'للكبار' : 'من ' + b.age[0] + ' سنة') : b.age[0] + '–' + b.age[1] + ' سنة'; }
   function libPass(b, ignoreCat){
     if(!ignoreCat){
       if(activeLib === 'في الأسبوع المكثّف' && !b.days.length) return false;
       if(activeLib !== 'الكل' && activeLib !== 'في الأسبوع المكثّف' && b.c !== activeLib) return false;
-    }
-    if(libAge !== 'all'){
-      var band = AGE_BANDS.filter(function(x){ return x[0] === libAge; })[0];
-      if(b.age[1] < band[2] || b.age[0] > band[3]) return false;
     }
     if(libMisc.free && b.paid) return false;
     if(libMisc.ar && b.lang !== 'ar') return false;
@@ -2737,15 +2874,6 @@
     return !q || [b.t, b.c, b.type, b.why, b.read, b.lvl].join(' ').toLowerCase().indexOf(q) !== -1;
   }
   function renderLibFilters(){
-    var ar = $('libAge');
-    ar.innerHTML = '<span class="flbl">السن:</span>';
-    AGE_BANDS.forEach(function(x){
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'chip' + (libAge === x[0] ? ' on' : '');
-      b.textContent = x[1];
-      b.addEventListener('click', function(){ libAge = x[0]; libShown = 24; renderLibFilters(); renderLibTabs(); renderLibrary(); });
-      ar.appendChild(b);
-    });
     var mr = $('libMisc');
     mr.innerHTML = '<span class="flbl">اعرض:</span>';
     [['free','مجاني بس'],['ar','بالعربي'],['fav','⭐ المفضّلة'],['unread','لسه ما جرّبتهاش']].forEach(function(x){
@@ -2757,7 +2885,6 @@
       mr.appendChild(b);
     });
   }
-  function setLibAge(band){ libAge = band; activeLib = 'الكل'; libShown = 24; renderLibFilters(); renderLibTabs(); renderLibrary(); }
   function renderLibTabs(){
     var tabs = $('libTabs');
     tabs.innerHTML = '';
@@ -2782,7 +2909,7 @@
     card.innerHTML =
       '<div class="lib-top"><div class="lib-t"><a href="' + esc(b.url) + '" target="_blank" rel="noopener">' + esc(b.t) + ' ↗</a></div>' +
         '<button type="button" class="fav' + (fav ? ' on' : '') + '" data-fav="' + k + '" aria-pressed="' + fav + '" aria-label="مفضّل">' + (fav ? '★' : '☆') + '</button></div>' +
-      '<div class="lib-badges"><span class="badge free">' + esc(b.type) + '</span><span class="badge age">' + esc(ageLabel(b)) + '</span><span class="badge">' + esc(b.lvl) + '</span>' +
+      '<div class="lib-badges"><span class="badge free">' + esc(b.type) + '</span><span class="badge">' + esc(b.lvl) + '</span>' +
         (b.lang === 'ar' ? '<span class="badge ar">عربي</span>' : '') + (b.paid ? '<span class="badge paid">فيه جزء مدفوع</span>' : '<span class="badge">مجاني</span>') + '</div>' +
       '<p class="lib-why">' + fmt(b.why) + '</p>' +
       '<div class="lib-read"><b>استخدمه إزاي: </b>' + fmt(b.read) + '</div>' +
@@ -2795,6 +2922,8 @@
     var list = LIBRARY.filter(function(b){ return libPass(b, false); });
     var readN = LIBRARY.filter(function(b){ return state.lib[libKey(b)]; }).length;
     $('libCount').textContent = list.length + ' مصدر ظاهر من ' + LIBRARY.length + ' · جرّبت ' + readN;
+    $('libTotal').textContent = LIBRARY.length;
+    $('libNum').textContent = readN;
     var g = $('libGrid');
     g.innerHTML = '';
     list.slice(0, libShown).forEach(function(b){ g.appendChild(libCard(b)); });
@@ -2838,276 +2967,11 @@
   $('libGrid').addEventListener('click', onFav);
   $('libPick').addEventListener('click', onFav);
 
-  // ================= age assessments (6–12) =================
-  // o[0] is always the right answer; options are shuffled on screen.
-  // big = emoji answers, ltr = English answers, say = text read aloud, code = code shown under the question
-  var KIDS = [
-    {age:6, lvl:'Pre A1 · Starters', band:'6-8', skill:'ألوان وأرقام وحيوانات، وأول خطوات البرمجة (ترتيب الأوامر)',
-     note:'الطفل في السن ده غالبًا لسه بيقرا. اقروا السؤال بالعربي معاه، ودوسوا 🔊 عشان يسمع الكلمة.',
-     qs:[
-      {q:'اسمع واختار اللون', say:'red', o:['🔴','🔵','🟢','🟡'], big:true},
-      {q:'ده اسمه إيه بالإنجليزي؟ 🐱', o:['cat','dog','fish','bird'], ltr:true},
-      {q:'How many apples? 🍎🍎🍎', o:['three','two','five','one'], ltr:true},
-      {q:'اسمع واختار الصورة', say:'dog', o:['🐶','🐱','🐟','🐦'], big:true},
-      {q:'🖱️ الحاجة دي اسمها إيه بالإنجليزي؟', o:['mouse','keyboard','screen','table'], ltr:true},
-      {q:'كلمة Apple بتبدأ بأنهي حرف؟', o:['A','B','P','E'], ltr:true},
-      {q:'اسمع واختار الرقم', say:'five', o:['5','4','9','2'], big:true},
-      {q:'أنهي كلمة معناها «شمس» ☀️؟', o:['sun','moon','star','sea'], ltr:true},
-      {q:'🤖 الروبوت عايز يوصل للنجمة ⭐ اللي قدامه بخطوتين. يعمل إيه؟', o:['➡️ ➡️','➡️','⬅️ ⬅️','⬆️'], big:true},
-      {q:'حد قالك Hello! ترد تقول إيه؟', o:['Hello!','Goodbye!','Sorry!','No!'], ltr:true},
-      {q:'اسمع واختار الصورة', say:'hand', o:['✋','👁️','👂','🦶'], big:true},
-      {q:'أنهي حاجة لونها yellow؟', o:['🍌','🍎','🍇','🥦'], big:true}
-     ]},
-    {age:7, lvl:'Pre A1 · Starters', band:'6-8', skill:'جسم الإنسان والعيلة والأيام والجمع، والتكرار (loop) في البرمجة',
-     note:'اقروا الجملة الإنجليزي بصوت عالي مع الطفل، وخلّوه يختار لوحده.',
-     qs:[
-      {q:'I see with my two ___ 👀', o:['eyes','ears','legs','hands'], ltr:true},
-      {q:'اسمع واختار الصورة', say:'keyboard', o:['⌨️','🖱️','🖥️','🖨️'], big:true},
-      {q:'🐱 القطة فوق الصندوق 📦: The cat is ___ the box.', o:['on','in','under','behind'], ltr:true},
-      {q:'عكس big إيه؟', o:['small','tall','long','happy'], ltr:true},
-      {q:'👩 This is my ___. (ماما)', o:['mother','father','sister','brother'], ltr:true},
-      {q:'كمّل: Monday, Tuesday, ___', o:['Wednesday','Sunday','Friday','March'], ltr:true},
-      {q:'🔁 البرنامج بيقول: كرّر 3 مرات 👏. هتصقف كام مرة؟', o:['3','1','6','2'], big:true},
-      {q:'اسمع الجملة. معناها إيه؟', say:'Click the button', o:['اضغط على الزرار','اقفل الشاشة','اكتب اسمك','اسمع الصوت']},
-      {q:'جمع cat إيه؟ (أكتر من قطة)', o:['cats','cates','catz','cat'], ltr:true},
-      {q:'What colour is the sky? ☁️', o:['blue','red','black','pink'], ltr:true},
-      {q:'⚽ I ___ a ball. (أنا عندي)', o:['have','has','am','is'], ltr:true},
-      {q:'🐞 في البرمجة، كلمة bug معناها إيه؟', o:['غلطة في البرنامج','حشرة في الجنينة','لعبة جديدة','زرار']}
-     ]},
-    {age:8, lvl:'A1 · Movers', band:'6-8', skill:'المضارع والماضي البسيط، والوقت، وخطوات الـ algorithm',
-     note:'الطفل ممكن يقرا لوحده، ولو وقف عند كلمة ساعدوه بالنطق مش بالترجمة.',
-     qs:[
-      {q:'She ___ to school every day.', o:['goes','go','going','gone'], ltr:true},
-      {q:'اسمع الجملة. معناها إيه؟', say:'Save your work', o:['احفظ شغلك','امسح شغلك','اطبع شغلك','افتح شغلك']},
-      {q:'أنهي كلمة فعل (verb)؟', o:['run','table','green','happy'], ltr:true},
-      {q:'Yesterday I ___ football.', o:['played','play','playing','plays'], ltr:true},
-      {q:'الـ algorithm هو خطوات بالترتيب. أنهي ترتيب صح لعمل ساندوتش؟', o:['هات العيش ← حط الجبنة ← اقفل الساندوتش','اقفل الساندوتش ← حط الجبنة ← هات العيش','حط الجبنة ← اقفل ← هات العيش','كُل ← هات العيش ← حط الجبنة']},
-      {q:'There ___ three books on the desk.', o:['are','is','am','be'], ltr:true},
-      {q:'What time is it? 🕒', o:["It's three o'clock.","It's Monday.","It's hot.","It's blue."], ltr:true},
-      {q:'كلمة screen معناها إيه؟', o:['شاشة','ماوس','سماعة','كاميرا']},
-      {q:'If it rains, I take my ___ ☂️', o:['umbrella','sunglasses','kite','ice cream'], ltr:true},
-      {q:'القطة في Scratch هتمشي كام خطوة؟', code:'repeat 4\n    move 10 steps', o:['40','14','10','4'], big:true},
-      {q:'Where do you live?', o:['I live in Cairo.','I am eight.','I like pizza.','Yes, I do.'], ltr:true},
-      {q:'اسمع الكلمة. معناها إيه؟', say:'Delete', o:['امسح','انسخ','الصق','احفظ']}
-     ]},
-    {age:9, lvl:'A1 · Movers', band:'9-12', skill:'المقارنة والأسئلة والمضارع المستمر، والشرط (if) والأمان على الإنترنت',
-     note:'شجّعوا الطفل يقرا السؤال بصوت عالي قبل ما يجاوب.',
-     qs:[
-      {q:'Tom is ___ than Ali. (Tom أطول)', o:['taller','tall','tallest','more tall'], ltr:true},
-      {q:'Can you ___ me, please?', o:['help','helps','helping','helped'], ltr:true},
-      {q:'اقرا: Sara has a robot. It can walk and talk, but it can’t swim.\nالروبوت مش بيعرف يعمل إيه؟', o:['يعوم (swim)','يمشي (walk)','يتكلم (talk)','كل اللي فات']},
-      {q:'في Scratch، البلوك when green flag clicked بيشتغل إمتى؟', o:['لما تدوس على العلم الأخضر','لما القطة تقع','لما البرنامج يقفل','لما تكتب اسمك']},
-      {q:'I am good ___ drawing.', o:['at','in','on','to'], ltr:true},
-      {q:'كلمة password معناها إيه؟', o:['كلمة السر','اسم المستخدم','الإيميل','الشاشة']},
-      {q:'اسمع الجملة. معناها إيه؟', say:"Don't share your password", o:['متقولش كلمة السر لحد','غيّر كلمة السر','اكتب كلمة السر','انسى كلمة السر']},
-      {q:'What ___ you doing now?', o:['are','is','do','does'], ltr:true},
-      {q:'لو score = 12، البرنامج هيعمل إيه؟', code:'if score > 10 then\n    say "You win!"', o:['هيقول You win!','مش هيقول حاجة','هيقول 12','البرنامج هيقفل']},
-      {q:'الماضي من go إيه؟', o:['went','goed','gone','going'], ltr:true},
-      {q:'أنهي جملة سؤال؟', o:['Do you like games?','I like games.','Games are fun.','Play games.'], ltr:true},
-      {q:'كلمة download معناها إيه؟', o:['تنزّل ملف على جهازك','ترفع ملف على النت','تمسح ملف','تطبع ملف']}
-     ]},
-    {age:10, lvl:'A2 · Flyers', band:'9-12', skill:'القراءة والفهم والمقارنة وsince، ومعنى variable وloop',
-     note:'فيه نص قراءة قصير. خلّوا الطفل يقراه مرتين قبل ما يجاوب.',
-     qs:[
-      {q:'I have lived here ___ 2020.', o:['since','for','from','at'], ltr:true},
-      {q:'الـ variable في البرمجة شبه إيه؟', o:['علبة بتحط فيها قيمة ومكتوب عليها اسم','زرار بتضغطه','صورة على الشاشة','لعبة']},
-      {q:'The game was ___ than the film.', o:['more exciting','excitinger','most exciting','exciting more'], ltr:true},
-      {q:'اقرا: Maya wanted to make a game. First, she drew a cat. Then she added a loop so the cat moved forever. Finally, she shared the game with her class.\nمايا عملت إيه الأول؟', o:['رسمت قطة','ضافت loop','شاركت اللعبة','لعبت مع الفصل']},
-      {q:'في نفس القصة، forever معناها إيه؟', o:['على طول من غير ما يقف','مرة واحدة','بسرعة','بالراحة']},
-      {q:'You ___ wear a helmet when you ride a bike. (نصيحة)', o:['should','shouldn’t','can’t','don’t'], ltr:true},
-      {q:'كلمة loop معناها إيه؟', o:['تكرار','شرط','خطأ','ملف']},
-      {q:'اسمع الجملة. معناها إيه؟', say:'The program has a bug', o:['البرنامج فيه غلطة','البرنامج خلص','البرنامج سريع','البرنامج جديد']},
-      {q:'أنهي جملة صح؟', o:['She doesn’t like maths.','She don’t like maths.','She not like maths.','She doesn’t likes maths.'], ltr:true},
-      {q:'إمتى تخرج؟', code:'while it is raining:\n    stay inside\ngo outside', o:['لما المطر يقف','وهو بيمطر','على طول','أبدًا']},
-      {q:'عكس upload إيه؟', o:['download','delete','save','print'], ltr:true},
-      {q:'I’m going to ___ a website next week.', o:['build','built','building','builds'], ltr:true}
-     ]},
-    {age:11, lvl:'A2 · Flyers', band:'9-12', skill:'الشرط والمبني للمجهول وHave you ever، وقراءة أول سطور Python',
-     note:'أسئلة الكود مش محتاجة خبرة برمجة. الطفل يفكر بالمنطق.',
-     qs:[
-      {q:'If I ___ a robot, I would call it Max.', o:['had','have','has','having'], ltr:true},
-      {q:'The file ___ saved automatically.', o:['is','are','be','does'], ltr:true},
-      {q:'إيه اللي هيظهر على الشاشة؟', code:'print(3 + 2)', o:['5','32','3 + 2','error'], big:true},
-      {q:'وده هيطبع إيه؟ (الأرقام جوه علامات تنصيص يعني نص)', code:'print("3" + "2")', o:['32','5','3 + 2','error'], big:true},
-      {q:'كلمة algorithm معناها إيه؟', o:['خطوات مرتبة لحل مشكلة','جهاز كمبيوتر','لغة برمجة','لعبة فيديو']},
-      {q:'ظهرتلك الرسالة دي. معناها إيه؟', code:'Error: file not found', o:['الملف مش موجود','الملف اتحفظ','الملف كبير','الملف اتفتح']},
-      {q:'Have you ever ___ a video game?', o:['made','make','making','makes'], ltr:true},
-      {q:'He asked me ___ help him.', o:['to','for','at','with'], ltr:true},
-      {q:'أنهي كلمة معناها «آمن»؟', o:['safe','save','same','sale'], ltr:true},
-      {q:'الكود المفروض يعد 1 2 3، بس بيعد 1 2 بس. أحسن حاجة تعملها إيه؟', o:['تقرا الكود خطوة خطوة وتدوّر على الغلطة','تمسح البرنامج كله','تقفل الجهاز','تتجاهل الغلطة']},
-      {q:'اختار السؤال الصح', o:['Where did you find the bug?','Where you found the bug?','Where did you found the bug?','Where you did find the bug?'], ltr:true},
-      {q:'اسمع الجملة. معناها إيه؟', say:'Please log in with your username', o:['سجّل دخول باسم المستخدم','اعمل حساب جديد','اخرج من الحساب','غيّر الصورة']}
-     ]},
-    {age:12, lvl:'A2 → B1', band:'9-12', skill:'المبني للمجهول في الماضي وPresent perfect continuous والطلب بأدب، ومعنى function وlist',
-     note:'ده أعلى مستوى. لو الطفل جاب 10 أو أكتر، يقدر يبدأ الأسبوع المكثّف فوق مع مساعدة.',
-     qs:[
-      {q:'The bug ___ by the team yesterday.', o:['was fixed','fixed','is fix','were fixed'], ltr:true},
-      {q:'اقرا: Before you publish your website, test it on a phone and a computer. Make sure every link works and that the text is easy to read.\nلازم تعمل إيه قبل ما تنشر الموقع؟', o:['تجرّبه على موبايل وكمبيوتر','تغيّر اسمه','تمسح الروابط','تكبّر الصور']},
-      {q:'الـ function في البرمجة إيه؟', o:['مجموعة أوامر ليها اسم وبتناديها لما تحتاجها','متغيّر فيه نص','رسالة خطأ','ملف صور']},
-      {q:'إيه اللي هيظهر؟', code:'x = 10\nif x > 5:\n    print("big")\nelse:\n    print("small")', o:['big','small','10','error'], big:true},
-      {q:'I ___ coding for two years.', o:['have been learning','am learning since','learned since','learn'], ltr:true},
-      {q:'أنهي commit message أحسن؟', o:['Fix typo on the home page','fixed stuff','changes!!!','asdfgh'], ltr:true},
-      {q:'Unless you save your work, you ___ lose it.', o:['will','won’t','are','did'], ltr:true},
-      {q:'كلمة secure معناها إيه؟', o:['آمن ومحمي','سريع','رخيص','ملوّن']},
-      {q:'أنهي طلب أكتر أدب؟', o:['Could you check my code, please?','Check my code now.','My code. Check.','You check code.'], ltr:true},
-      {q:'items[0] قيمته إيه؟', code:'items = ["a", "b", "c"]', o:['"a"','"b"','"c"','0'], big:true},
-      {q:'The word "debug" means…', o:['to find and fix errors','to add bugs','to delete a program','to buy a computer'], ltr:true},
-      {q:'اسمع الجملة. معناها إيه؟', say:'Think before you click', o:['فكّر قبل ما تضغط','اضغط بسرعة','متفكرش','اضغط مرتين']}
-     ]}
-  ];
-  var kidAge = null, kidRun = null;
-  (function(){
-    var last = null;
-    KIDS.forEach(function(k){ if(state.kids[k.age]) last = k.age; });
-    kidAge = last || 6;
-  })();
-  function shuffled(n){
-    var a = []; for(var i = 0; i < n; i++) a.push(i);
-    for(var j = a.length - 1; j > 0; j--){ var r = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[r]; a[r] = t; }
-    return a;
-  }
-  function kidStars(score, total){ var p = score / total; return p >= 0.83 ? 3 : p >= 0.58 ? 2 : score > 0 ? 1 : 0; }
-  function starStr(n){ return '★★★'.slice(0, n) + '☆☆☆'.slice(0, 3 - n); }
-  function kidSet(){ return KIDS.filter(function(k){ return k.age === kidAge; })[0]; }
-  function renderKidsStrip(){
-    var el = $('ageStrip');
-    el.innerHTML = '';
-    KIDS.forEach(function(k){
-      var r = state.kids[k.age];
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'age-btn' + (k.age === kidAge ? ' sel' : '');
-      b.setAttribute('aria-pressed', k.age === kidAge ? 'true' : 'false');
-      b.innerHTML = '<span class="al">سن</span><span class="an">' + k.age + '</span><span class="as" aria-label="' + (r ? r.stars + ' نجوم' : 'لسه') + '">' + (r ? starStr(r.stars) : '—') + '</span>';
-      b.addEventListener('click', function(){ kidAge = k.age; kidRun = null; renderKidsStrip(); renderKid(); });
-      el.appendChild(b);
-    });
-    var done = KIDS.filter(function(k){ return state.kids[k.age]; }).length;
-    $('kidsNum').textContent = done + '/' + KIDS.length;
-  }
-  function startKid(){
-    var set = kidSet();
-    kidRun = {age:set.age, order:shuffled(set.qs.length), opt:set.qs.map(function(q){ return shuffled(q.o.length); }), i:0, ans:[]};
-    renderKid();
-  }
-  function renderKid(){
-    var set = kidSet(), st = $('kidStage'), r = state.kids[set.age];
-    var head = '<div class="kid-head"><h3>اختبار سن ' + set.age + ' سنين</h3><div class="kid-meta">' +
-      '<span class="badge sky">' + esc(set.lvl) + '</span><span class="badge sun">' + set.qs.length + ' سؤال · حوالي 10 دقايق</span>' +
-      (r ? '<span class="badge free">أحسن نتيجة ' + r.best + '/' + set.qs.length + '</span>' : '') + '</div></div>';
-    if(!kidRun || kidRun.age !== set.age){
-      st.innerHTML = head +
-        '<p class="kid-intro"><b>بيقيس:</b> ' + esc(set.skill) + '.</p>' +
-        '<p class="kid-intro"><b>للأهل والمدرّسين:</b> ' + esc(set.note) + '</p>' +
-        '<div class="kid-nav"><button type="button" class="link-btn" id="kidStart" style="margin-top:0">' + (r ? 'اعمل الاختبار تاني ←' : 'ابدأ الاختبار ←') + '</button>' +
-        (canSpeak ? '' : '<span class="sub-note">المتصفح ده مش بيدعم الصوت، فأسئلة «اسمع» هتظهر مكتوبة.</span>') + '</div>';
-      $('kidStart').addEventListener('click', startKid);
-      return;
-    }
-    var total = set.qs.length;
-    if(kidRun.i >= total){ renderKidResult(set, head); return; }
-    var qi = kidRun.order[kidRun.i], q = set.qs[qi], answered = kidRun.ans[kidRun.i];
-    var h = head + '<div class="kid-bar" role="progressbar" aria-valuemin="0" aria-valuemax="' + total + '" aria-valuenow="' + kidRun.i + '"><div style="width:' + pct(kidRun.i, total) + '%"></div></div>' +
-      '<div class="kid-q"><div class="kid-qn">Q' + (kidRun.i + 1) + ' / ' + total + '</div>' +
-      '<div class="kid-qq">' + esc(q.q).replace(/\n/g, '<br>') + '</div>';
-    if(q.code) h += '<pre class="kid-code">' + esc(q.code) + '</pre>';
-    if(q.say){
-      h += canSpeak ? '<button type="button" class="kid-listen" data-say="' + esc(q.say) + '">🔊 اسمع</button>'
-                    : '<div class="kid-code">' + esc(q.say) + '</div>';
-    }
-    h += '<div class="kid-opts">';
-    kidRun.opt[qi].forEach(function(oi){
-      var cls = 'kid-opt' + (q.big ? ' big' : '') + (q.ltr ? ' ltr' : '');
-      if(answered){ if(oi === 0) cls += ' right'; else if(oi === answered.chosen) cls += ' wrong'; }
-      h += '<button type="button" class="' + cls + '" data-kopt="' + oi + '"' + (answered ? ' disabled' : '') + '>' + esc(q.o[oi]) + '</button>';
-    });
-    h += '</div><div class="kid-fb ' + (answered ? (answered.chosen === 0 ? 'ok' : 'no') : '') + '" aria-live="polite">' +
-      (answered ? (answered.chosen === 0 ? '👏 برافو! إجابة صح.' : 'ولا يهمك! الإجابة الصح: ' + esc(q.o[0])) : '') + '</div>';
-    h += '<div class="kid-nav">' + (answered ? '<button type="button" class="link-btn" id="kidNext" style="margin-top:0">' + (kidRun.i + 1 < total ? 'السؤال اللي بعده ←' : 'شوف النتيجة ←') + '</button>' : '') +
-      '<button type="button" class="ghost-btn" id="kidQuit">اخرج من الاختبار</button></div></div>';
-    st.innerHTML = h;
-    if(answered) $('kidNext').focus();
-    if(answered) $('kidNext').addEventListener('click', function(){ kidRun.i++; renderKid(); });
-    $('kidQuit').addEventListener('click', function(){ kidRun = null; renderKid(); });
-  }
-  $('kidStage').addEventListener('click', function(e){
-    var b = e.target.closest('[data-kopt]');
-    if(!b || !kidRun || b.disabled) return;
-    if(kidRun.ans[kidRun.i]) return;
-    kidRun.ans[kidRun.i] = {chosen:Number(b.dataset.kopt)};
-    renderKid();
-  });
-  function renderKidResult(set, head){
-    var total = set.qs.length;
-    var score = kidRun.ans.filter(function(a){ return a && a.chosen === 0; }).length;
-    var stars = kidStars(score, total);
-    if(!kidRun.saved){
-      var prev = state.kids[set.age] || {best:0, tries:0};
-      state.kids[set.age] = {best:Math.max(prev.best, score), last:score, stars:Math.max(prev.stars || 0, stars), tries:(prev.tries || 0) + 1, date:new Date().toISOString().slice(0, 10)};
-      kidRun.saved = true;
-      markToday(); saveState(); renderKidsStrip(); renderKidReport();
-    }
-    var msg, next = '';
-    if(stars === 3){
-      msg = 'ممتاز! المستوى ده سهل عليك.';
-      if(set.age < 12) next = '<button type="button" class="link-btn" id="kidUp" style="margin-top:0">جرّب اختبار سن ' + (set.age + 1) + ' ←</button>';
-      else next = '<a class="link-btn" href="#sprint" style="margin-top:0;text-decoration:none">ابدأ الأسبوع المكثّف ←</a>';
-    } else if(stars === 2){
-      msg = 'كويس جدًا! راجع الأسئلة اللي تحت وجرّب تاني بعد يومين.';
-    } else {
-      msg = 'بداية حلوة! اتمرّن بالمصادر المقترحة، ولو الأسئلة صعبة جرّب اختبار السن الأصغر.';
-      if(set.age > 6) next = '<button type="button" class="cat-tab" id="kidDown">جرّب اختبار سن ' + (set.age - 1) + '</button>';
-    }
-    var wrong = [];
-    kidRun.order.forEach(function(qi, i){ var a = kidRun.ans[i]; if(a && a.chosen !== 0) wrong.push(set.qs[qi]); });
-    var h = head + '<div class="kid-result">' +
-      '<div class="kid-stars" aria-label="' + stars + ' من 3 نجوم" style="color:var(--kid-sun)">' + starStr(stars) + '</div>' +
-      '<div class="kid-score">' + score + ' / ' + total + '</div>' +
-      '<p class="kid-intro">' + msg + '</p>' +
-      '<div class="kid-nav">' + next +
-        '<button type="button" class="cat-tab" id="kidLib">مصادر مناسبة لسن ' + set.age + ' في المكتبة</button>' +
-        '<button type="button" class="cat-tab" id="kidAgain">اعمل الاختبار تاني</button></div>';
-    if(wrong.length){
-      h += '<h4 class="proj-h" style="margin-top:6px">راجع دول:</h4><div class="kid-review">' +
-        wrong.map(function(q){
-          return '<div class="rv">' + esc(q.q.split('\n').pop()) + (q.say ? ' <span class="mono">(' + esc(q.say) + ')</span>' : '') + ' ← الإجابة الصح: <b>' + esc(q.o[0]) + '</b></div>';
-        }).join('') + '</div>';
-    }
-    h += '</div>';
-    $('kidStage').innerHTML = h;
-    if($('kidUp')) $('kidUp').addEventListener('click', function(){ kidAge = set.age + 1; kidRun = null; renderKidsStrip(); startKid(); });
-    if($('kidDown')) $('kidDown').addEventListener('click', function(){ kidAge = set.age - 1; kidRun = null; renderKidsStrip(); startKid(); });
-    $('kidAgain').addEventListener('click', startKid);
-    $('kidLib').addEventListener('click', function(){
-      setLibAge(set.band);
-      $('library').scrollIntoView({behavior:'smooth', block:'start'});
-    });
-  }
-  function renderKidReport(){
-    var rows = KIDS.map(function(k){
-      var r = state.kids[k.age];
-      return '<tr><td>سن ' + k.age + '</td><td>' + esc(k.lvl) + '</td>' +
-        '<td class="num">' + (r ? r.best + '/' + k.qs.length : '—') + '</td>' +
-        '<td style="color:var(--kid-sun)">' + (r ? starStr(r.stars) : '—') + '</td>' +
-        '<td class="num">' + (r ? r.tries : 0) + '</td><td class="num">' + (r ? r.date : '—') + '</td></tr>';
-    }).join('');
-    $('kidReport').innerHTML = '<caption class="sub-note" style="text-align:start;padding:6px 0">تقرير الأهل والمدرّسين: أحسن نتيجة لكل سن</caption>' +
-      '<thead><tr><th>الاختبار</th><th>المستوى</th><th>أحسن نتيجة</th><th>النجوم</th><th>المحاولات</th><th>آخر مرة</th></tr></thead><tbody>' + rows + '</tbody>';
-  }
-
   // ================= references =================
   var REFS = [
-    ['المستويات وتقييمات الأطفال', [
-      ['Common European Framework of Reference for Languages (CEFR)','Council of Europe','https://www.coe.int/en/web/common-european-framework-reference-languages','وصف المستويات من A1 لـ C2 اللي اتربطت بيها التقييمات.'],
-      ['Cambridge English: Pre A1 Starters','Cambridge University Press & Assessment','https://www.cambridgeenglish.org/exams-and-tests/starters/','مرجع مستوى اختباري سن 6 و7 وقايمة كلماته.'],
-      ['Cambridge English: A1 Movers','Cambridge University Press & Assessment','https://www.cambridgeenglish.org/exams-and-tests/movers/','مرجع مستوى اختباري سن 8 و9.'],
-      ['Cambridge English: A2 Flyers','Cambridge University Press & Assessment','https://www.cambridgeenglish.org/exams-and-tests/flyers/','مرجع مستوى اختبارات سن 10 لـ 12.'],
-      ['Oxford 3000 and 5000 word lists','Oxford University Press','https://www.oxfordlearnersdictionaries.com/wordlists/oxford3000-5000','اختيار الكلمات حسب مستوى CEFR.'],
-      ['CS Unplugged','University of Canterbury, NZ','https://www.csunplugged.org/','فكرة أسئلة التفكير البرمجي (ترتيب الخطوات والتكرار) من غير كمبيوتر.'],
-      ['Scratch','MIT Media Lab','https://scratch.mit.edu/','أسماء البلوكات في أسئلة سن 8 و9 (repeat وmove وwhen green flag clicked).']
-    ]],
+    ["المستويات والمفردات والقواعد", [["Common European Framework of Reference for Languages (CEFR)", "Council of Europe", "https://www.coe.int/en/web/common-european-framework-reference-languages", "وصف مستويات اللغة من A1 لـ C2."], ["Oxford 3000 and 5000 word lists", "Oxford University Press", "https://www.oxfordlearnersdictionaries.com/wordlists/oxford3000-5000", "اختيار الكلمات العامة حسب المستوى."], ["English Vocabulary Profile", "Cambridge University Press & Assessment", "https://www.englishprofile.org/wordlists", "مستوى كل كلمة وكل معنى في CEFR."], ["English Grammar Today", "Cambridge University Press", "https://dictionary.cambridge.org/grammar/british-grammar/", "مرجع قواعد gerund وinfinitive وsince وfor وsaid وtold."], ["LearnEnglish — Grammar", "British Council", "https://learnenglish.britishcouncil.org/grammar", "شرح الأزمنة والمقارنة وtoo وenough."]]],
     ['اللغة والكتابة التقنية', [
-      ['Google Technical Writing Courses','Google','https://developers.google.com/tech-writing','أساس دروس الكتابة الواضحة واليوم الرابع.'],
+      ['Google Technical Writing Courses','Google','https://developers.google.com/tech-writing','أساس دروس الكتابة الواضحة واليوم الرابع من الأسبوع المكثّف.'],
       ['Google Developer Documentation Style Guide','Google','https://developers.google.com/style','أسلوب التوثيق والأزمنة المستخدمة فيه.'],
       ['Microsoft Writing Style Guide','Microsoft','https://learn.microsoft.com/en-us/style-guide/welcome/','نصايح الكتابة المختصرة الودودة.'],
       ['Conventional Commits 1.0.0','conventionalcommits.org','https://www.conventionalcommits.org/','صيغة feat وfix وdocs في رسائل الـ commits.'],
@@ -3117,14 +2981,20 @@
       ['Cambridge Dictionary','Cambridge University Press','https://dictionary.cambridge.org/','النطق والمعاني في بنك المفردات.']
     ]],
     ['البرمجة ورسائل الأخطاء', [
-      ['Built-in Exceptions','Python Software Foundation','https://docs.python.org/3/library/exceptions.html','أسماء ومعاني رسائل الأخطاء في القسم 13.'],
+      ['Built-in Exceptions','Python Software Foundation','https://docs.python.org/3/library/exceptions.html','أسماء ومعاني رسائل أخطاء Python.'],
       ['The Python Tutorial','Python Software Foundation','https://docs.python.org/3/tutorial/','أمثلة الكود والمصطلحات الأساسية.'],
       ['PEP 8 — Style Guide for Python Code','Python Software Foundation','https://peps.python.org/pep-0008/','قواعد التسمية snake_case وUPPER_CASE.'],
       ['PEP 257 — Docstring Conventions','Python Software Foundation','https://peps.python.org/pep-0257/','صيغة الـ docstrings.'],
       ['Automate the Boring Stuff with Python','Al Sweigart','https://automatetheboringstuff.com/','مصدر تصنيف «من كتابك مباشرة» في المفردات.'],
       ['An overview of HTTP','MDN Web Docs','https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview','كلمات الويب: request وresponse وstatus code.'],
-      ['Pro Git','Scott Chacon & Ben Straub','https://git-scm.com/book/en/v2','مصطلحات Git.']
-    ]]
+      ['Pro Git','Scott Chacon & Ben Straub','https://git-scm.com/book/en/v2','مصطلحات Git.'],
+      ["JavaScript error reference", "MDN Web Docs", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors", "رسائل أخطاء JavaScript ومعانيها."],
+      ["HTTP response status codes", "MDN Web Docs", "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status", "معاني أكواد HTTP في قسم الأخطاء."],
+      ["RFC 9110: HTTP Semantics", "IETF", "https://www.rfc-editor.org/rfc/rfc9110", "التعريف الرسمي لأكواد الحالة وأسمائها."],
+      ["Git Reference", "git-scm.com", "https://git-scm.com/docs", "أوامر Git ورسائلها."],
+      ["n8n Docs", "n8n", "https://docs.n8n.io/", "مصطلحات workflow وnode وtrigger وexecution وcredential."]
+    ]],
+    ["الشغل والتعاون والأمان والذكاء الاصطناعي", [["Google Engineering Practices: Code Review", "Google", "https://google.github.io/eng-practices/review/", "أسلوب تعليقات الـ code review."], ["About pull requests", "GitHub Docs", "https://docs.github.com/en/pull-requests", "أقسام وصف الـ PR وكلمة Closes."], ["Semantic Versioning 2.0.0", "Tom Preston-Werner", "https://semver.org/", "معنى أرقام الإصدارات والـ breaking changes."], ["Keep a Changelog", "Olivier Lacan", "https://keepachangelog.com/", "أقسام Added وFixed وDeprecated في الـ release notes."], ["The Scrum Guide", "Ken Schwaber & Jeff Sutherland", "https://scrumguides.org/", "مصطلحات sprint وbacklog وretrospective."], ["Incident postmortems", "Atlassian", "https://www.atlassian.com/incident-management/postmortem", "هيكل تقرير الـ post-mortem وفكرة blameless."], ["OWASP Top 10", "OWASP Foundation", "https://owasp.org/www-project-top-ten/", "مصطلحات الأمان."], ["Machine Learning Glossary", "Google for Developers", "https://developers.google.com/machine-learning/glossary", "مصطلحات الذكاء الاصطناعي."]]]
   ];
   function renderRefs(){
     var n = 0;
@@ -3133,7 +3003,7 @@
         g[1].map(function(r){ n++;
           return '<li><a href="' + esc(r[2]) + '" target="_blank" rel="noopener">' + esc(r[0]) + '</a> — <span class="mono" style="font-size:13px">' + esc(r[1]) + '</span><span class="rs">' + esc(r[3]) + '</span></li>';
         }).join('') + '</ol></div>';
-    }).join('') + '<p class="sub-note">المكتبة (القسم 08) فيها ' + LIBRARY.length + ' مصدر إضافي. أسماء المنصات والامتحانات ملك أصحابها، والصفحة دي مش تابعة لأي جهة منهم. الأسئلة والنصوص مكتوبة للصفحة دي ومش مأخوذة من امتحانات رسمية.</p>';
+    }).join('') + '<p class="sub-note">المكتبة (القسم 08) فيها ' + LIBRARY.length + ' مصدر إضافي. أسماء المنصات والأدوات ملك أصحابها، والصفحة دي مش تابعة لأي جهة منهم. الأسئلة والنصوص مكتوبة للصفحة دي ومش منقولة من مصادر تانية.</p>';
   }
 
   // ================= backup / restore =================
@@ -3164,23 +3034,39 @@
   $('bkYes').addEventListener('click', function(){
     var f = freshState();
     Object.keys(f).forEach(function(k){ state[k] = f[k]; });
-    saveState(); $('bkConfirm').hidden = true; kidRun = null; rerenderAll();
+    saveState(); $('bkConfirm').hidden = true; rerenderAll();
     bkMsg('اتمسح كل التقدم.');
   });
   function rerenderAll(){
     selDay = firstOpenDay(); quizTab = selDay;
     renderSprintTabs(); renderSprintDay(); renderQuiz(); renderFocus(); renderVocab();
-    renderLibTabs(); renderLibrary(); renderKidsStrip(); renderKid(); renderKidReport();
+    renderLibTabs(); renderLibrary();
     renderMap(); renderWeek(); renderTracks(); renderProjects(); updateTotals();
   }
 
   // ================= errors =================
-  $('errList').innerHTML = ERRORS.map(function(er){
-    return '<div class="err-card"><div class="msg">' + esc(er.msg) + '</div>' +
-      '<div class="meaning">' + fmt(er.meaning) + '</div>' +
-      '<div class="cause">السبب الشائع: ' + fmt(er.cause) + '</div>' +
-      '<div class="fix">الكلمة المهمة: <span class="mono">' + esc(er.kw) + '</span></div></div>';
-  }).join('');
+  var errGroups = Array.from(new Set(ERRORS.map(function(er){ return er.g; })));
+  var activeErr = errGroups[0];
+  function renderErrors(){
+    var tabs = $('errTabs');
+    tabs.innerHTML = '';
+    errGroups.forEach(function(g){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'cat-tab' + (g === activeErr ? ' active' : '');
+      b.innerHTML = esc(g) + ' <span class="cnt">' + ERRORS.filter(function(er){ return er.g === g; }).length + '</span>';
+      b.addEventListener('click', function(){ activeErr = g; renderErrors(); });
+      tabs.appendChild(b);
+    });
+    $('errList').innerHTML = ERRORS.filter(function(er){ return er.g === activeErr; }).map(function(er){
+      return '<div class="err-card"><div class="msg" style="white-space:pre-wrap">' + esc(er.msg) + '</div>' +
+        '<div class="meaning">' + fmt(er.meaning) + '</div>' +
+        '<div class="cause">السبب الشائع: ' + fmt(er.cause) + '</div>' +
+        (er.fix ? '<div class="cause">الحل: ' + fmt(er.fix) + '</div>' : '') +
+        '<div class="fix">الكلمة المهمة: <span class="mono">' + esc(er.kw) + '</span></div></div>';
+    }).join('');
+  }
+  renderErrors();
 
   // ================= totals =================
   function updateTotals(){
@@ -3191,6 +3077,7 @@
       sd += st.build + st.quiz + st.chal; stot += st.buildT + st.quizT + 1;
       qr += st.quiz; qt += st.quizT;
     });
+    EXTRA_QUIZ.forEach(function(q, i){ qt++; if(state.quiz[quizId('x', i)] === q.a) qr++; });
     $('sprintPct').textContent = pct(sd, stot) + '%';
     $('quizPct').textContent = pct(qr, qt) + '%';
     $('planPct').textContent = planPct() + '%';
@@ -3223,9 +3110,6 @@
   renderLibFilters();
   renderLibTabs();
   renderLibrary();
-  renderKidsStrip();
-  renderKid();
-  renderKidReport();
   renderRefs();
   renderMap();
   renderFilter();
