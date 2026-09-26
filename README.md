@@ -1,4 +1,18 @@
-# إنجليزي المبرمج
+<div align="center">
+
+# 📘 إنجليزي المبرمج · Programmer English
+
+**The English a developer uses every day — error messages, docs, commits, code review, emails and interviews.**
+
+[![Live site](https://img.shields.io/badge/Live%20site-Open%20→-3f8f63?style=for-the-badge)](https://micro4tricks-ai.github.io/programmer-english/)
+&nbsp;
+![430+ words](https://img.shields.io/badge/Vocabulary-430%2B%20words-26332b?style=for-the-badge)
+&nbsp;
+![Single file](https://img.shields.io/badge/Single%20HTML%20file-no%20build-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+<a href="https://micro4tricks-ai.github.io/programmer-english/"><img src="docs/screenshot.png" alt="Programmer English page" width="860"></a>
+
+</div>
 
 صفحة واحدة لتعلم الإنجليزي اللي المبرمج بيحتاجه كل يوم: رسائل الأخطاء، والتوثيق، والكتابة التقنية، والتواصل، والمقابلات.
 
