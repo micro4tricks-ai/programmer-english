@@ -1,6 +1,8 @@
 <div align="center">
 
-# 📘 إنجليزي المبرمج · Programmer English
+<img src="assets/logo.svg" width="96" height="96" alt="Programmer English logo">
+
+# إنجليزي المبرمج · Programmer English
 
 **The English a developer uses every day — error messages, docs, commits, code review, emails and interviews.**
 
